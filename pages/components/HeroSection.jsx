@@ -24,8 +24,8 @@ export default function HeroSection() {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
             <Image
-              src="/placeholder.svg?height=500&width=500"
-              alt="Your Name"
+              src="/logo.png"  // Update to your image path
+              alt="Ace Labador"
               fill
               className="rounded-full object-cover shadow-2xl"
             />
@@ -40,9 +40,8 @@ export default function HeroSection() {
           <h1 className="text-4xl font-extrabold tracking-tight text-center lg:text-left sm:text-5xl md:text-6xl lg:text-7xl">
             <span className="block text-primary">Ace Labador</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 inline-block">
-  Web Developer
-</span>
-
+              Web Developer
+            </span>
           </h1>
           <p className="mt-6 text-xl text-muted-foreground text-center lg:text-left sm:text-2xl lg:text-3xl">
             Crafting elegant, responsive, and user-centric web experiences. Specialized in React, Next.js, and cutting-edge front-end technologies.

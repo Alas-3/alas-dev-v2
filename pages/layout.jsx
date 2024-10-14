@@ -13,29 +13,35 @@ export default function RootLayout({ children }) {
   const handleScroll = () => {
     if (isClicking) return;
     const sections = ['home', 'projects', 'experience'];
-    let currentSection = activeSection;
-
+    let currentSection = 'home'; // Default to 'home' at the top
+  
     const viewportHeight = window.innerHeight;
     let maxVisiblePercentage = 0;
-
+  
     sections.forEach((section) => {
       const element = document.getElementById(section);
       if (element) {
         const rect = element.getBoundingClientRect();
         const visibleHeight = Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
         const visiblePercentage = (visibleHeight / element.offsetHeight) * 100;
-
+  
         if (visiblePercentage > maxVisiblePercentage) {
           maxVisiblePercentage = visiblePercentage;
           currentSection = section;
         }
       }
     });
-
+  
+    // Check if we're at the very top of the page
+    if (window.scrollY === 0) {
+      currentSection = 'home'; // Set home as active if at the top
+    }
+  
     if (currentSection !== activeSection) {
       setActiveSection(currentSection);
     }
   };
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -75,21 +81,29 @@ export default function RootLayout({ children }) {
               return (
                 <li key={item} className="relative flex items-center">
                   <Link 
-                    href={`#${sectionId}`} 
-                    className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${isActive ? 'text-white' : 'text-gray-400'}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setIsClicking(true);
-                      setActiveSection(sectionId);
-                      const targetElement = document.getElementById(sectionId);
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                      setTimeout(() => setIsClicking(false), 1000);
-                    }}
-                  >
-                    {item}
-                  </Link>
+  href={`#${sectionId}`} 
+  className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${isActive ? 'text-white' : 'text-gray-400'}`}
+  onClick={(e) => {
+    e.preventDefault();
+    setIsClicking(true);
+    setActiveSection(sectionId);
+    
+    if (sectionId === 'home') {
+      // Scroll to the very top if the home button is clicked
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const targetElement = document.getElementById(sectionId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    setTimeout(() => setIsClicking(false), 1000);
+  }}
+>
+  {item}
+</Link>
+
                   {isActive && (
                     <motion.div
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500"
