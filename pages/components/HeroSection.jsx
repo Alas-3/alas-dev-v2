@@ -56,7 +56,9 @@ export default function HeroSection() {
               Get in Touch
             </motion.a>
             <motion.a
-              href="#projects"
+              href="/ResumeV2.pdf" // Link to the resume in the public folder
+              target="_blank" // Opens the PDF in a new tab
+              rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border-2 border-transparent bg-black px-5 py-3 text-base font-medium text-white transition hover:bg-gray-800 sm:text-lg"
               style={{
                 borderImage: 'linear-gradient(to right, #68D391, #4299E1) 1',
