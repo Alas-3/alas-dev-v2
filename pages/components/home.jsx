@@ -3,6 +3,7 @@ import TechStackSection from './TechStackSection'
 import ProjectsSection from './ProjectsSection'
 import ExperienceSection from './ExperienceSection'
 import ContactSection from './ContactSection'
+import CertificateShowcase from './CertificatesSection'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <TechStackSection />
       <ProjectsSection />
       <ExperienceSection />
+      <CertificateShowcase />
       <ContactSection />
     </div>
   )

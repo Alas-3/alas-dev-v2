@@ -7,10 +7,10 @@ import Image from 'next/image'
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-background">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20" />
-      <div className="absolute inset-0 bg-grid-white/[0.02] -z-10" />
+      <div className="absolute" />
+      <div className="absolute" />
       <div
-        className="absolute inset-y-0 right-0 w-1/2 bg-primary/10"
+        className="absolute inset-y-0 right-0 w-1/2 "
         style={{
           clipPath: 'polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)',
         }}
@@ -38,8 +38,8 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h1 className="text-4xl font-extrabold tracking-tight text-center lg:text-left sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block text-primary">Ace Labador</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 inline-block">
+            <span className="block text-white">Ace Labador</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
               Web Developer
             </span>
           </h1>
@@ -48,13 +48,14 @@ export default function HeroSection() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.a
-              href="#contact"
+              href="mailto:alas.dev@outlook.com"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-base font-medium text-primary-foreground transition hover:bg-primary/90 sm:text-lg"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Get in Touch
             </motion.a>
+
             <motion.a
               href="/ResumeV2.pdf" // Link to the resume in the public folder
               target="_blank" // Opens the PDF in a new tab
