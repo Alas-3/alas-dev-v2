@@ -43,22 +43,23 @@ export default function TechStackSection() {
 }
 
 function ScrollingRow({ techStack }) {
-    const [isInView, setIsInView] = useState(true);
-  
-    useEffect(() => {
-      setIsInView(true);
-    }, []);
-  
-    return (
-      <div className="flex overflow-hidden whitespace-nowrap col-span-2 md:col-span-3 lg:col-span-4">
+  const [isInView, setIsInView] = useState(true);
+
+  useEffect(() => {
+    setIsInView(true);
+  }, []);
+
+  return (
+    <div className="overflow-hidden col-span-2 md:col-span-3 lg:col-span-4">
+      <div className="flex">
         <motion.div
           className="flex space-x-16"
-          initial={{ x: '0%' }} // Start from the left side
+          initial={{ x: 0 }} // Start from the left side
           animate={{
-            x: isInView ? ['0%', '-100%'] : '0%', // Animate from left to left more
+            x: isInView ? ['0%', '-50%'] : '0%', // Animate to the left
           }}
           transition={{
-            duration: 40, // Increased total duration of one scroll for slower animation
+            duration: 20, // Adjust duration for smoother scrolling
             ease: 'linear',
             repeat: Infinity, // Repeat infinitely
           }}
@@ -66,7 +67,7 @@ function ScrollingRow({ techStack }) {
           {/* Render the tech stack icons, duplicating the array for seamless scrolling */}
           {[...techStack, ...techStack].map((tech, index) => {
             const Icon = tech.icon; // Assign the icon to a variable for rendering
-  
+
             return (
               <div key={index} className="flex flex-col items-center">
                 <Icon className="text-5xl mb-2 text-gray-400" />
@@ -76,6 +77,6 @@ function ScrollingRow({ techStack }) {
           })}
         </motion.div>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
