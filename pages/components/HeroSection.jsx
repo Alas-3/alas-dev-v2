@@ -57,12 +57,16 @@ export default function HeroSection() {
             </motion.a>
             <motion.a
               href="#projects"
-              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border border-primary bg-background px-5 py-3 text-base font-medium text-primary transition hover:bg-primary/10 sm:text-lg"
+              className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border-2 border-transparent bg-black px-5 py-3 text-base font-medium text-white transition hover:bg-gray-800 sm:text-lg"
+              style={{
+                borderImage: 'linear-gradient(to right, #68D391, #4299E1) 1',
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               View Resume
             </motion.a>
+
           </div>
         </motion.div>
       </div>
