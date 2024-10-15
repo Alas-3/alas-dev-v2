@@ -52,7 +52,7 @@ export default function CertificateShowcase() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
-            Work Experience
+            My Certificates
           </h2>
 
           {/* Grid to display certificates, adjusting for mobile and desktop */}
