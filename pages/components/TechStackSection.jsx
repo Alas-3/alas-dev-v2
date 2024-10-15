@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaJs, FaHtml5, FaCss3, FaGit, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0 } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse } from 'react-icons/si';
 
 export default function TechStackSection() {
   const techStack = [
@@ -20,6 +20,12 @@ export default function TechStackSection() {
     { name: 'Appwrite', icon: SiAppwrite },
     { name: 'Vercel', icon: SiVercel },
     { name: 'Auth0', icon: SiAuth0 },
+    { name: 'Vite', icon: SiVite }, // Added Vite
+    { name: 'Electron', icon: SiElectron }, // Added Electron
+    { name: 'Axios', icon: SiAxios }, // Added Axios
+    { name: 'Node.js', icon: FaJs }, // Using FaJs as a placeholder for Node.js
+    { name: 'npm', icon: SiNpm }, // Added npm
+    { name: 'Lighthouse', icon: SiLighthouse }, // Added Lighthouse
   ];
 
   // Ensure the tech stack is not empty
@@ -28,7 +34,7 @@ export default function TechStackSection() {
   return (
     <motion.section
       id="skills"
-      className="py-20 overflow-hidden"
+      className="py-20 tech-stack-section"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -50,7 +56,7 @@ function ScrollingRow({ techStack }) {
   }, []);
 
   return (
-    <div className="overflow-hidden col-span-2 md:col-span-3 lg:col-span-4">
+    <div className=" col-span-2 md:col-span-3 lg:col-span-4">
       <div className="flex">
         <motion.div
           className="flex space-x-16"

@@ -10,7 +10,7 @@ const techStack = [
     { name: 'React', icon: FaReact, color: '#61DAFB' },
     { name: 'Vite', icon: SiVite, color: '#646CFF' },
     { name: 'Next.js', icon: SiNextdotjs, color: '#F2F3F4' },
-    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38B2AC' },
+    { name: 'Tailwind', icon: SiTailwindcss, color: '#38B2AC' },
     { name: 'Electron', icon: SiElectron, color: '#F2F3F4' },
     { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
     { name: 'Axios', icon: SiAxios, color: '#5A29E3' }, // Axios color
@@ -49,7 +49,7 @@ const techStack = [
       title: 'Himitsu',
       description: 'A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel',
       favicon: '/personal_logo.png',
-      techStack: ['Next.js', 'Supabase', 'Axios', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Supabase', 'Axios', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-red-500 to-yellow-500', // Anime-inspired colors
@@ -58,7 +58,7 @@ const techStack = [
       title: 'StormSignal',
       description: 'A Location-based Weather Web App with real-time typhoon alerts and warnings from PAGASA',
       favicon: '/stormlogo.png',
-      techStack: ['Next.js', 'Axios', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Axios', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-blue-400 to-gray-500', // Storm clouds
@@ -67,7 +67,7 @@ const techStack = [
       title: 'QuiRky',
       description: 'A QR Code Generator Web App built using NextJS & Tailwind CSS',
       favicon: '/qrlogo.png',
-      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-green-400 to-blue-500', // QR code colors
@@ -76,7 +76,7 @@ const techStack = [
       title: 'D.R.A Jewelry',
       description: 'A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner',
       favicon: '/dralogo.png',
-      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-yellow-300 to-blue-400', // Sun and sky
@@ -85,7 +85,7 @@ const techStack = [
       title: 'AniGuess',
       description: 'A Web App for an Anime-related Guessing Game utilizing Open Trivia API',
       favicon: '/guesslogo.png',
-      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-pink-400 to-purple-600', // Anime-inspired colors
@@ -94,7 +94,7 @@ const techStack = [
       title: 'UniFind',
       description: 'A University Finder Web App for select countries utilizing HipoLabs API for data and rankings',
       favicon: '/unilogo.png',
-      techStack: ['Next.js', 'Tailwind CSS', 'Vercel'],
+      techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
       bgColor: 'from-green-600 to-blue-600', // Academic colors

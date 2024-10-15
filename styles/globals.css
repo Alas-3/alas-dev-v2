@@ -18,6 +18,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.tech-stack-section {
+  overflow: visible; /* Allow overflow specifically for this section */
+}
+
+
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */

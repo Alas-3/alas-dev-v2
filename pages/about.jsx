@@ -235,7 +235,7 @@ function CertificateShowcase() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className="py-16"
+      className="pt-16"
     >
       <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
         <span className="bg-blue-500 w-2 h-8 mr-4"></span>

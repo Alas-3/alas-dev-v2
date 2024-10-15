@@ -3,6 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export default function HeroSection() {
   return (
@@ -69,7 +70,30 @@ export default function HeroSection() {
             >
               View Resume
             </motion.a>
+          </div>
 
+          {/* Social Icons Section */}
+          <div className="mt-8 flex justify-center lg:justify-start space-x-6">
+            <motion.a
+              href="https://www.linkedin.com/in/alasdev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-blue-400 opacity-50 transition-colors duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaLinkedin size={36} />
+            </motion.a>
+            <motion.a
+              href="https://github.com/Alas-3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400 opacity-50 transition-colors duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <FaGithub size={36} />
+            </motion.a>
           </div>
         </motion.div>
       </div>

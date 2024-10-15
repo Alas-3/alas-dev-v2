@@ -1,6 +1,16 @@
+import { useRouter } from "next/router";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const NavBar = ({ active }) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    // Preload the "about" and "projects" pages when the NavBar component loads
+    router.prefetch("/about");
+    router.prefetch("/projects");
+  }, [router]);
+
   return (
     <div className="flex justify-center items-center w-full px-4 sm:px-0">
       <nav className="fixed top-3 z-50 w-full max-w-[90%] sm:max-w-md">

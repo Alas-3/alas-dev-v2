@@ -70,7 +70,7 @@ export default function CertificateShowcase() {
                     src={cert.image}
                     alt={cert.title}
                     fill
-                    className="object-contain"
+                    className="object-contain bg-white"
                   />
                 </div>
                 <div className="p-4">
