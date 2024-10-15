@@ -172,15 +172,17 @@ const certificates = [
 
 const experiences = [
   {
-    company: "D.R.A Jewelery",
+    company: "D.R.A Jewelry",
     position: "Web Developer",
     period: "Sep 2024 - Present",
+    location: "Meycauayan City, Bulacan, PH", // Add location here
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
   },
   {
     company: "WeWhiten",
     position: "Social Media Marketer",
     period: "Jun 2023 - Jun 2024",
+    location: "Salt Lake City, UT, USA", // Add location here
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
   },
 ];
@@ -222,6 +224,51 @@ function AboutMeSection() {
         <p className="text-lg text-gray-300 text-pretty">
         Greetings! I'm Ace Labador, from the ever-sunny or always-raining Philippines. Picture a fusion of design savvy and coding wizardry – that's me, crafting the digital future one pixel at a time. Ever the innovator, I blend creativity and code like a master chef mixes ingredients, concocting web experiences that leave users craving more. With a design sense sharper than a samurai sword and coding skills smoother than jazz on a summer night, I'm here to elevate your digital game. Let's join forces and turn your digital dreams into reality. After all, why settle for ordinary when you can have extraordinary?
         </p>
+      </div>
+    </motion.section>
+  );
+}
+
+function ExperienceSection() {
+  return (
+    <motion.section
+      id="experience"
+      className="py-20"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+        <span className="bg-blue-500 w-2 h-8 mr-4 "></span>
+        <FaBriefcase className="mr-2" style={{ color: 'white' }}/> Work Experience
+      </h2>
+      <div className="space-y-12">
+        {experiences.map((exp, index) => (
+          <motion.div
+            key={exp.company}
+            className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg flex items-center space-x-4"
+            initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <img
+              src={exp.logo}
+              alt={`${exp.company} logo`}
+              className="w-16 h-16 object-contain rounded-full"
+            />
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-white">
+                {exp.position}
+              </h3>
+              <h4 className="text-lg text-gray-300">{exp.company}</h4>
+              <p className="text-sm text-gray-400 mb-2">{exp.location}</p> {/* Location here */}
+              <p className="text-sm text-gray-400">{exp.period}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );
@@ -288,46 +335,3 @@ function CertificateShowcase() {
   );
 }
 
-function ExperienceSection() {
-  return (
-    <motion.section
-      id="experience"
-      className="py-20"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-    >
-      <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-        <span className="bg-blue-500 w-2 h-8 mr-4 "></span>
-        <FaBriefcase className="mr-2" style={{ color: 'white' }}/> Work Experience
-      </h2>
-      <div className="space-y-12">
-        {experiences.map((exp, index) => (
-          <motion.div
-            key={exp.company}
-            className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg flex items-center space-x-4"
-            initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: index * 0.1 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.02 }}
-          >
-            <img
-              src={exp.logo}
-              alt={`${exp.company} logo`}
-              className="w-16 h-16 object-contain rounded-full"
-            />
-            <div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                {exp.position}
-              </h3>
-              <h4 className="text-lg text-gray-300 mb-2">{exp.company}</h4>
-              <p className="text-sm text-gray-400">{exp.period}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </motion.section>
-  );
-}

@@ -3,16 +3,18 @@ import { motion } from "framer-motion";
 export default function ExperienceSection() {
   const experiences = [
     {
-      company: "D.R.A Jewelery",
+      company: "D.R.A Jewelry",
       position: "Web Developer",
       period: "Sep 2024 - Present",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s", // Add logo or icon path here
+      location: "Meycauayan City, Bulacan, PH", // Add location here
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
     },
     {
       company: "WeWhiten",
       position: "Social Media Marketer",
       period: "Jun 2023 - Jun 2024",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s", // Add logo or icon path here
+      location: "Salt Lake City, UT, USA", // Add location here
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
     },
   ];
 
@@ -44,13 +46,13 @@ export default function ExperienceSection() {
               src={exp.logo}
               alt={`${exp.company} logo`}
               className="w-16 h-16 object-contain rounded-full"
-            />{" "}
-            {/* Rounded Logo */}
+            />
             <div>
               <h3 className="text-xl font-semibold mb-2 text-white">
                 {exp.position}
               </h3>
-              <h4 className="text-lg text-gray-300 mb-2">{exp.company}</h4>
+              <h4 className="text-lg text-gray-300">{exp.company}</h4>
+              <p className="text-sm text-gray-400 mb-2">{exp.location}</p> {/* Location here */}
               <p className="text-sm text-gray-400">{exp.period}</p>
             </div>
           </motion.div>

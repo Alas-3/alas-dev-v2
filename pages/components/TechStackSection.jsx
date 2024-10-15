@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaJs, FaHtml5, FaCss3, FaGit, FaGithub } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub } from 'react-icons/fa';
 import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse } from 'react-icons/si';
 
 export default function TechStackSection() {
@@ -23,7 +23,7 @@ export default function TechStackSection() {
     { name: 'Vite', icon: SiVite }, // Added Vite
     { name: 'Electron', icon: SiElectron }, // Added Electron
     { name: 'Axios', icon: SiAxios }, // Added Axios
-    { name: 'Node.js', icon: FaJs }, // Using FaJs as a placeholder for Node.js
+    { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
     { name: 'npm', icon: SiNpm }, // Added npm
     { name: 'Lighthouse', icon: SiLighthouse }, // Added Lighthouse
   ];
@@ -65,7 +65,7 @@ function ScrollingRow({ techStack }) {
             x: isInView ? ['0%', '-50%'] : '0%', // Animate to the left
           }}
           transition={{
-            duration: 20, // Adjust duration for smoother scrolling
+            duration: 40, // Adjust duration for smoother scrolling
             ease: 'linear',
             repeat: Infinity, // Repeat infinitely
           }}

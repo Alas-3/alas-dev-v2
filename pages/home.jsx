@@ -9,8 +9,8 @@ export default function Home() {
     <div className="container mx-auto px-6">
       <HeroSection />
       <TechStackSection />
-      <ProjectsSection />
       <ExperienceSection />
+      <ProjectsSection />
       <CertificateShowcase />
     </div>
   )
