@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Head from 'next/head'
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
@@ -189,6 +190,16 @@ const experiences = [
 
 export default function AboutPage() {
   return (
+    <>
+    <Head>
+        <title>Christopher Ace Labador | About</title>
+        <meta name="description" content="Discover Ace Labador's professional journey as a Front-End Engineer with 3+ years of experience in web development, expertise in React and Next.js, and certifications showcasing continuous learning and growth." />
+        <meta property="og:title" content="Ace Labador | About" />
+        <meta property="og:description" content="Discover full-stack web apps developed by Ace Labador using cutting-edge technologies like React, Next.js, Firebase, and Supabase." />
+        <meta property="og:image" content="https://acelabador.vercel.app/logo.png" />
+        <meta property="og:url" content="https://acelabador.vercel.app/about" />
+        <link rel="canonical" href="https://acelabador.vercel.app/about" />
+      </Head>
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">
       <div className="container mx-auto px-4">
         <AboutMeSection />
@@ -196,6 +207,7 @@ export default function AboutPage() {
         <CertificateShowcase />
       </div>
     </div>
+    </>
   );
 }
 
