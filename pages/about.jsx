@@ -218,13 +218,9 @@ function AboutMeSection() {
 
       {/* Text section for desktop on left */}
       <div className="md:w-2/3 md:pr-8 flex flex-col justify-center items-start">
-        <h1 className="text-4xl font-bold mb-4">About Me</h1>
-        <p className="text-lg text-gray-300">
-          I'm a passionate front-end developer with experience in creating
-          responsive and user-friendly web applications. Specializing in React
-          and modern JavaScript, I strive to build efficient, scalable, and
-          visually appealing solutions that provide exceptional user
-          experiences.
+        <h1 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">About Me</h1>
+        <p className="text-lg text-gray-300 text-pretty">
+        Greetings! I'm Ace Labador, from the ever-sunny or always-raining Philippines. Picture a fusion of design savvy and coding wizardry – that's me, crafting the digital future one pixel at a time. Ever the innovator, I blend creativity and code like a master chef mixes ingredients, concocting web experiences that leave users craving more. With a design sense sharper than a samurai sword and coding skills smoother than jazz on a summer night, I'm here to elevate your digital game. Let's join forces and turn your digital dreams into reality. After all, why settle for ordinary when you can have extraordinary?
         </p>
       </div>
     </motion.section>
@@ -241,9 +237,9 @@ function CertificateShowcase() {
       viewport={{ once: true }}
       className="py-16"
     >
-      <h2 className="text-3xl font-bold mb-12 flex items-center">
+      <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
         <span className="bg-blue-500 w-2 h-8 mr-4"></span>
-        <FaCertificate className="mr-2" /> Certificates
+        <FaCertificate className="mr-2" style={{ color: 'white' }}/> Certificates
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {certificates.map((cert, index) => (
@@ -276,7 +272,7 @@ function CertificateShowcase() {
                 href={cert.verificationLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300"
+                className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300"
               >
                 Verify Certificate
                 <ExternalLink className="w-4 h-4 ml-2" />
@@ -299,9 +295,9 @@ function ExperienceSection() {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl font-bold mb-12 flex items-center">
-        <span className="bg-blue-500 w-2 h-8 mr-4"></span>
-        <FaBriefcase className="mr-2" /> Work Experience
+      <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+        <span className="bg-blue-500 w-2 h-8 mr-4 "></span>
+        <FaBriefcase className="mr-2" style={{ color: 'white' }}/> Work Experience
       </h2>
       <div className="space-y-12">
         {experiences.map((exp, index) => (
