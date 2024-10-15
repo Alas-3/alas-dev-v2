@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
-import { FaReact, FaJs, FaGithub, FaExternalLinkAlt, FaCss3 } from 'react-icons/fa'  // Added FaCss3 import
+import { FaReact, FaJs, FaGithub, FaExternalLinkAlt, FaCss3 } from 'react-icons/fa'
 import { SiTailwindcss, SiNextdotjs, SiFramer } from 'react-icons/si'
+import Link from 'next/link'  // Import Link from next
 
 export default function ProjectsSection() {
   const projects = [
@@ -15,7 +16,7 @@ export default function ProjectsSection() {
     {
       title: 'Project 2',
       description: 'A brief description of Project 2 and its features.',
-      techStack: [FaJs, SiFramer, FaCss3],  // FaCss3 used here
+      techStack: [FaJs, SiFramer, FaCss3], 
       liveUrl: 'https://project2.com',
       repoUrl: 'https://github.com/yourusername/project2',
       image: '/placeholder.svg?height=300&width=400',
@@ -31,9 +32,9 @@ export default function ProjectsSection() {
       transition={{ duration: 1 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-3xl font-bold mb-12 text-center text-white">Projects</h2>
+      <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-500">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {projects.map((project, index) => (
+        {projects.slice(0, 2).map((project, index) => (  // Display limited projects
           <motion.div
             key={project.title}
             className="bg-gray-800 bg-opacity-50 rounded-lg overflow-hidden shadow-lg"
@@ -84,6 +85,16 @@ export default function ProjectsSection() {
           </motion.div>
         ))}
       </div>
+
+      {/* "View All Projects" Button */}
+      <div className="mt-8 text-center">
+            <Link
+              href="/projects"
+              className="inline-block px-4 py-2 bg-gray-600 text-white text-sm rounded-md hover:bg-gray-700 transition-colors duration-300 opacity-70 hover:opacity-100"
+            >
+              Show All Projec
+            </Link>
+          </div>
     </motion.section>
   )
 }
