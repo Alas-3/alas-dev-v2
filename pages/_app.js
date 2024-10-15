@@ -2,7 +2,6 @@
 import "../styles/globals.css";
 import RootLayout from "./layout";
 import Head from "next/head";
-import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -48,7 +47,6 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:image" content="/logo.png" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-
       </Head>
       <RootLayout>
         <Component {...pageProps} />
