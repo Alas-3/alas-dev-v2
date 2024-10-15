@@ -3,7 +3,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaReact, FaJs, FaGithub, FaExternalLinkAlt, FaCss3, FaNodeJs } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiFramer, SiVite, SiVercel, SiFirebase } from 'react-icons/si'; // Import SiFirebase
+import { SiTailwindcss, SiSupabase, SiAxios, SiNextdotjs, SiFramer, SiVite, SiVercel, SiFirebase } from 'react-icons/si'; // Import SiFirebase
 import { SiElectron } from 'react-icons/si'; // Import Electron icon
 import Link from 'next/link';
 
@@ -19,6 +19,8 @@ const techStack = {
   'Node.js': FaNodeJs,
   Electron: SiElectron, // Add Electron here
   Firebase: SiFirebase,  // Add Firebase here
+  Supabase: SiSupabase,
+  Axios: SiAxios,
 };
 
 export default function ProjectsSection() {
@@ -32,9 +34,9 @@ export default function ProjectsSection() {
       bgColor: 'from-gray-800 to-gray-900',
     },
     {
-      title: 'D.R.A Jewelry',
-      description: 'A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner',
-      techStack: ['Next.js', 'Tailwind CSS',],
+      title: 'Himitsu',
+      description: 'A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel',
+      techStack: ['Next.js', 'Tailwind CSS', 'Supabase', 'Axios'],
       liveUrl: 'https://project2.com',
       repoUrl: 'https://github.com/yourusername/project2',
       bgColor: 'from-gray-800 to-gray-900',

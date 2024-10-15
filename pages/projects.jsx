@@ -48,7 +48,7 @@ const projects = [
     title: "E-Registrar",
     description:
       "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS and Firebase",
-    favicon: "/registrarlogo.png",
+    favicon: "/images/registrarlogo.png",
     techStack: ["React", "Electron", "Firebase"],
     livePreview: "",
     githubRepo: "",
@@ -58,7 +58,7 @@ const projects = [
     title: "alasportfolio",
     description:
       "Version 1 of my Personal Portfolio built using React, Vite & deployed using Vercel",
-    favicon: "/logo.png",
+    favicon: "/images/logo.png",
     techStack: ["React", "Vite", "Vercel"],
     livePreview: "https://alas-dev.vercel.app",
     githubRepo: "https://github.com/Alas-3/alas.dev",
@@ -68,7 +68,7 @@ const projects = [
     title: "Himitsu",
     description:
       "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
-    favicon: "/personal_logo.png",
+    favicon: "/images/personal_logo.png",
     techStack: ["Next.js", "Supabase", "Axios", "Tailwind", "Vercel"],
     livePreview: "https://projecthimitsu.vercel.app",
     githubRepo: "https://github.com/Alas-3/asdfghjkl",
@@ -78,37 +78,37 @@ const projects = [
     title: "StormSignal",
     description:
       "A Location-based Weather Web App with real-time typhoon alerts and warnings from PAGASA",
-    favicon: "/stormlogo.png",
+    favicon: "/images/stormlogo.png",
     techStack: ["Next.js", "Axios", "Tailwind", "Vercel"],
     livePreview: "https://typhoon-tracker-ph.vercel.app",
     githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
     bgColor: "from-gray-800 to-gray-900",
   },
   {
-    title: "QuiRky",
-    description:
-      "A QR Code Generator Web App built using NextJS & Tailwind CSS",
-    favicon: "/qrlogo.png",
-    techStack: ["Next.js", "Tailwind", "Vercel"],
-    livePreview: "https://qr-generator-app-umber.vercel.app/",
-    githubRepo: "https://github.com/Alas-3/qr-generator-app",
-    bgColor: "from-gray-800 to-gray-900",
-  },
-  {
     title: "D.R.A Jewelry",
     description:
       "A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner",
-    favicon: "/dralogo.png",
+    favicon: "/images/dralogo.png",
     techStack: ["Next.js", "Tailwind", "Vercel"],
     livePreview: "https://dra-jewelry.vercel.app",
     githubRepo: "https://github.com/Alas-3/dra-jewelry",
     bgColor: "from-gray-800 to-gray-900",
   },
   {
+    title: "QuiRky",
+    description:
+      "A QR Code Generator Web App built using NextJS & Tailwind CSS",
+    favicon: "/images/qrlogo.png",
+    techStack: ["Next.js", "Tailwind", "Vercel"],
+    livePreview: "https://qr-generator-app-umber.vercel.app/",
+    githubRepo: "https://github.com/Alas-3/qr-generator-app",
+    bgColor: "from-gray-800 to-gray-900",
+  },
+  {
     title: "AniGuess",
     description:
       "A Web App for an Anime-related Guessing Game utilizing Open Trivia API",
-    favicon: "/guesslogo.png",
+    favicon: "/images/guesslogo.png",
     techStack: ["Next.js", "Tailwind", "Vercel"],
     livePreview: "https://anime-guess-9k9b-sepia.vercel.app/",
     githubRepo: "https://github.com/Alas-3/anime-guess",
@@ -118,7 +118,7 @@ const projects = [
     title: "UniFind",
     description:
       "A University Finder Web App for select countries utilizing HipoLabs API for data and rankings",
-    favicon: "/unilogo.png",
+    favicon: "/images/unilogo.png",
     techStack: ["Next.js", "Tailwind", "Vercel"],
     livePreview: "https://uni-finder-beige.vercel.app/",
     githubRepo: "https://github.com/Alas-3/uni-finder",
@@ -128,7 +128,7 @@ const projects = [
     title: "BAHA",
     description:
       "A Full Stack Flood Awarenees Website built using HTML, CSS, JavaScript and PHP",
-    favicon: "/bahalogo.png",
+    favicon: "/images/bahalogo.png",
     techStack: ["HTML", "CSS", "JavaScript"],
     livePreview: "https://baha-finals.vercel.app/",
     githubRepo: "https://github.com/Alas-3/BAHA-FINALS",
@@ -160,7 +160,7 @@ export default function ProjectsPage() {
           property="og:image"
           content="https://acelabador.vercel.app/logo.png"
         />
-        <meta property="og:url" content="https://yourdomain.com/projects" />
+        <meta property="og:url" content="https://acelabador.vercel.app/projects" />
         <link rel="canonical" href="https://acelabador.vercel.app/projects" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">

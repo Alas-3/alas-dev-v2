@@ -223,8 +223,8 @@ function AboutMeSection() {
       <div className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0">
         <div className="relative rounded-full w-48 h-48 overflow-hidden bg-white">
           <img
-            src="/personal_logo.png"
-            alt="Personal Logo"
+            src="/images/personal_logo.png"
+            alt="Ace Labador Personal Logo"
             className="absolute top-1/2 left-1/2 w-80 h-80 object-cover transform -translate-x-1/2 -translate-y-1/2" // Image positioning
           />
         </div>
