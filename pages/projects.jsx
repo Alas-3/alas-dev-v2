@@ -34,7 +34,7 @@ const techStack = [
       techStack: ['React', 'Electron', 'Firebase'],
       livePreview: 'https://project1.com',
       githubRepo: 'https://github.com/yourusername/project1',
-      bgColor: 'from-blue-600 to-indigo-600', // School colors
+      bgColor: 'from-gray-800 to-gray-900', // School colors
     },
     {
       title: 'alasportfolio',
@@ -43,7 +43,7 @@ const techStack = [
       techStack: ['React', 'Vite', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-purple-500 to-pink-500', // Creative and personal
+      bgColor: 'from-gray-800 to-gray-900', // Creative and personal
     },
     {
       title: 'Himitsu',
@@ -52,7 +52,7 @@ const techStack = [
       techStack: ['Next.js', 'Supabase', 'Axios', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-red-500 to-yellow-500', // Anime-inspired colors
+      bgColor: 'from-gray-800 to-gray-900', // Anime-inspired colors
     },
     {
       title: 'StormSignal',
@@ -61,7 +61,7 @@ const techStack = [
       techStack: ['Next.js', 'Axios', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-blue-400 to-gray-500', // Storm clouds
+      bgColor: 'from-gray-800 to-gray-900', // Storm clouds
     },
     {
       title: 'QuiRky',
@@ -70,7 +70,7 @@ const techStack = [
       techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-green-400 to-blue-500', // QR code colors
+      bgColor: 'from-gray-800 to-gray-900', // QR code colors
     },
     {
       title: 'D.R.A Jewelry',
@@ -79,7 +79,7 @@ const techStack = [
       techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-yellow-300 to-blue-400', // Sun and sky
+      bgColor: 'from-gray-800 to-gray-900', // Sun and sky
     },
     {
       title: 'AniGuess',
@@ -88,7 +88,7 @@ const techStack = [
       techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-pink-400 to-purple-600', // Anime-inspired colors
+      bgColor: 'from-gray-800 to-gray-900', // Anime-inspired colors
     },
     {
       title: 'UniFind',
@@ -97,7 +97,7 @@ const techStack = [
       techStack: ['Next.js', 'Tailwind', 'Vercel'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-green-600 to-blue-600', // Academic colors
+      bgColor: 'from-gray-800 to-gray-900', // Academic colors
     },
     {
       title: 'BAHA',
@@ -106,7 +106,7 @@ const techStack = [
       techStack: ['HTML', 'CSS', 'JavaScript'],
       livePreview: 'https://project2.com',
       githubRepo: 'https://github.com/yourusername/project2',
-      bgColor: 'from-blue-700 to-teal-500', // Water-inspired colors
+      bgColor: 'from-gray-800 to-gray-900', // Water-inspired colors
     },
   ];
 
@@ -126,11 +126,11 @@ export default function ProjectsPage() {
           animate="animate"
           variants={fadeInUp}
         >
-          <h1 id="projects-title1" className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 pt-20">
+          <h1 id="projects-title1" className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 pt-15">
             Things I've made trying to put my dent in the universe.
           </h1>
           <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-            I've worked on a diverse range of projects over the years, and I'm proud of the strides I've made in my development journey. My primary tech stack revolves around React, Next.js, and Tailwind CSS, which I utilize to develop intuitive and responsive front-end web apps. On the backend, I leverage BaaS platforms like Firebase, Supabase, and Appwrite to create seamless full-stack web applications that scale effectively. Many of these projects are open-source and available for others to explore. If you're interested in any of the projects I've worked on, please feel free to check them out and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.
+          I've developed a range of projects over the years, focusing on front-end web apps with React, Next.js, and Tailwind CSS. For the backend, I use BaaS platforms like Firebase, Supabase, and Appwrite to build scalable full-stack applications. Many of these projects are open-source, and I'm always open to feedback or collaboration. Feel free to check them out and share any suggestions you have!
           </p>
         </motion.div>
 

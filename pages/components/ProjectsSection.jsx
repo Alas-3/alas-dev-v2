@@ -29,7 +29,7 @@ export default function ProjectsSection() {
       techStack: ['React', 'Electron', 'Firebase'],
       liveUrl: 'https://project1.com',
       repoUrl: 'https://github.com/yourusername/project1',
-      bgColor: 'gray-800',
+      bgColor: 'from-gray-800 to-gray-900',
     },
     {
       title: 'D.R.A Jewelry',
@@ -37,7 +37,7 @@ export default function ProjectsSection() {
       techStack: ['Next.js', 'Tailwind CSS',],
       liveUrl: 'https://project2.com',
       repoUrl: 'https://github.com/yourusername/project2',
-      bgColor: 'gray-800',
+      bgColor: 'from-gray-800 to-gray-900',
     },
   ]
 

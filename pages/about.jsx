@@ -12,7 +12,7 @@ const certificates = [
         title: "IBM Front-End Developer Professional Certificate",
         issuer: "Coursera",
         date: "2024",
-        verificationverificationLink: "https://www.coursera.org/account/accomplishments/specialization/4SK3A56V1L08",
+        verificationLink: "https://www.coursera.org/account/accomplishments/specialization/4SK3A56V1L08",
         description: "Awarded for completing all 11 courses of the IBM Front-End Developer Specialization",
         image: "https://images.credly.com/size/680x680/images/e646f624-ca3d-4917-9e90-16a051497bdb/image.png" // Add the logo URL here
     },
@@ -200,7 +200,7 @@ export default function AboutPage() {
 function AboutMeSection() {
   return (
     <motion.section
-      className="flex flex-col md:flex-row items-center mb-16 mt-20"
+      className="flex flex-col md:flex-row items-center mb-16 mt-15"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -248,31 +248,34 @@ function CertificateShowcase() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-800 bg-opacity-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            className="bg-gray-800 bg-opacity-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-44 flex flex-col"
           >
-            <div className="relative h-48 bg-white">
-              <Image
-                src={cert.image}
-                alt={cert.title}
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-semibold text-lg mb-2 text-white">
-                {cert.title}
-              </h3>
-              <div className="flex justify-between items-center mb-4">
-                <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-sm">
-                  {cert.issuer}
-                </span>
-                <span className="text-sm text-gray-400">{cert.date}</span>
+            <div className="p-4 flex flex-col flex-grow">
+              <div className="flex items-start mb-4">
+                <div className="relative w-12 h-12 mr-4 flex-shrink-0">
+                  <Image
+                    src={cert.image}
+                    alt={cert.title}
+                    fill
+                    className="object-contain bg-white rounded-lg"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-lg text-white line-clamp-2">
+                    {cert.title}
+                  </h3>
+                  <div className="flex justify-between items-center mt-1">
+                    <span className="text-sm text-gray-400">{cert.issuer}</span>
+                    <span className="text-sm text-gray-400">{cert.date}</span>
+                  </div>
+                </div>
               </div>
+              <div className="flex-grow"></div>
               <a
                 href={cert.verificationLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300"
+                className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300 mt-auto"
               >
                 Verify Certificate
                 <ExternalLink className="w-4 h-4 ml-2" />
