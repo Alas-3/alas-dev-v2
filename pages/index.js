@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title> Christopher Ace Labador | Front-End Engineer</title>
+        <title>Christopher Ace Labador | Front-End Engineer</title>
         <meta
           name="description"
           content="Portfolio of Christopher Ace Labador, showcasing projects and expertise in React & Next.js."
