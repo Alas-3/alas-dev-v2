@@ -167,7 +167,7 @@ export default function ProjectsPage() {
         <link rel="canonical" href="https://acelabador.vercel.app/projects" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:pt-10">
           <motion.div
             className="projects-container mb-16"
             initial="initial"
@@ -227,7 +227,7 @@ export default function ProjectsPage() {
             id="projectsection"
             className="pt-10"
           >
-            <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-500 pt-10">
+            <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-500 pt-5">
               Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -29,6 +29,7 @@ export default function HeroSection() {
               alt="Ace Labador"
               fill
               className="rounded-full object-cover shadow-2xl"
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
             />
           </div>
         </motion.div>
@@ -45,7 +46,7 @@ export default function HeroSection() {
             </span>
           </h1>
           <p className="mt-6 text-xl text-muted-foreground text-center lg:text-left sm:text-2xl lg:text-3xl">
-            Crafting elegant, responsive, and user-centric web experiences. Specialized in React, Next.js, and cutting-edge front-end technologies.
+            Crafting elegant, responsive, and user-centric web applications. Specialized in React, Next.js, and cutting-edge front-end technologies.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.a

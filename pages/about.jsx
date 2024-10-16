@@ -183,6 +183,17 @@ const certificates = [
       "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-512.png", // Add the logo URL here
   },
   {
+    title: "Foundations of Project Management",
+    issuer: "Coursera",
+    date: "2024",
+    verificationLink:
+      "https://coursera.org/share/d11458a1b0c2afcd499dcb08810308e0",
+    description:
+      "Awarded for completing the Google Foundations of Foundations of Project Management Course",
+    image:
+      "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-512.png", // Add the logo URL here
+  },
+  {
     title: "Start the UX Design Process: Empathize, Define, and Ideate",
     issuer: "Coursera",
     date: "2024",
@@ -279,7 +290,7 @@ export default function AboutPage() {
 function AboutMeSection() {
   return (
     <motion.section
-      className="flex flex-col md:flex-row items-center mb-16 mt-15"
+      className="flex flex-col md:flex-row items-center mb-16 mt-15 lg:pt-10"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -395,6 +406,7 @@ function CertificateShowcase() {
                     alt={cert.title}
                     fill
                     className="object-contain bg-white rounded-lg"
+                    sizes="(max-width: 768px) 48px, (max-width: 1200px) 72px, 96px"
                   />
                 </div>
                 <div className="flex-grow">

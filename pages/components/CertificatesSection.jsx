@@ -70,7 +70,8 @@ export default function CertificateShowcase() {
                     src={cert.image}
                     alt={cert.title}
                     fill
-                    className="object-contain bg-white"
+                    className="object-contain bg-anti-flash-white"
+                    sizes="(max-width: 768px) 48px, (max-width: 1200px) 72px, 96px"
                   />
                 </div>
                 <div className="p-4">

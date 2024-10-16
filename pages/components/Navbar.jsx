@@ -14,7 +14,7 @@ const NavBar = ({ active }) => {
   return (
     <div className="flex justify-center items-center w-full px-4 sm:px-0">
       <nav className="fixed top-3 z-50 w-full max-w-[90%] sm:max-w-md">
-        <div className="bg-white rounded-full shadow-lg p-1">
+        <div className="bg-anti-flash-white rounded-full shadow-lg p-1">
           <ul className="flex justify-between items-center list-none">
             <NavLink href="/" active={active === "home"}>
               Home
