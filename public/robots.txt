@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://acelabador.vercel.app
+Host: https://acelabador.vercel.app/
 
 # Sitemaps
 Sitemap: https://acelabador.vercel.app/sitemap.xml
