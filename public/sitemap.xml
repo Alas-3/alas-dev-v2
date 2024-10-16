@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-    <url>
-        <loc>https://acelabador.vercel.app/</loc>
-        <lastmod>2024-10-15T11:47:44.526387Z</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://acelabador.vercel.app/about</loc>
-        <lastmod>2024-10-15T11:47:44.526387Z</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://acelabador.vercel.app/projects</loc>
-        <lastmod>2024-10-15T11:47:44.526387Z</lastmod>
-        <changefreq>hourly</changefreq>
-        <priority>0.8</priority>
-    </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://acelabador.vercel.app/</loc>
+  <lastmod>2024-10-16T01:23:57+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://acelabador.vercel.app/about</loc>
+  <lastmod>2024-10-16T01:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acelabador.vercel.app/projects</loc>
+  <lastmod>2024-10-16T01:23:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acelabador.vercel.app/ResumeV2.pdf</loc>
+  <lastmod>2024-10-16T01:23:58+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
