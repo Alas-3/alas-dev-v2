@@ -146,7 +146,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Head>
-        <title>Christopher Ace Labador | Projects</title>
+        <title>Projects | Christopher Ace Labador</title>
         <meta
           name="description"
           content="Explore the portfolio projects of Ace Labador, including full-stack web apps built with React, Next.js, Firebase, and Supabase."

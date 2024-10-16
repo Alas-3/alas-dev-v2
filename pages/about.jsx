@@ -248,7 +248,7 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>Christopher Ace Labador | About</title>
+        <title>About | Christopher Ace Labador</title>
         <meta
           name="description"
           content="Discover Ace Labador's professional journey as a Front-End Engineer with 3+ years of experience in web development, expertise in React and Next.js, and certifications showcasing continuous learning and growth."
