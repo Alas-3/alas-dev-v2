@@ -71,7 +71,6 @@ export default function CertificateShowcase() {
                     alt={cert.title}
                     fill
                     className="object-contain bg-anti-flash-white"
-                    sizes="(max-width: 768px) 48px, (max-width: 1200px) 72px, 96px"
                   />
                 </div>
                 <div className="p-4">
