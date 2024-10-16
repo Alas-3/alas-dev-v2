@@ -160,7 +160,10 @@ export default function ProjectsPage() {
           property="og:image"
           content="https://acelabador.vercel.app/logo.png"
         />
-        <meta property="og:url" content="https://acelabador.vercel.app/projects" />
+        <meta
+          property="og:url"
+          content="https://acelabador.vercel.app/projects"
+        />
         <link rel="canonical" href="https://acelabador.vercel.app/projects" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">
