@@ -218,6 +218,12 @@ function MyApp({ Component, pageProps }) {
         {/* Global SEO Settings */}
         <link
           rel="icon"
+          href="/images/favicon.ico"
+          sizes="64x64"
+          type="image/x-icon"
+        />
+        <link
+          rel="icon"
           href="/images/favicon-16x16.png"
           sizes="16x16"
           type="image/png"
@@ -232,12 +238,6 @@ function MyApp({ Component, pageProps }) {
           rel="icon"
           href="/images/favicon-48x48.ico"
           sizes="48x48"
-          type="image/x-icon"
-        />
-        <link
-          rel="icon"
-          href="/images/favicon.ico"
-          sizes="64x64"
           type="image/x-icon"
         />
         <link
