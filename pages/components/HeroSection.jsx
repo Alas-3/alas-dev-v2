@@ -40,9 +40,9 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h1 className="text-4xl font-extrabold tracking-tight text-center lg:text-left sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="block text-white">Ace Labador</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
-              Web Developer
+            <span className="block text-white text-4xl md:text-6xl 1024:text-4xl 1440:text-6xl 2560:text-7xl lg:text-6xl">Ace Labador</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 pb-2 text-3xl md:text-6xl 1024:text-4xl 1440:text-6xl 2560:text-7xl lg:text-4xl">
+              Front-End Engineer
             </span>
           </h1>
           <p className="mt-6 text-xl text-muted-foreground text-center lg:text-left sm:text-2xl lg:text-3xl">

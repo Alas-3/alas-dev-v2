@@ -8,6 +8,11 @@ module.exports = {
 	],
 	theme: {
 	  extend: {
+		screens: {
+		  '1080': '1080px',  // Custom breakpoint for 1080px screens
+		  '1440': '1440px',  // Custom breakpoint for 1440px screens
+		  '2560': '2560px',  // Custom breakpoint for 1440px screens
+		},
 		colors: {
 		  background: 'hsl(var(--background))',
 		  foreground: 'hsl(var(--foreground))',
@@ -49,7 +54,7 @@ module.exports = {
 			'4': 'hsl(var(--chart-4))',
 			'5': 'hsl(var(--chart-5))',
 		  },
-		  'anti-flash-white': '#F2F3F4', // Add your custom color here
+		  'anti-flash-white': '#F2F3F4', // Custom color
 		},
 		borderRadius: {
 		  lg: 'var(--radius)',
