@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
     alternateName: ["Alas dev", "Alas Web Development", "Alas Portfolio"],
     logo: [
       "https://acelabador.vercel.app/images/logo.png",
-      "https://acelabador.vercel.app/favicon.ico",
+      "https://acelabador.vercel.app/images/favicon.ico",
     ],
     image: "https://acelabador.vercel.app/images/logo.png",
     address: {
@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
     ],
     logo: [
       "https://acelabador.vercel.app/images/logo.png",
-      "https://acelabador.vercel.app/favicon.ico",
+      "https://acelabador.vercel.app/images/favicon.ico",
     ],
     description:
       "Alas.dev is a freelance web developer dedicated to providing high-quality web development solutions.",

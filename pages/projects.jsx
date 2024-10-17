@@ -257,17 +257,20 @@ export default function ProjectsPage() {
                     </p>
                     <div className="flex mb-4">
                       {project.techStack.map((tech) => {
-                        const TechIcon = techStack.find(
-                          (t) => t.name === tech
-                        )?.icon;
+                        const techItem = techStack.find((t) => t.name === tech);
+                        const TechIcon = techItem?.icon;
+                        const iconColor = techItem?.color;
+
                         return TechIcon ? (
                           <TechIcon
                             key={tech}
-                            className="text-2xl mr-2 text-white"
+                            className="text-2xl mr-2"
+                            style={{ color: iconColor }} // Apply the color here
                           />
                         ) : null;
                       })}
                     </div>
+
                     <div className="flex justify-between">
                       <a
                         href={project.livePreview}
