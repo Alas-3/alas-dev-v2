@@ -180,7 +180,7 @@ export default function ProjectsPage() {
             >
               Things I've made trying to put my dent in the universe.
             </h1>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+            <p className="text-lg text-gray-300 mb-8 leading-relaxed text-balance">
               I've developed a range of projects over the years, focusing on
               front-end web apps with React, Next.js, and Tailwind CSS. For the
               backend, I use BaaS platforms like Firebase, Supabase, and
@@ -252,7 +252,7 @@ export default function ProjectsPage() {
                         {project.title}
                       </h3>
                     </div>
-                    <p className="text-gray-100 mb-4 flex-grow overflow-hidden">
+                    <p className="text-gray-100 text-balance mb-4 flex-grow overflow-hidden">
                       {project.description}
                     </p>
                     <div className="flex mb-4">

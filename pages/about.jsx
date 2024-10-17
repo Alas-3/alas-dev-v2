@@ -6,7 +6,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import { FaBriefcase, FaCertificate } from "react-icons/fa";
+import olfuLogo from '../public/images/olfulogo.jpg';
+import { FaBriefcase, FaCertificate, FaGraduationCap } from "react-icons/fa";
 
 const certificates = [
   {
@@ -255,6 +256,18 @@ const experiences = [
   },
 ];
 
+const educationData = [
+  {
+    school: "Our Lady of Fatima University",
+    degree: "Bachelor of Science in Information Technology",
+    year: "2021 - 2025 (Expected)",
+    location: "Valenzuela, Philippines",
+    affiliations: [
+      "Junior Philippine Computer Society (JPCS)",
+    ]
+  }
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -279,6 +292,7 @@ export default function AboutPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">
         <div className="container mx-auto px-4">
           <AboutMeSection />
+          <EducationSection />
           <ExperienceSection />
           <CertificateShowcase />
         </div>
@@ -322,6 +336,64 @@ function AboutMeSection() {
           game. Let's join forces and turn your digital dreams into reality.
           After all, why settle for ordinary when you can have extraordinary?
         </p>
+      </div>
+    </motion.section>
+  );
+}
+
+
+function EducationSection() {
+  return (
+    <motion.section
+      id="education"
+      className="py-10"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+        <span className="bg-blue-500 w-2 h-8 mr-4 "></span>
+        <FaGraduationCap className="mr-2" style={{ color: "white" }} /> Education
+      </h2>
+      <div className="space-y-12">
+        {educationData.map((edu, index) => (
+          <motion.div
+            key={edu.school}
+            className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg flex items-start space-x-4"
+            initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: index * 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+          >
+            <Image
+              src={olfuLogo} // Using the local image
+              alt={`${edu.school} logo`}
+              width={64} // Set width of the logo
+              height={64} // Set height of the logo
+              className="rounded-full bg-white object-contain"
+            />
+            <div>
+              <h3 className="text-base md:text-xl font-semibold mb-2 text-white">
+                {edu.degree}
+              </h3>
+              <h4 className="text-sm md:text-lg text-gray-300">{edu.school}</h4>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">{edu.location}</p>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">{edu.year}</p>
+              {edu.affiliations && edu.affiliations.length > 0 && (
+                <div>
+                  <p className="text-sm font-semibold text-gray-300 mt-2">Affiliations:</p>
+                  <ul className="list-disc list-inside text-sm text-gray-400">
+                    {edu.affiliations.map((affiliation, index) => (
+                      <li key={index}>{affiliation}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.section>
   );

@@ -64,7 +64,7 @@ export default function ProjectsSection() {
           >
             <div className={`p-6 bg-gradient-to-br ${project.bgColor} h-[300px] flex flex-col`}>
               <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
-              <p className="text-gray-100 mb-4 flex-grow overflow-hidden">{project.description}</p>
+              <p className="text-gray-100 mb-4 flex-grow overflow-hidden text-pretty">{project.description}</p>
               <div className="flex mb-4">
                 {project.techStack.map((tech) => {
                   const TechIcon = techStack[tech];

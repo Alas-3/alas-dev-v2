@@ -48,12 +48,12 @@ export default function ExperienceSection() {
               className="w-16 h-16 object-contain rounded-full"
             />
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
+              <h3 className="text-lg text-balance font-semibold mb-2 text-white md:text-xl">
                 {exp.position}
               </h3>
-              <h4 className="text-lg text-gray-300">{exp.company}</h4>
-              <p className="text-sm text-gray-400 mb-2">{exp.location}</p> {/* Location here */}
-              <p className="text-sm text-gray-400">{exp.period}</p>
+              <h4 className="text-md md:text-lg text-gray-300">{exp.company}</h4>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">{exp.location}</p> {/* Location here */}
+              <p className="text-xs md:text-sm text-gray-400">{exp.period}</p>
             </div>
           </motion.div>
         ))}
