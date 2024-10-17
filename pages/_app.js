@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }) {
     alternateName: ["Alas dev", "Alas Web Development", "Alas Portfolio"],
     logo: [
       "https://acelabador.vercel.app/images/logo.png",
-      "https://acelabador.vercel.app/images/favicon.ico",
+      "https://acelabador.vercel.app/favicon.ico",
     ],
     image: "https://acelabador.vercel.app/images/logo.png",
     address: {
@@ -92,7 +92,7 @@ function MyApp({ Component, pageProps }) {
     ],
     logo: [
       "https://acelabador.vercel.app/images/logo.png",
-      "https://acelabador.vercel.app/images/favicon.ico",
+      "https://acelabador.vercel.app/favicon.ico",
     ],
     description:
       "Alas.dev is a freelance web developer dedicated to providing high-quality web development solutions.",
@@ -218,32 +218,32 @@ function MyApp({ Component, pageProps }) {
         {/* Global SEO Settings */}
         <link
           rel="icon"
-          href="/images/favicon.ico"
+          href="/favicon.ico"
           sizes="64x64"
           type="image/x-icon"
         />
         <link
           rel="icon"
-          href="/images/favicon-16x16.png"
+          href="/favicon-16x16.png"
           sizes="16x16"
           type="image/png"
         />
         <link
           rel="icon"
-          href="/images/favicon-32x32.png"
+          href="/favicon-32x32.png"
           sizes="32x32"
           type="image/png"
         />
         <link
           rel="icon"
-          href="/images/favicon-48x48.ico"
+          href="/favicon-48x48.ico"
           sizes="48x48"
           type="image/x-icon"
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/images/apple-touch-icon.png"
+          href="/apple-touch-icon.png"
         />
 
         <meta charset="utf-8" />
