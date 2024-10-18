@@ -1,6 +1,14 @@
 {
-  "name": "out",
-  "version": "0.1.0",
+  "name": "alasportfolio",
+  "version": "1.1.0",
+  "description": "Personal portfolio website built using Reactjs",
+  "author": {
+    "name": "Alas",
+    "email": "ac3labador@gmail.com",
+    "url": "https://github.com/Alas-3"
+  },
+  "license": "MIT",
+  "homepage": "https://acelabador.vercel.app",
   "private": true,
   "scripts": {
     "dev": "next dev",
