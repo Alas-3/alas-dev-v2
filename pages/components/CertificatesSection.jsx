@@ -9,6 +9,16 @@ import Link from "next/link";
 const certificates = [
   {
     id: 1,
+    title: "US-ASEAN STIC IPC",
+    issuer: "ASU / U.S. Department of State",
+    date: "2024",
+    image:
+      "/images/STIC_logo.jpg",
+    verificationLink:
+      "",
+  },
+  {
+    id: 2,
     title: "Meta Front-End Developer",
     issuer: "Meta",
     date: "2024",
@@ -18,7 +28,7 @@ const certificates = [
       "https://coursera.org/share/dfd7fc30f72444b5795e968b6de56810",
   },
   {
-    id: 2,
+    id: 3,
     title: "IBM Front-End Developer",
     issuer: "IBM",
     date: "2024",
@@ -28,7 +38,7 @@ const certificates = [
       "https://coursera.org/share/7a5e5733ca88bd52efc7d81f52dece53",
   },
   {
-    id: 3,
+    id: 4,
     title: "Google IT Support",
     issuer: "Google",
     date: "2023",
@@ -56,8 +66,8 @@ export default function CertificateShowcase() {
           </h2>
 
           {/* Grid to display certificates, adjusting for mobile and desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {certificates.slice(0, 3).map((cert, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            {certificates.slice(0, 4).map((cert, index) => (
               <motion.div
                 key={cert.id}
                 initial={{ opacity: 0, y: 50 }}

@@ -11,6 +11,17 @@ import { FaBriefcase, FaCertificate, FaGraduationCap } from "react-icons/fa";
 
 const certificates = [
   {
+    title: "US-ASEAN STIC Industry Professional Credentials Track Certificate",
+    issuer: "ASU / U.S. Department of State",
+    date: "2024",
+    verificationLink:
+      "https://www.coursera.org/account/accomplishments/specialization/4SK3A56V1L08",
+    description:
+      "Awarded for completing the US-ASEAN STIC Industry Professional Credentials Track",
+    image:
+      "/images/STIC_logo.jpg", // Add the logo URL here
+  },
+  {
     title: "IBM Front-End Developer Professional Certificate",
     issuer: "Coursera",
     date: "2024",
@@ -231,7 +242,7 @@ const certificates = [
     title: "PCAP: Programming Essentials in Python",
     issuer: "OpenEDG",
     date: "2023",
-    verificationLink: "",
+    verificationLink: "/images/pythoncert.pdf",
     description:
       "Awarded for completing the PCAP: Programming Essentials in Python Course, provided by Cisco Networking Academy in collaboration with OpenEDG Python Institute.",
     image:
@@ -493,14 +504,22 @@ function CertificateShowcase() {
               </div>
               <div className="flex-grow"></div>
               <a
-                href={cert.verificationLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300 mt-auto"
-              >
-                Verify Certificate
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </a>
+  href={cert.verificationLink ? cert.verificationLink : undefined}
+  target={cert.verificationLink ? "_blank" : undefined}
+  rel={cert.verificationLink ? "noopener noreferrer" : undefined}
+  className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300 mt-auto"
+  onClick={(e) => {
+    // If there's no verification link (i.e., image), show it in a new tab
+    if (!cert.verificationLink) {
+      e.preventDefault();
+      window.open(`/images/${cert.image}`, "_blank");
+    }
+  }}
+>
+  Verify Certificate
+  <ExternalLink className="w-4 h-4 ml-2" />
+</a>
+
             </div>
           </motion.div>
         ))}
