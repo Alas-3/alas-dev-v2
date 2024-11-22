@@ -7,6 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 
 function CertificateModal({ cert, onClose }) {
+    if (!cert) return null;
   useEffect(() => {
     document.body.style.overflow = 'hidden';
     return () => {
