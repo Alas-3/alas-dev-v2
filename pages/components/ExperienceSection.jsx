@@ -3,6 +3,13 @@ import { motion } from "framer-motion";
 export default function ExperienceSection() {
   const experiences = [
     {
+      company: "Syrincal Trading, OPC",
+      position: "Full-Stack Software Engineer",
+      period: "Nov 2024 - Present",
+      location: "Meycauayan City, Bulacan, PH", // Add location here
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
+    },
+    {
       company: "D.R.A Jewelry",
       position: "Web Developer",
       period: "Sep 2024 - Present",
@@ -48,10 +55,10 @@ export default function ExperienceSection() {
               className="w-16 h-16 object-contain rounded-full"
             />
             <div>
-              <h3 className="text-lg text-balance font-semibold mb-2 text-white md:text-xl">
+              <h3 className="text-md md:text-xl text-balance font-semibold mb-2 text-white">
                 {exp.position}
               </h3>
-              <h4 className="text-md md:text-lg text-gray-300">{exp.company}</h4>
+              <h4 className="text-sm md:text-lg text-gray-300">{exp.company}</h4>
               <p className="text-xs md:text-sm text-gray-400 mb-2">{exp.location}</p> {/* Location here */}
               <p className="text-xs md:text-sm text-gray-400">{exp.period}</p>
             </div>

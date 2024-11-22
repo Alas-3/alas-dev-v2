@@ -1,25 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useState }  from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Info } from "lucide-react";
 import Link from "next/link";
-import olfuLogo from '../public/images/olfulogo.jpg';
+import olfuLogo from "../public/images/olfulogo.jpg";
 import { FaBriefcase, FaCertificate, FaGraduationCap } from "react-icons/fa";
+import CertificateModal from './components/CertificateModal';
 
 const certificates = [
   {
     title: "US-ASEAN STIC Industry Professional Credentials Track Certificate",
-    issuer: "ASU / U.S. Department of State",
+    issuer: "Arizona State University & U.S. Department of State",
     date: "2024",
     verificationLink:
       "https://www.coursera.org/account/accomplishments/specialization/4SK3A56V1L08",
     description:
-      "Awarded for completing the US-ASEAN STIC Industry Professional Credentials Track",
-    image:
-      "/images/STIC_logo.jpg", // Add the logo URL here
+      "Awarded for completing the US-ASEAN Science, Tecnology, and Innovation Cooperation Program (STIC) Industry Professional Credentials Track",
+    image: "/images/STIC_logo.jpg", // Add the logo URL here
   },
   {
     title: "IBM Front-End Developer Professional Certificate",
@@ -252,6 +252,13 @@ const certificates = [
 
 const experiences = [
   {
+    company: "Syrincal Trading, OPC",
+    position: "Full-Stack Software Engineer",
+    period: "Nov 2024 - Present",
+    location: "Meycauayan City, Bulacan, PH", // Add location here
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
+  },
+  {
     company: "D.R.A Jewelry",
     position: "Web Developer",
     period: "Sep 2024 - Present",
@@ -273,10 +280,8 @@ const educationData = [
     degree: "Bachelor of Science in Information Technology",
     year: "2021 - 2025 (Expected)",
     location: "Valenzuela, Philippines",
-    affiliations: [
-      "Junior Philippine Computer Society (JPCS)",
-    ]
-  }
+    affiliations: ["Junior Philippine Computer Society (JPCS)"],
+  },
 ];
 
 export default function AboutPage() {
@@ -352,7 +357,6 @@ function AboutMeSection() {
   );
 }
 
-
 function EducationSection() {
   return (
     <motion.section
@@ -365,7 +369,8 @@ function EducationSection() {
     >
       <h2 className="text-3xl font-bold mb-12 flex items-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
         <span className="bg-blue-500 w-2 h-8 mr-4 "></span>
-        <FaGraduationCap className="mr-2" style={{ color: "white" }} /> Education
+        <FaGraduationCap className="mr-2" style={{ color: "white" }} />{" "}
+        Education
       </h2>
       <div className="space-y-12">
         {educationData.map((edu, index) => (
@@ -390,11 +395,17 @@ function EducationSection() {
                 {edu.degree}
               </h3>
               <h4 className="text-sm md:text-lg text-gray-300">{edu.school}</h4>
-              <p className="text-xs md:text-sm text-gray-400 mb-2">{edu.location}</p>
-              <p className="text-xs md:text-sm text-gray-400 mb-2">{edu.year}</p>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">
+                {edu.location}
+              </p>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">
+                {edu.year}
+              </p>
               {edu.affiliations && edu.affiliations.length > 0 && (
                 <div>
-                  <p className="text-sm font-semibold text-gray-300 mt-2">Affiliations:</p>
+                  <p className="text-sm font-semibold text-gray-300 mt-2">
+                    Affiliations:
+                  </p>
                   <ul className="list-disc list-inside text-sm text-gray-400">
                     {edu.affiliations.map((affiliation, index) => (
                       <li key={index}>{affiliation}</li>
@@ -442,13 +453,13 @@ function ExperienceSection() {
               className="w-16 h-16 object-contain rounded-full"
             />
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
+              <h3 className="text-md md:text-xl font-semibold mb-2 text-white">
                 {exp.position}
               </h3>
-              <h4 className="text-lg text-gray-300">{exp.company}</h4>
-              <p className="text-sm text-gray-400 mb-2">{exp.location}</p>{" "}
+              <h4 className="text-sm md:text-lg text-gray-300">{exp.company}</h4>
+              <p className="text-xs md:text-sm text-gray-400 mb-2">{exp.location}</p>{" "}
               {/* Location here */}
-              <p className="text-sm text-gray-400">{exp.period}</p>
+              <p className="text-xs md:text-sm text-gray-400">{exp.period}</p>
             </div>
           </motion.div>
         ))}
@@ -458,6 +469,8 @@ function ExperienceSection() {
 }
 
 function CertificateShowcase() {
+  const [selectedCert, setSelectedCert] = useState(null);
+
   return (
     <motion.section
       id="certificates"
@@ -472,58 +485,60 @@ function CertificateShowcase() {
         <FaCertificate className="mr-2" style={{ color: "white" }} />{" "}
         Certificates
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {certificates.map((cert, index) => (
           <motion.div
             key={cert.id}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-800 bg-opacity-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 h-44 flex flex-col"
+            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105"
           >
-            <div className="p-4 flex flex-col flex-grow">
-              <div className="flex items-start mb-4">
-                <div className="relative w-12 h-12 mr-4 flex-shrink-0">
+            <div className="p-6 flex flex-col h-full">
+              <div className="flex items-center mb-4">
+                <div className="relative w-16 h-16 mr-4 flex-shrink-0">
                   <Image
                     src={cert.image}
                     alt={cert.title}
                     fill
                     className="object-contain bg-white rounded-lg"
-                    sizes="(max-width: 768px) 48px, (max-width: 1200px) 72px, 96px"
+                    sizes="(max-width: 768px) 64px, 96px"
                   />
                 </div>
-                <div className="flex-grow">
-                  <h3 className="font-semibold text-lg text-white line-clamp-2">
-                    {cert.title}
-                  </h3>
-                  <div className="flex justify-between items-center mt-1">
-                    <span className="text-sm text-gray-400">{cert.issuer}</span>
-                    <span className="text-sm text-gray-400">{cert.date}</span>
-                  </div>
-                </div>
+                <h3 className="font-semibold text-md md:text-lg text-white line-clamp-4">
+                  {cert.title}
+                </h3>
               </div>
+              
               <div className="flex-grow"></div>
-              <a
-  href={cert.verificationLink ? cert.verificationLink : undefined}
-  target={cert.verificationLink ? "_blank" : undefined}
-  rel={cert.verificationLink ? "noopener noreferrer" : undefined}
-  className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300 mt-auto"
-  onClick={(e) => {
-    // If there's no verification link (i.e., image), show it in a new tab
-    if (!cert.verificationLink) {
-      e.preventDefault();
-      window.open(`/images/${cert.image}`, "_blank");
-    }
-  }}
->
-  Verify Certificate
-  <ExternalLink className="w-4 h-4 ml-2" />
-</a>
-
+              <div className="flex gap-3 mt-4">
+                <button
+                  onClick={() => setSelectedCert(cert)}
+                  className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-md hover:from-blue-600 hover:to-purple-700 transition-all duration-300 text-sm flex items-center justify-center"
+                >
+                  <Info className="w-4 h-4 mr-2" />
+                  Learn More
+                </button>
+                <a
+                  href={cert.verificationLink || `/images/${cert.image}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-md hover:from-purple-600 hover:to-pink-700 transition-all duration-300 text-sm"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Verify
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
+      {selectedCert && (
+        <CertificateModal
+          cert={selectedCert}
+          onClose={() => setSelectedCert(null)}
+        />
+      )}
     </motion.section>
   );
 }
