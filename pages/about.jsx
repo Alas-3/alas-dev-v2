@@ -16,7 +16,7 @@ const certificates = [
     issuer: "Arizona State University & U.S. Department of State",
     date: "2024",
     verificationLink:
-      "https://www.coursera.org/account/accomplishments/specialization/4SK3A56V1L08",
+      "images/US-ASEAN_STIC_Cert.pdf",
     description:
       "Awarded for completing the US-ASEAN Science, Tecnology, and Innovation Cooperation Program (STIC) Industry Professional Credentials Track",
     image: "/images/STIC_logo.jpg", // Add the logo URL here

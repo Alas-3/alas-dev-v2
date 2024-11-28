@@ -15,7 +15,7 @@ const certificates = [
     image:
       "/images/STIC_logo.jpg",
     verificationLink:
-      "",
+      "images/US-ASEAN_STIC_Cert.pdf",
   },
   {
     id: 2,
