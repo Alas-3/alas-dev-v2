@@ -58,65 +58,66 @@ export default function CertificateShowcase() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
+      className="py-20"
     >
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
-            My Certificates
-          </h2>
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-300 to-pink-300">
+          My Certificates
+        </h2>
 
-          {/* Grid to display certificates, adjusting for mobile and desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {certificates.slice(0, 4).map((cert, index) => (
-              <motion.div
-                key={cert.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800 bg-opacity-50 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={cert.image}
-                    alt={cert.title}
-                    fill
-                    className="object-contain bg-anti-flash-white"
-                  />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+          {certificates.slice(0, 4).map((cert, index) => (
+            <motion.div
+              key={cert.id}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex flex-col"
+            >
+              <div className="relative h-48 bg-white">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  fill
+                  className="object-contain p-4"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-semibold text-lg mb-2 text-white line-clamp-2 flex-grow">
+                  {cert.title}
+                </h3>
+                <div className="flex justify-between items-center mb-4">
+                  <span className="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs">
+                    {cert.issuer}
+                  </span>
+                  <span className="text-xs text-gray-400">{cert.date}</span>
                 </div>
-                <div className="p-4">
-                  <h3 className="font-semibold text-lg mb-2 text-white">
-                    {cert.title}
-                  </h3>
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="px-2 py-1 bg-gray-200 text-gray-700 rounded-full text-sm">
-                      {cert.issuer}
-                    </span>
-                    <span className="text-sm text-gray-600">{cert.date}</span>
-                  </div>
+                <div className="flex gap-3">
+                  
                   <a
                     href={cert.verificationLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center w-full px-4 py-2 bg-blue-800 text-white rounded-md hover:bg-blue-900 transition-colors duration-300"
+                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-md hover:from-purple-600 hover:to-pink-700 transition-all duration-300 text-xs"
                   >
-                    Verify Certificate
-                    <ExternalLink className="w-4 h-4 ml-2" />
+                    Verify
+                    <ExternalLink className="w-3 h-3 ml-1" />
                   </a>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-          {/* "Show All Certificates" button */}
-          <div className="mt-8 text-center">
-            <Link
-              href="/about#certificates"
-              className="inline-block px-4 py-2 bg-gray-600 text-white text-sm rounded-md hover:bg-gray-700 transition-colors duration-300 opacity-70 hover:opacity-100"
-            >
-              Show All Certificates
-            </Link>
-          </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
+
+        <div className="mt-16 text-center">
+        <Link
+          href="/about#certificates"
+          className="inline-block px-4 py-2 bg-gray-600 text-white text-sm rounded-md hover:bg-gray-700 transition-colors duration-300 opacity-70 hover:opacity-100"
+        >
+          Show All Certificates
+        </Link>
+        </div>
+      </div>
     </motion.section>
   );
 }

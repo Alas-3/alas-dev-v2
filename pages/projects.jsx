@@ -47,7 +47,7 @@ const projects = [
   {
     title: "E-Registrar",
     description:
-      "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS and Firebase",
+      "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS & Firebase",
     favicon: "/images/registrarlogo.png",
     techStack: ["React", "Electron", "Firebase"],
     livePreview: "",
@@ -72,6 +72,16 @@ const projects = [
     techStack: ["Next.js", "Supabase", "Axios", "Tailwind", "Vercel"],
     livePreview: "https://projecthimitsu.vercel.app",
     githubRepo: "https://github.com/Alas-3/asdfghjkl",
+    bgColor: "from-gray-800 to-gray-900",
+  },
+  {
+    title: "Syrincal System",
+    description:
+      "A Full-Stack Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
+    favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
+    techStack: ["Next.js", "Supabase", "Tailwind", "Vercel"],
+    livePreview: "https://typhoon-tracker-ph.vercel.app",
+    githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
     bgColor: "from-gray-800 to-gray-900",
   },
   {
@@ -127,7 +137,7 @@ const projects = [
   {
     title: "BAHA",
     description:
-      "A Full Stack Flood Awarenees Website built using HTML, CSS, JavaScript and PHP",
+      "A Full Stack Flood Awarenees Website built using HTML, CSS, JavaScript & PHP",
     favicon: "/images/bahalogo.png",
     techStack: ["HTML", "CSS", "JavaScript"],
     livePreview: "https://baha-finals.vercel.app/",
