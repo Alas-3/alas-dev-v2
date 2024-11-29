@@ -5,18 +5,18 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Christopher Ace Labador | Front-End Engineer</title>
+        <title>Christopher Ace Labador | Software Engineer</title>
         <meta
           name="description"
           content="Portfolio of Christopher Ace Labador, showcasing projects and expertise in React & Next.js."
         />
         <meta
           property="og:title"
-          content="Christopher Ace Labador | Front-End Engineer"
+          content="Christopher Ace Labador | Software Engineer"
         />
         <meta
           property="og:description"
-          content="Showcasing projects and skills of Ace Labador, a front-end engineer specializing in React & Next.js."
+          content="Showcasing projects and skills of Ace Labador, a software engineer specializing in React & Next.js."
         />
         <meta
           property="og:site_name"
@@ -35,7 +35,7 @@ export default function HomePage() {
         />
         <meta
           name="twitter:description"
-          content="Explore the portfolio of Ace Labador, a front-end engineer specializing in React & Next.js."
+          content="Explore the portfolio of Ace Labador, a software engineer specializing in React & Next.js."
         />
         <meta
           name="twitter:image"
