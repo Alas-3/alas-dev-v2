@@ -18,8 +18,8 @@ function MyApp({ Component, pageProps }) {
       ],
       jobTitle: [
         "Developer",
-        "Front-End Developer",
-        "Front-End Engineer",
+        "Software Developer",
+        "Software Engineer",
         "Web Developer",
         "React Developer",
         "Next.js Developer",
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
         addressCountry: "PH",
       },
       url: "https://acelabador.vercel.app",
-      description: "Front-End Engineer specializing in React & Next.js",
+      description: "Software Engineer specializing in React & Next.js",
       sameAs: [
         "https://www.linkedin.com/in/alasdev",
         "https://github.com/Alas-3",
@@ -95,7 +95,7 @@ function MyApp({ Component, pageProps }) {
       "https://acelabador.vercel.app/favicon.ico",
     ],
     description:
-      "Alas.dev is a freelance web developer dedicated to providing high-quality web development solutions.",
+      "Alas.dev is a freelance software engineer dedicated to providing high-quality web development solutions.",
     email: "alas.dev@outlook.com",
     address: {
       "@type": "PostalAddress",
@@ -121,7 +121,7 @@ function MyApp({ Component, pageProps }) {
       "acelabador.vercel.app",
     ],
     description:
-      "Ace Labador: A Front-End Engineer specializing in React and Next.js. Explore my portfolio showcasing web development skills, certificates, works and projects.",
+      "Ace Labador: A Software Engineer specializing in React and Next.js. Explore my portfolio showcasing web development skills, certificates, works and projects.",
     url: "https://acelabador.vercel.app/",
     potentialAction: {
       "@type": "SearchAction",
@@ -174,7 +174,7 @@ function MyApp({ Component, pageProps }) {
     url: "https://acelabador.vercel.app/",
     name: "Christopher Ace Labador | Portfolio",
     description:
-      "Ace Labador: A Front-End Engineer specializing in React and Next.js. Explore my portfolio showcasing web development skills, certificates, works and projects.",
+      "Ace Labador: A Software Engineer specializing in React and Next.js. Explore my portfolio showcasing web development skills, certificates, works and projects.",
     inLanguage: "en",
     mainEntityOfPage: "https://acelabador.vercel.app/",
     image: {
@@ -201,7 +201,7 @@ function MyApp({ Component, pageProps }) {
     url: "https://acelabador.vercel.app/",
     image: "https://acelabador.vercel.app/images/logo.png",
     description:
-      "Front-End Engineer specializing in React and Next.js based in Meycauayan, Bulacan PH.",
+      "Software Engineer specializing in React and Next.js based in Meycauayan, Bulacan PH.",
     sameAs: [
       "https://www.linkedin.com/in/alasdev",
       "https://github.com/Alas-3",
