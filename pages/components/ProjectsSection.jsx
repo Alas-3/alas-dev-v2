@@ -102,10 +102,10 @@ export default function ProjectsSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 h-full flex flex-col">
-                <h3 className="text-3xl font-bold text-white mb-4">
+                <h3 className="text-lg md:text-2xl font-bold text-white mb-4">
                   {project.title}
                 </h3>
-                <p className="text-gray-100 mb-6 flex-grow text-lg leading-relaxed">
+                <p className="text-gray-100 mb-6 flex-grow text-sm md:text-lg leading-relaxed">
                   {project.description}
                 </p>
                 <div className="flex mb-6 space-x-3">
