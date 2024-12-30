@@ -66,6 +66,16 @@ const certificates = [
       "https://images.credly.com/size/680x680/images/51dff787-71ae-4d9d-9ca7-ef9342914d75/GCC_badge_PGM_1000x1000.png", // Add the logo URL here
   },
   {
+    title: "Foundations of Prompt Engineering",
+    issuer: "AWS",
+    date: "2024",
+    verificationLink: "/images/AWS_Prompt_Engineering.pdf",
+    description:
+      "Awarded for completing the Foundations of Prompt Engineering Course, provided by AWS Skill Builder",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYFGJBwupGj1ozARUdsB4LxxZbzWgYY1y5_g&s", // Add the logo URL here
+  },
+  {
     title: "Front-End Development with React V2",
     issuer: "Coursera",
     date: "2024",

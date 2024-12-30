@@ -9,6 +9,7 @@ const nextConfig = {
       'cdn4.iconfinder.com',
       'm.media-amazon.com',
       'encrypted-tbn0.gstatic.com',
+      'cdn.freebiesupply.com',
     ], // Add external domains here
   },
 };
