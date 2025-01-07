@@ -263,7 +263,7 @@ const certificates = [
 const experiences = [
   {
     company: "Syrincal Trading, OPC",
-    position: "Full-Stack Engineer",
+    position: "Software Engineer",
     period: "Nov 2024 - Present",
     location: "Meycauayan City, Bulacan, PH", // Add location here
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
