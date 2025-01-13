@@ -5,13 +5,18 @@ import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupab
 
 export default function TechStackSection() {
   const techStack = [
-    { name: 'React', icon: FaReact },
-    { name: 'JavaScript', icon: FaJs },
     { name: 'HTML5', icon: FaHtml5 },
     { name: 'CSS3', icon: FaCss3 },
-    { name: 'Tailwind CSS', icon: SiTailwindcss },
+    { name: 'JavaScript', icon: FaJs },
+    { name: 'React', icon: FaReact },
     { name: 'Next.js', icon: SiNextdotjs },
     { name: 'TypeScript', icon: SiTypescript },
+    { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
+    { name: 'Axios', icon: SiAxios }, // Added Axios
+    { name: 'Auth0', icon: SiAuth0 },
+    { name: 'Vite', icon: SiVite }, // Added Vite
+    { name: 'Electron', icon: SiElectron }, // Added Electron
+    { name: 'Tailwind CSS', icon: SiTailwindcss },
     { name: 'Framer Motion', icon: SiFramer },
     { name: 'Git', icon: FaGit },
     { name: 'GitHub', icon: FaGithub },
@@ -19,11 +24,6 @@ export default function TechStackSection() {
     { name: 'Supabase', icon: SiSupabase },
     { name: 'Appwrite', icon: SiAppwrite },
     { name: 'Vercel', icon: SiVercel },
-    { name: 'Auth0', icon: SiAuth0 },
-    { name: 'Vite', icon: SiVite }, // Added Vite
-    { name: 'Electron', icon: SiElectron }, // Added Electron
-    { name: 'Axios', icon: SiAxios }, // Added Axios
-    { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
     { name: 'npm', icon: SiNpm }, // Added npm
     { name: 'Lighthouse', icon: SiLighthouse }, // Added Lighthouse
   ];
