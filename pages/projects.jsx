@@ -77,7 +77,7 @@ const projects = [
   {
     title: "Syrincal System",
     description:
-      "A Full-Stack Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
+      "A Full-Stack B2B Ordering platform, Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
     favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
     techStack: ["Next.js", "Supabase", "Tailwind", "Vercel"],
     livePreview: "https://typhoon-tracker-ph.vercel.app",

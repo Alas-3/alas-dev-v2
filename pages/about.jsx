@@ -76,6 +76,16 @@ const certificates = [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYFGJBwupGj1ozARUdsB4LxxZbzWgYY1y5_g&s", // Add the logo URL here
   },
   {
+    title: "Generative AI: Introduction and Applications",
+    issuer: "IBM",
+    date: "2024",
+    verificationLink: "https://coursera.org/share/bf3d54ea0cc82f7f2ccdf49f149318de",
+    description:
+      "Awarded for completing the Generative AI: Introduction and Applications",
+    image:
+      "https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg", // Add the logo URL here
+  },
+  {
     title: "Front-End Development with React V2",
     issuer: "Coursera",
     date: "2024",

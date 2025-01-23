@@ -10,6 +10,8 @@ const nextConfig = {
       'm.media-amazon.com',
       'encrypted-tbn0.gstatic.com',
       'cdn.freebiesupply.com',
+      's3.amazonaws.com',
+      'www.credly.com',
     ], // Add external domains here
   },
 };
