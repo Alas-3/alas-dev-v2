@@ -1,31 +1,34 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub, FaSwift } from 'react-icons/fa';
+import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio } from 'react-icons/si';
 
 export default function TechStackSection() {
   const techStack = [
     { name: 'HTML5', icon: FaHtml5 },
     { name: 'CSS3', icon: FaCss3 },
     { name: 'JavaScript', icon: FaJs },
+    { name: 'TypeScript', icon: SiTypescript },
     { name: 'React', icon: FaReact },
     { name: 'Next.js', icon: SiNextdotjs },
-    { name: 'TypeScript', icon: SiTypescript },
-    { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
-    { name: 'Axios', icon: SiAxios }, // Added Axios
-    { name: 'Auth0', icon: SiAuth0 },
-    { name: 'Vite', icon: SiVite }, // Added Vite
-    { name: 'Electron', icon: SiElectron }, // Added Electron
+    { name: 'Vite', icon: SiVite },
+    { name: 'Electron', icon: SiElectron },
     { name: 'Tailwind CSS', icon: SiTailwindcss },
     { name: 'Framer Motion', icon: SiFramer },
+    { name: 'Swift', icon: FaSwift }, // Added Swift
+    { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
+    { name: 'Axios', icon: SiAxios },
+    { name: 'Express', icon: SiExpress }, // Added Express
+    { name: 'Cheerio', icon: SiCheerio }, // Added Cheerio
+    { name: 'Auth0', icon: SiAuth0 },
     { name: 'Git', icon: FaGit },
     { name: 'GitHub', icon: FaGithub },
     { name: 'Firebase', icon: SiFirebase },
     { name: 'Supabase', icon: SiSupabase },
     { name: 'Appwrite', icon: SiAppwrite },
     { name: 'Vercel', icon: SiVercel },
-    { name: 'npm', icon: SiNpm }, // Added npm
-    { name: 'Lighthouse', icon: SiLighthouse }, // Added Lighthouse
+    { name: 'npm', icon: SiNpm },
+    { name: 'Lighthouse', icon: SiLighthouse },
   ];
 
   // Ensure the tech stack is not empty
@@ -56,26 +59,25 @@ function ScrollingRow({ techStack }) {
   }, []);
 
   return (
-    <div className=" col-span-2 md:col-span-3 lg:col-span-4">
-      <div className="flex">
+    <div className="col-span-2 md:col-span-3 lg:col-span-4">
+      <div className="flex ">
         <motion.div
           className="flex space-x-16"
-          initial={{ x: 0 }} // Start from the left side
+          initial={{ x: 0 }}
           animate={{
-            x: isInView ? ['0%', '-50%'] : '0%', // Animate to the left
+            x: isInView ? ['0%', '-100%'] : '0%', // Changed from -50% to -100%
           }}
           transition={{
-            duration: 40, // Adjust duration for smoother scrolling
+            duration: 60,
             ease: 'linear',
-            repeat: Infinity, // Repeat infinitely
+            repeat: Infinity,
           }}
         >
-          {/* Render the tech stack icons, duplicating the array for seamless scrolling */}
           {[...techStack, ...techStack].map((tech, index) => {
-            const Icon = tech.icon; // Assign the icon to a variable for rendering
+            const Icon = tech.icon;
 
             return (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col items-center min-w-max">
                 <Icon className="text-5xl mb-2 text-gray-400" />
                 <span className="text-gray-400 whitespace-nowrap text-sm">{tech.name}</span>
               </div>

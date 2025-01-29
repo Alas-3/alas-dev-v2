@@ -21,6 +21,8 @@ import {
   SiLighthouse,
   SiElectron,
 } from "react-icons/si";
+import { FaSwift } from "react-icons/fa"; // For Swift icon
+import { SiCheerio } from "react-icons/si"; // For Cheerio icon
 
 const techStack = [
   { name: "HTML", icon: SiHtml5, color: "#E34F26" }, // HTML5 color
@@ -31,15 +33,17 @@ const techStack = [
   { name: "Next.js", icon: SiNextdotjs, color: "#F2F3F4" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#38B2AC" },
   { name: "Electron", icon: SiElectron, color: "#F2F3F4" },
+  { name: "Swift", icon: FaSwift, color: "#F05138" }, // Swift color
   { name: "Node.js", icon: FaNodeJs, color: "#339933" },
   { name: "Axios", icon: SiAxios, color: "#5A29E3" }, // Axios color
+  { name: "Cheerio", icon: SiCheerio, color: "#E88C1F" }, // Cheerio color
+  { name: "Express", icon: SiExpress, color: "#FFFFFF" }, // Express color
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
   { name: "Appwrite", icon: SiAppwrite, color: "#F02E65" },
   { name: "GitHub", icon: SiGithub, color: "#F2F3F4" }, // GitHub color
-  { name: "npm", icon: SiNpm, color: "#CB3837" }, // npm color
-  { name: "Vercel", icon: SiVercel, color: "#F2F3F4" }, // Vercel color
   { name: "Git", icon: SiGit, color: "#F05032" }, // Git color
+  { name: "npm", icon: SiNpm, color: "#CB3837" }, // npm color
   { name: "Lighthouse", icon: SiLighthouse, color: "#F9BC24" }, // Lighthouse color
 ];
 
@@ -59,17 +63,17 @@ const projects = [
     description:
       "Version 1 of my Personal Portfolio built using React, Vite & deployed using Vercel",
     favicon: "/images/logo.png",
-    techStack: ["React", "Vite", "Vercel"],
+    techStack: ["React", "Vite"],
     livePreview: "https://alas-dev.vercel.app",
     githubRepo: "https://github.com/Alas-3/alas.dev",
     bgColor: "from-gray-800 to-gray-900",
   },
   {
-    title: "Himitsu",
+    title: "Kakureta",
     description:
-      "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
+      "An Anime Streaming Web App built using NextJS, Tailwind & a Custom APIs for 3rd Party Content Provider",
     favicon: "/images/personal_logo.png",
-    techStack: ["Next.js", "Supabase", "Axios", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Tailwind"],
     livePreview: "https://projecthimitsu.vercel.app",
     githubRepo: "https://github.com/Alas-3/asdfghjkl",
     bgColor: "from-gray-800 to-gray-900",
@@ -77,19 +81,9 @@ const projects = [
   {
     title: "Syrincal System",
     description:
-      "A Full-Stack B2B Ordering platform, Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
+    "A Full-Stack B2B Ordering platform, Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
     favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
-    techStack: ["Next.js", "Supabase", "Tailwind", "Vercel"],
-    livePreview: "https://typhoon-tracker-ph.vercel.app",
-    githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
-    bgColor: "from-gray-800 to-gray-900",
-  },
-  {
-    title: "StormSignal",
-    description:
-      "A Location-based Weather Web App with real-time typhoon alerts and warnings from PAGASA",
-    favicon: "/images/stormlogo.png",
-    techStack: ["Next.js", "Axios", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Supabase", "Tailwind"],
     livePreview: "https://typhoon-tracker-ph.vercel.app",
     githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
     bgColor: "from-gray-800 to-gray-900",
@@ -97,11 +91,31 @@ const projects = [
   {
     title: "D.R.A Jewelry",
     description:
-      "A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner",
+    "A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner",
     favicon: "/images/dralogo.png",
-    techStack: ["Next.js", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Tailwind"],
     livePreview: "https://dra-jewelry.vercel.app",
     githubRepo: "https://github.com/Alas-3/dra-jewelry",
+    bgColor: "from-gray-800 to-gray-900",
+  },
+  {
+    title: "Himitsu",
+    description:
+      "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
+    favicon: "/images/personal_logo.png",
+    techStack: ["Next.js", "Supabase", "Axios", "Tailwind"],
+    livePreview: "https://projecthimitsu.vercel.app",
+    githubRepo: "https://github.com/Alas-3/asdfghjkl",
+    bgColor: "from-gray-800 to-gray-900",
+  },
+  {
+    title: "StormSignal",
+    description:
+      "A Location-based Weather Web App with real-time typhoon alerts and warnings from PAGASA",
+    favicon: "/images/stormlogo.png",
+    techStack: ["Next.js", "Axios", "Tailwind"],
+    livePreview: "https://typhoon-tracker-ph.vercel.app",
+    githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
     bgColor: "from-gray-800 to-gray-900",
   },
   {
@@ -109,7 +123,7 @@ const projects = [
     description:
       "A QR Code Generator Web App built using NextJS & Tailwind CSS",
     favicon: "/images/qrlogo.png",
-    techStack: ["Next.js", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Tailwind"],
     livePreview: "https://qr-generator-app-umber.vercel.app/",
     githubRepo: "https://github.com/Alas-3/qr-generator-app",
     bgColor: "from-gray-800 to-gray-900",
@@ -119,7 +133,7 @@ const projects = [
     description:
       "A Web App for an Anime-related Guessing Game utilizing Open Trivia API",
     favicon: "/images/guesslogo.png",
-    techStack: ["Next.js", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Tailwind"],
     livePreview: "https://anime-guess-9k9b-sepia.vercel.app/",
     githubRepo: "https://github.com/Alas-3/anime-guess",
     bgColor: "from-gray-800 to-gray-900",
@@ -129,7 +143,7 @@ const projects = [
     description:
       "A University Finder Web App for select countries utilizing HipoLabs API for data and rankings",
     favicon: "/images/unilogo.png",
-    techStack: ["Next.js", "Tailwind", "Vercel"],
+    techStack: ["Next.js", "Tailwind"],
     livePreview: "https://uni-finder-beige.vercel.app/",
     githubRepo: "https://github.com/Alas-3/uni-finder",
     bgColor: "from-gray-800 to-gray-900",
@@ -208,7 +222,7 @@ export default function ProjectsPage() {
             variants={fadeInUp}
           >
             <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
-              Tech Stack
+              Tech Stack & Tools
             </h2>
             <div className="flex flex-wrap justify-center gap-12">
               {techStack.map((tech, index) => (
