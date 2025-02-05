@@ -66,6 +66,17 @@ const certificates = [
       "https://images.credly.com/size/680x680/images/51dff787-71ae-4d9d-9ca7-ef9342914d75/GCC_badge_PGM_1000x1000.png", // Add the logo URL here
   },
   {
+    title: "Github Foundations",
+    issuer: "Github",
+    date: "2025",
+    verificationLink:
+      "https://www.credly.com/badges/fde0d473-a43b-48f2-983f-ee4edf516740/public_url",
+    description:
+      "Awarded for completing all 6 courses of the Google Project Management Specialization",
+    image:
+      "https://images.credly.com/size/680x680/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png", // Add the logo URL here
+  },
+  {
     title: "Foundations of Prompt Engineering",
     issuer: "AWS",
     date: "2024",
@@ -118,6 +129,28 @@ const certificates = [
       "https://cdn1.iconfinder.com/data/icons/bootstrap-fill-vol-2/16/meta-512.png", // Add the logo URL here
   },
   {
+    title: "Cloud Native, DevOps, Agile, and NoSQL Essentials",
+    issuer: "Coursera",
+    date: "2024",
+    verificationLink:
+    "https://www.credly.com/badges/f84c989f-c90a-4e99-9b40-524db4291969/linked_in_profile",
+    description:
+    "Awarded for completing the IBM Get Started with Cloud Native, DevOps, Agile, and NoSQL Course",
+    image:
+    "https://images.credly.com/size/680x680/images/0180c9c4-1723-4e5d-b38e-c439cd445130/image.png", // Add the logo URL here
+  },
+  {
+    title: "Software Engineering Essentials",
+    issuer: "Coursera",
+    date: "2024",
+    verificationLink:
+    "https://www.credly.com/badges/fb141250-8fff-444e-90aa-82771c8ff56b/public_url",
+    description:
+    "Awarded for completing the IBM Introduction to Software Engineering",
+    image:
+    "https://images.credly.com/size/680x680/images/1b67aaf9-670d-4c92-8d51-7ac1190f0a42/image.png", // Add the logo URL here
+  },
+  {
     title: "Git and Github Essentials",
     issuer: "Coursera",
     date: "2024",
@@ -127,28 +160,6 @@ const certificates = [
       "Awarded for completing the IBM Git and Github Essentials Course",
     image:
       "https://images.credly.com/size/680x680/images/9a0255eb-a47d-4f3a-9611-243bfe3eb9e4/image.png", // Add the logo URL here
-  },
-  {
-    title: "Cloud Native, DevOps, Agile, and NoSQL Essentials",
-    issuer: "Coursera",
-    date: "2024",
-    verificationLink:
-      "https://www.credly.com/badges/f84c989f-c90a-4e99-9b40-524db4291969/linked_in_profile",
-    description:
-      "Awarded for completing the IBM Get Started with Cloud Native, DevOps, Agile, and NoSQL Course",
-    image:
-      "https://images.credly.com/size/680x680/images/0180c9c4-1723-4e5d-b38e-c439cd445130/image.png", // Add the logo URL here
-  },
-  {
-    title: "Software Engineering Essentials",
-    issuer: "Coursera",
-    date: "2024",
-    verificationLink:
-      "https://www.credly.com/badges/fb141250-8fff-444e-90aa-82771c8ff56b/public_url",
-    description:
-      "Awarded for completing the IBM Introduction to Software Engineering",
-    image:
-      "https://images.credly.com/size/680x680/images/1b67aaf9-670d-4c92-8d51-7ac1190f0a42/image.png", // Add the logo URL here
   },
   {
     title: "Introduction to Front-End Development",

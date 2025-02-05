@@ -41,11 +41,31 @@ const certificates = [
     id: 4,
     title: "Google IT Support",
     issuer: "Google",
-    date: "2023",
+    date: "2024",
     image:
       "https://images.credly.com/size/680x680/images/fb97a12f-c0f1-4f37-9b7d-4a830199fe84/GCC_badge_IT_Support_1000x1000.png",
     verificationLink:
       "https://coursera.org/share/a6291acbd12cc6599b3f3e6bf43d28f4",
+  },
+  {
+    id: 5,
+    title: "Google Project Management",
+    issuer: "Google",
+    date: "2024",
+    image:
+      "https://images.credly.com/size/680x680/images/51dff787-71ae-4d9d-9ca7-ef9342914d75/GCC_badge_PGM_1000x1000.png",
+    verificationLink:
+      "https://www.coursera.org/account/accomplishments/specialization/EZ8JDDLZNOZT",
+  },
+  {
+    id: 6,
+    title: "Github Foundations",
+    issuer: "Github",
+    date: "2025",
+    image:
+      "https://images.credly.com/size/680x680/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
+    verificationLink:
+      "https://www.credly.com/badges/fde0d473-a43b-48f2-983f-ee4edf516740/public_url",
   },
   // Add more certificates as needed
 ];
@@ -65,8 +85,8 @@ export default function CertificateShowcase() {
           My Certificates
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-          {certificates.slice(0, 4).map((cert, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {certificates.slice(0, 6).map((cert, index) => (
             <motion.div
               key={cert.id}
               initial={{ opacity: 0, y: 50 }}
