@@ -369,7 +369,7 @@ function EducationSection() {
         {educationData.map((edu, index) => (
           <motion.div
             key={edu.school}
-            className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg flex items-start space-x-4"
+            className="bg-gradient-to-br from-white/5 to-transparent rounded-lg p-6 shadow-lg flex items-start space-x-4"
             initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: index * 0.1 }}
@@ -433,7 +433,7 @@ function ExperienceSection() {
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.company}
-            className="bg-gray-800 bg-opacity-50 rounded-lg p-6 shadow-lg flex items-center space-x-4"
+            className="bg-gradient-to-br from-white/5 to-transparent rounded-lg p-6 shadow-lg flex items-center space-x-4"
             initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: index * 0.1 }}
@@ -485,7 +485,7 @@ function CertificateShowcase() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-br from-white/5 to-transparent rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:scale-105"
           >
             <div className="p-6 flex flex-col h-full">
               <div className="flex items-center mb-4">
