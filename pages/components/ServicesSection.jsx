@@ -1,38 +1,36 @@
 import { motion } from "framer-motion";
-import { Monitor, Smartphone, Palette, Code } from "lucide-react";
+import { Layout, Code, Layers, Server } from "lucide-react";
 
 const services = [
   {
-    icon: <Monitor />,
-    title: "UX & UI",
+    icon: <Layout />,
+    title: "System Architecture & Design",
     description:
-      "Designing interfaces that are intuitive, efficient, and enjoyable to use.",
+      "Crafting robust, scalable, and efficient system architectures tailored to meet business and technical requirements.",
   },
   {
-    icon: <Smartphone />,
-    title: "Web & Mobile App",
+    icon: <Layers />,
+    title: "UI/UX Design",
     description:
-      "Transforming ideas into exceptional web and mobile app experiences.",
-  },
-  {
-    icon: <Palette />,
-    title: "Design & Creative",
-    description:
-      "Crafting visually stunning designs that connect with your audience.",
+      "Designing user-centered interfaces and experiences that align with industry standards and enhance usability.",
   },
   {
     icon: <Code />,
-    title: "Development",
+    title: "Frontend Development",
     description:
-      "Bringing your vision to life with the latest technology and design trends.",
+      "Building intuitive, responsive, and visually stunning user interfaces using modern web technologies.",
+  },
+  {
+    icon: <Server />,
+    title: "Backend Development",
+    description:
+      "Designing and implementing scalable server-side systems to ensure seamless functionality and performance.",
   },
 ];
 
 export default function ServicesSection() {
   return (
     <section className="py-24 relative overflow-hidden">
-      {/* Subtle gradient background */}
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,7 +56,7 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              Collaborate with brands and agencies to create impactful results
+              Collaborate with brands and businesses to create impactful results
             </motion.p>
           </div>
 
@@ -72,36 +70,25 @@ export default function ServicesSection() {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                {/* Card Background with subtle gradient border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 to-blue-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-[1px] bg-black/80 rounded-2xl" />
+                {/* Card Background */}
+                <div className="absolute inset-[1px] bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl" />
 
                 {/* Card Content */}
                 <div className="relative p-6 md:p-8">
                   <div className="flex items-start gap-6">
                     <div className="relative">
                       {/* Icon container with gradient background */}
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-400/10 to-blue-500/10 flex items-center justify-center">
-                        <div className="w-6 h-6 text-white/80 group-hover:text-white transition-colors duration-300">
-                          {service.icon}
-                        </div>
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-400/70 to-blue-500/70 flex items-center justify-center">
+                        <div className="w-6 h-6 text-white/80">{service.icon}</div>
                       </div>
                     </div>
 
                     <div className="flex-1 space-y-2">
-                      <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-blue-500 transition-colors duration-300">
+                      <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                         {service.title}
                       </h3>
-                      <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        {service.description}
-                      </p>
+                      <p className="text-gray-400">{service.description}</p>
                     </div>
-                  </div>
-
-                  {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[1px] h-8 bg-gradient-to-b from-green-400/20 to-transparent transform translate-x-8" />
-                    <div className="absolute top-0 right-0 h-[1px] w-8 bg-gradient-to-r from-transparent to-blue-500/20 transform translate-y-8" />
                   </div>
                 </div>
               </motion.div>
