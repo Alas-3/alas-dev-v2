@@ -10,7 +10,7 @@ const certificates = [
   {
     id: 1,
     title: "US-ASEAN STIC IPC",
-    issuer: "ASU & U.S. State Dept.",
+    issuer: "ASU & U.S.",
     date: "2024",
     image: "/images/STIC_logo.jpg",
     verificationLink: "images/US-ASEAN_STIC_Cert.pdf",
