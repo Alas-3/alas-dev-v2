@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback } from 'react';
 import { GithubIcon, BookOpen, Users, FolderGit2 } from 'lucide-react';
 import { SiGoogle, SiIbm, SiMeta } from 'react-icons/si';
 
@@ -12,6 +12,71 @@ const Badge = memo(({ children, className }) => (
 const Card = memo(({ children, className }) => (
   <div className={`rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg shadow-xl ${className}`}>
     {children}
+  </div>
+));
+
+const CertificationsGrid = memo(({ certifications, certIcons }) => (
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {certifications.map((cert) => {
+      const IconComponent = certIcons[cert.provider];
+      return (
+        <Card key={cert.provider} className="p-6 flex items-center gap-4">
+          <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
+            <IconComponent className="w-8 h-8 text-white/80" />
+          </div>
+          <div className="min-w-0">
+            <div className="text-3xl font-bold text-white truncate">x{cert.count}</div>
+            <div className="text-sm text-white/60 truncate">{cert.provider} Certified</div>
+          </div>
+        </Card>
+      );
+    })}
+  </div>
+));
+
+const GitHubStats = memo(() => (
+  <div className="grid grid-cols-1 gap-4">
+    <Card className="p-6 flex items-center gap-4">
+      <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
+        <GithubIcon className="w-6 h-6 text-white/80" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-3xl font-bold text-white truncate">500+</div>
+        <div className="text-sm text-white/60 truncate">Commits</div>
+      </div>
+    </Card>
+    <Card className="p-6 flex items-center gap-4">
+      <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
+        <FolderGit2 className="w-6 h-6 text-white/80" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-3xl font-bold text-white truncate">40+</div>
+        <div className="text-sm text-white/60 truncate">Repositories</div>
+      </div>
+    </Card>
+  </div>
+));
+
+const ClientsAndProjects = memo(({ clientCount }) => (
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <Card className="p-6 flex items-center gap-4 h-full">
+      <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
+        <Users className="w-6 h-6 text-white/80" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-2xl sm:text-3xl font-bold text-white truncate">{clientCount}</div>
+        <div className="text-sm text-white/60 truncate">Clients</div>
+      </div>
+    </Card>
+    <Card className="p-6 flex items-center gap-4 h-full">
+      <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
+        <BookOpen className="w-6 h-6 text-white/80" />
+      </div>
+      <div className="min-w-0">
+        <div className="text-2xl sm:text-3xl font-bold text-white truncate">11</div>
+        <div className="text-sm text-white/60 truncate">Total Projects</div>
+      </div>
+    </Card>
   </div>
 ));
 
@@ -45,67 +110,14 @@ export default function PortfolioOverview() {
             </Card>
             
             {/* GitHub Stats */}
-            <div className="grid grid-cols-1 gap-4">
-              <Card className="p-6 flex items-center gap-4">
-                <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-                  <GithubIcon className="w-6 h-6 text-white/80" />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-3xl font-bold text-white truncate">500+</div>
-                  <div className="text-sm text-white/60 truncate">Commits</div>
-                </div>
-              </Card>
-              <Card className="p-6 flex items-center gap-4">
-                <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-                  <FolderGit2 className="w-6 h-6 text-white/80" />
-                </div>
-                <div className="min-w-0">
-                  <div className="text-3xl font-bold text-white truncate">40+</div>
-                  <div className="text-sm text-white/60 truncate">Repositories</div>
-                </div>
-              </Card>
-            </div>
+            <GitHubStats />
           </div>
           
           {/* Certifications Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {certifications.map((cert) => {
-              const IconComponent = certIcons[cert.provider];
-              return (
-                <Card key={cert.provider} className="p-6 flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-                    <IconComponent className="w-8 h-8 text-white/80" />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-3xl font-bold text-white truncate">x{cert.count}</div>
-                    <div className="text-sm text-white/60 truncate">{cert.provider} Certified</div>
-                  </div>
-                </Card>
-              );
-            })}
-          </div>
+          <CertificationsGrid certifications={certifications} certIcons={certIcons} />
           
           {/* Clients and Projects */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <Card className="p-6 flex items-center gap-4 h-full">
-              <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-                <Users className="w-6 h-6 text-white/80" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-2xl sm:text-3xl font-bold text-white truncate">{clientCount}</div>
-                <div className="text-sm text-white/60 truncate">Clients</div>
-              </div>
-            </Card>
-            <Card className="p-6 flex items-center gap-4 h-full">
-              <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-                <BookOpen className="w-6 h-6 text-white/80" />
-              </div>
-              <div className="min-w-0">
-                <div className="text-2xl sm:text-3xl font-bold text-white truncate">11</div>
-                <div className="text-sm text-white/60 truncate">Total Projects</div>
-              </div>
-            </Card>
-          </div>
+          <ClientsAndProjects clientCount={clientCount} />
         </div>
       </div>
     </main>

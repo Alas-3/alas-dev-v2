@@ -350,46 +350,6 @@ export default function AboutPage() {
   );
 }
 
-function AboutMeSection() {
-  return (
-    <motion.section
-      className="flex flex-col md:flex-row items-center mb-16 mt-15 lg:pt-10"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Image container for mobile on top */}
-      <div className="w-full md:w-1/3 flex justify-center mb-8 md:mb-0">
-        <div className="relative rounded-full w-48 h-48 overflow-hidden bg-white">
-          <img
-            src="/images/personal_logo.png"
-            alt="Ace Labador Personal Logo"
-            className="absolute top-1/2 left-1/2 w-80 h-80 object-cover transform -translate-x-1/2 -translate-y-1/2" // Image positioning
-          />
-        </div>
-      </div>
-
-      {/* Text section for desktop on left */}
-      <div className="md:w-2/3 md:pr-8 flex flex-col justify-center items-start">
-        <h1 className="text-3xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-          About Me
-        </h1>
-        <p className="text-lg text-gray-300 text-pretty">
-          Greetings! I'm Ace Labador, from the ever-sunny or always-raining
-          Philippines. Picture a fusion of design savvy and coding wizardry –
-          that's me, crafting the digital future one pixel at a time. Ever the
-          innovator, I blend creativity and code like a master chef mixes
-          ingredients, concocting web experiences that leave users craving more.
-          With a design sense sharper than a samurai sword and coding skills
-          smoother than jazz on a summer night, I'm here to elevate your digital
-          game. Let's join forces and turn your digital dreams into reality.
-          After all, why settle for ordinary when you can have extraordinary?
-        </p>
-      </div>
-    </motion.section>
-  );
-}
-
 function EducationSection() {
   return (
     <motion.section
