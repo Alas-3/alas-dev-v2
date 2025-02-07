@@ -23,7 +23,7 @@ const experiences = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
     description: "Led the development of business website",
     current: false,
-    skills: ["React", "Tailwind CSS"],
+    skills: ["React",  "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
   },
   {
@@ -32,9 +32,9 @@ const experiences = [
     period: "Jun 2023 - Jun 2024",
     location: "Salt Lake City, UT, USA",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
-    description: "Managed social media campaigns and content strategy",
+    description: "Managed social media campaigns, content strategy & client aquisition",
     current: false,
-    skills: ["Social Media", "Content Strategy", "Analytics"],
+    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach" ,"Analytics"],
     website: "https://wewhiten.com/",
   },
 ]
@@ -71,25 +71,25 @@ const ExperienceCard = ({ exp, index, inView }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
     >
-      {/* Timeline Node */}
-      <div className="absolute left-0 md:left-1/2 top-0 h-full w-6 md:w-12 -translate-x-1/2 z-20 flex justify-center">
+      {/* Timeline Node - Visible on desktop only */}
+      <div className="hidden md:flex absolute left-1/2 top-0 h-full w-14 -translate-x-1/2 z-20 justify-center">
         <motion.div
-          className="relative w-10 h-10 md:w-12 md:h-12 rounded-full bg-black flex items-center justify-center shadow-lg"
+          className="relative w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-lg"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.1, rotate: 10 }}
-          transition={{ 
-            type: "spring", 
-            stiffness: 260, 
+          transition={{
+            type: "spring",
+            stiffness: 260,
             damping: 15,
-            delay: index * 0.15
+            delay: index * 0.15,
           }}
         >
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-400 to-blue-500 animate-pulse" />
           <div className="absolute inset-[2px] rounded-full bg-black" />
-          <div className="relative w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden">
             <img
-              src={exp.logo}
+              src={exp.logo || "/placeholder.svg"}
               alt={`${exp.company} logo`}
               className="w-full h-full object-cover"
             />
@@ -99,11 +99,8 @@ const ExperienceCard = ({ exp, index, inView }) => {
 
       {/* Content Card */}
       <motion.div
-        className={`w-full ml-12 md:ml-0 p-5 md:p-6 rounded-xl border bg-black/40 backdrop-blur-sm ${
-          index % 2 === 0 
-            ? "md:mr-[calc(50%+3rem)] md:text-right" 
-            : "md:ml-[calc(50%+3rem)]"
-        }`}
+        className={`w-full ml-12 md:ml-0 p-6 rounded-xl border bg-black/40 backdrop-blur-sm relative
+          ${index % 2 === 0 ? "md:mr-[calc(50%+3rem)]" : "md:ml-[calc(50%+3rem)]"}`}
         style={{
           borderImage: "linear-gradient(45deg, #68D391, #4299E1) 1",
         }}
@@ -111,14 +108,34 @@ const ExperienceCard = ({ exp, index, inView }) => {
           scale: 1.02,
           backgroundColor: "rgba(0, 0, 0, 0.6)",
         }}
-        transition={{ 
-          type: "spring", 
-          stiffness: 300, 
+        transition={{
+          type: "spring",
+          stiffness: 300,
           damping: 15,
-          delay: 0.1
+          delay: 0.1,
         }}
       >
-        <div className="space-y-4">
+        {/* Company Logo - Sticker style for mobile */}
+        <motion.div
+          className="md:hidden absolute -top-5 -left-5 w-16 h-16 rounded-full overflow-hidden border-4 border-black bg-black"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1, rotate: 10 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 15,
+            delay: index * 0.15,
+          }}
+        >
+          <img
+            src={exp.logo || "/placeholder.svg"}
+            alt={`${exp.company} logo`}
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
+        <div className="space-y-4 mt-6 md:mt-0">
           {/* Header Section */}
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
             <div>
@@ -158,9 +175,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-gray-300 text-left leading-relaxed">
-            {exp.description}
-          </p>
+          <p className="text-sm sm:text-base text-gray-300 text-left leading-relaxed">{exp.description}</p>
 
           {/* Skills */}
           <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
@@ -194,7 +209,7 @@ export default function ExperienceSection() {
   return (
     <section ref={containerRef} className="py-24 relative overflow-hidden">
       <motion.div
-        className="container mx-auto px-4 relative z-10"
+        className="container mx-auto px-4 md:px-6 relative z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -216,25 +231,25 @@ export default function ExperienceSection() {
           </motion.div>
 
           <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-800/50" />
+            {/* Timeline Line - Adjust for both mobile and desktop */}
+            <div className="absolute left-3 md:left-1/2 top-0 bottom-0 w-0.5 bg-gray-800/50" />
             <motion.div
-              className="absolute left-6 md:left-1/2 top-0 w-0.5 bg-gradient-to-b from-green-400 to-blue-500"
-              style={{ 
-                height: gradientHeight, 
+              className="absolute left-3 md:left-1/2 top-0 w-0.5 bg-gradient-to-b from-green-400 to-blue-500"
+              style={{
+                height: gradientHeight,
                 originY: 0,
-                transform: 'translateX(-50%)'
               }}
             />
 
-            <div className="space-y-20 md:space-y-32 pl-6 md:pl-0">
+            {/* Mobile view circles at both ends of the timeline */}
+            <div className="md:hidden">
+              <div className="absolute left-3 top-0 -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full" />
+              <div className="absolute left-3 bottom-0 -translate-x-1/2 w-4 h-4 bg-gradient-to-r from-green-400 to-blue-500 rounded-full" />
+            </div>
+
+            <div className="space-y-16 md:space-y-32 pt-6 md:pt-0">
               {experiences.map((exp, index) => (
-                <ExperienceCard 
-                  key={exp.company} 
-                  exp={exp} 
-                  index={index} 
-                  inView={isInView} 
-                />
+                <ExperienceCard key={exp.company} exp={exp} index={index} inView={isInView} />
               ))}
             </div>
           </div>
