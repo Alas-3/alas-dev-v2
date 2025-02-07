@@ -9,6 +9,8 @@ import Link from "next/link";
 import olfuLogo from "../public/images/olfulogo.jpg";
 import { FaBriefcase, FaCertificate, FaGraduationCap } from "react-icons/fa";
 import CertificateModal from './components/CertificateModal';
+import PortfolioOverview from './components/PortfolioOverview';
+
 
 const certificates = [
   {
@@ -338,7 +340,7 @@ export default function AboutPage() {
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 py-20">
         <div className="container mx-auto px-4">
-          <AboutMeSection />
+        <PortfolioOverview />
           <EducationSection />
           <ExperienceSection />
           <CertificateShowcase />
