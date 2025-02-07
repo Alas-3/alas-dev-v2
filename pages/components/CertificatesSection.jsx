@@ -9,8 +9,8 @@ import Link from "next/link";
 const certificates = [
   {
     id: 1,
-    title: "US-ASEAN STIC IPC",
-    issuer: "ASU & U.S.",
+    title: "Industry Professional Credentials Track",
+    issuer: "US-ASEAN",
     date: "2024",
     image: "/images/STIC_logo.jpg",
     verificationLink: "images/US-ASEAN_STIC_Cert.pdf",
