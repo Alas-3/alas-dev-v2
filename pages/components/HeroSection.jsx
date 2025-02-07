@@ -45,7 +45,7 @@ export default function HeroSection() {
               Software Engineer
             </span>
           </h1>
-          <p className="mt-6 text-xl text-muted-foreground text-pretty text-center lg:text-left sm:text-2xl lg:text-3xl">
+          <p className="mt-6 text-xl text-muted-foreground text-pretty text-justify lg:text-left sm:text-2xl lg:text-3xl">
             Crafting elegant, responsive, and user-centric web applications. Specialized in React, Next.js, and modern web technologies.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
