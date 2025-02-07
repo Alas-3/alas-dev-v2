@@ -12,10 +12,8 @@ const certificates = [
     title: "US-ASEAN STIC IPC",
     issuer: "ASU & U.S. State Dept.",
     date: "2024",
-    image:
-      "/images/STIC_logo.jpg",
-    verificationLink:
-      "images/US-ASEAN_STIC_Cert.pdf",
+    image: "/images/STIC_logo.jpg",
+    verificationLink: "images/US-ASEAN_STIC_Cert.pdf",
   },
   {
     id: 2,
@@ -135,26 +133,25 @@ export default function CertificateShowcase() {
                   </h3>
 
                   <div className="mt-auto flex justify-between items-center">
-  <div className="flex items-center gap-2">
-    <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs leading-none">
-      {cert.issuer}
-    </span>
-    <span className="text-xs text-gray-400 leading-none">
-      {cert.date}
-    </span>
-  </div>
+                    <div className="flex items-center gap-2">
+                      <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs leading-none">
+                        {cert.issuer}
+                      </span>
+                      <span className="text-xs text-gray-400 leading-none">
+                        {cert.date}
+                      </span>
+                    </div>
 
-  <a
-    href={cert.verificationLink}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-md hover:from-purple-600 hover:to-pink-700 transition-all duration-300 text-sm"
-  >
-    Verify
-    <ExternalLink className="w-4 h-4 ml-2" />
-  </a>
-</div>
-
+                    <a
+                      href={cert.verificationLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-md hover:from-purple-600 hover:to-pink-700 transition-all duration-300 text-sm"
+                    >
+                      Verify
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </div>
 
                   {/* Decorative corner accent */}
                   <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
