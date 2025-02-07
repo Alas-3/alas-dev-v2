@@ -19,8 +19,8 @@ import {
   SiVite,
   SiVercel,
   SiFirebase,
-} from "react-icons/si"; // Import SiFirebase
-import { SiElectron } from "react-icons/si"; // Import Electron icon
+} from "react-icons/si";
+import { SiElectron } from "react-icons/si";
 import Link from "next/link";
 
 const techStack = {
@@ -33,8 +33,8 @@ const techStack = {
   Vite: SiVite,
   Vercel: SiVercel,
   "Node.js": FaNodeJs,
-  Electron: SiElectron, // Add Electron here
-  Firebase: SiFirebase, // Add Firebase here
+  Electron: SiElectron,
+  Firebase: SiFirebase,
   Supabase: SiSupabase,
   Axios: SiAxios,
 };
@@ -48,7 +48,7 @@ export default function ProjectsSection() {
       techStack: ["React", "Electron", "Firebase"],
       liveUrl: "",
       repoUrl: "",
-      bgColor: "from-gray-800 to-gray-900",
+      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
     {
       title: "Himitsu",
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
       techStack: ["Next.js", "Tailwind CSS", "Supabase", "Axios"],
       liveUrl: "https://projecthimitsu.vercel.app",
       repoUrl: "https://github.com/Alas-3/asdfghjkl",
-      bgColor: "from-gray-800 to-gray-900",
+      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
     {
       title: "Syrincal System",
@@ -66,16 +66,16 @@ export default function ProjectsSection() {
       techStack: ["Next.js", "Tailwind CSS", "Supabase"],
       liveUrl: "",
       repoUrl: "https://github.com/Alas-3/syrincal-system",
-      bgColor: "from-gray-800 to-gray-900",
+      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
     {
       title: "DRA Jewelry",
       description:
-        "A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner",
+        "A Website built for an established Jewelry Business that allows clients to request personalized consultations with the owner",
       techStack: ["Next.js", "Tailwind CSS", "Vercel"],
       liveUrl: "",
       repoUrl: "https://github.com/Alas-3/syrincal-system",
-      bgColor: "from-gray-800 to-gray-900",
+      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
   ];
 
@@ -101,7 +101,7 @@ export default function ProjectsSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="p-8 bg-gradient-to-br from-gray-800 to-gray-900 h-full flex flex-col">
+              <div className={`p-8 ${project.bgColor} h-full flex flex-col`}>
                 <h3 className="text-lg md:text-2xl font-bold text-white mb-4">
                   {project.title}
                 </h3>

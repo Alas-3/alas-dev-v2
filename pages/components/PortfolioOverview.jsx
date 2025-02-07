@@ -22,7 +22,7 @@ const CertificationsGrid = memo(({ certifications, certIcons }) => (
       return (
         <Card key={cert.provider} className="p-6 flex items-center gap-4">
           <div className="p-3 rounded-lg bg-white/5 flex-shrink-0">
-            <IconComponent className="w-8 h-8 text-white/80" />
+            <IconComponent className="w-6 h-6 text-white/80" />
           </div>
           <div className="min-w-0">
             <div className="text-3xl font-bold text-white truncate">x{cert.count}</div>

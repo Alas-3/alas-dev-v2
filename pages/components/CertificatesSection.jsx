@@ -111,7 +111,7 @@ export default function CertificateShowcase() {
                 className="group relative"
               >
                 {/* Card Background with gradient border */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 to-pink-500/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="absolute inset-[1px] bg-gray-900/90 rounded-2xl" />
 
                 {/* Card Content */}
@@ -151,12 +151,6 @@ export default function CertificateShowcase() {
                       Verify
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
-                  </div>
-
-                  {/* Decorative corner accent */}
-                  <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-                    <div className="absolute top-0 right-0 w-[1px] h-8 bg-gradient-to-b from-purple-400/20 to-transparent transform translate-x-8" />
-                    <div className="absolute top-0 right-0 h-[1px] w-8 bg-gradient-to-r from-transparent to-pink-500/20 transform translate-y-8" />
                   </div>
                 </div>
               </motion.div>

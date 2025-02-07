@@ -99,7 +99,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
 
       {/* Content Card */}
       <motion.div
-        className={`w-full ml-12 md:ml-0 p-6 rounded-xl border bg-black/40 backdrop-blur-sm relative
+        className={`w-full ml-12 md:ml-0 p-6 rounded-xl border bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm relative
           ${index % 2 === 0 ? "md:mr-[calc(50%+3rem)]" : "md:ml-[calc(50%+3rem)]"}`}
         style={{
           borderImage: "linear-gradient(45deg, #68D391, #4299E1) 1",
