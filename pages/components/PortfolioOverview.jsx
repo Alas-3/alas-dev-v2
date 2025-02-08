@@ -73,7 +73,7 @@ const ClientsAndProjects = memo(({ clientCount }) => (
         <BookOpen className="w-6 h-6 text-white/80" />
       </div>
       <div className="min-w-0">
-        <div className="text-2xl sm:text-3xl font-bold text-white truncate">11</div>
+        <div className="text-2xl sm:text-3xl font-bold text-white truncate">20+</div>
         <div className="text-sm text-white/60 truncate">Total Projects</div>
       </div>
     </Card>
@@ -83,8 +83,8 @@ const ClientsAndProjects = memo(({ clientCount }) => (
 export default function PortfolioOverview() {
   const certifications = [
     { provider: "Google", count: 5 },
-    { provider: "Meta", count: 6 },
-    { provider: "IBM", count: 7 },
+    { provider: "Meta", count: 7 },
+    { provider: "IBM", count: 8 },
   ];
 
   const certIcons = {
@@ -93,7 +93,7 @@ export default function PortfolioOverview() {
     Meta: SiMeta,
   };
 
-  const clientCount = 3;
+  const clientCount = 4;
 
   return (
     <main className="text-white flex items-start sm:items-center justify-center pt-4 pb-2">
