@@ -149,7 +149,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
                 >
-                  <Building2 className="w-4 h-4" />
+                  <Building2 className="w-4 h-4 mr-1" />
                   <span className="text-sm md:text-base">{exp.company}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
