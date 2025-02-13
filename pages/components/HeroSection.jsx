@@ -25,7 +25,7 @@ export default function HeroSection() {
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
             <Image
-              src="/images/logo.png" // Update to your image path
+              src="/images/herologo.png" // Update to your image path
               alt="Ace Labador"
               fill
               className="rounded-full object-cover shadow-2xl"
