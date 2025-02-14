@@ -5,16 +5,16 @@ import { useRef } from "react"
 
 const experiences = [
   {
-    company: "Syrincal Trading, OPC",
-    position: "Software Engineer",
-    period: "Nov 2024 - Present",
-    location: "Meycauayan City, Bulacan, PH",
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
-    description: "Developing B2B e-commerce platform and inventory management system",
-    current: true,
-    skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
-    website: "https://example.com",
-  },
+  company: "Syrincal Trading, OPC",
+  position: "Software Engineer",
+  period: "Nov 2024 - Present",
+  location: "Meycauayan City, Bulacan, PH",
+  logo: "/images/syrincalvector.svg", // Updated logo path
+  description: "Developing B2B e-commerce platform and inventory management system",
+  current: true,
+  skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
+  website: "https://example.com",
+},
   {
     company: "D.R.A Jewelry",
     position: "Web Developer",
