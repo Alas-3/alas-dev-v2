@@ -207,7 +207,7 @@ export default function ExperienceSection() {
   const gradientHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"])
 
   return (
-    <section ref={containerRef} className="py-24 relative overflow-hidden">
+    <section ref={containerRef} className="py-10 md:py-24 relative overflow-hidden">
       <motion.div
         className="container mx-auto px-4 md:px-6 relative z-10"
         initial={{ opacity: 0 }}

@@ -82,7 +82,7 @@ export default function ProjectsSection() {
   return (
     <motion.section
       id="projects"
-      className="py-24 px-4 sm:px-6 lg:px-8"
+      className="py-10 md:py-24  px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
