@@ -7,7 +7,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background pt-20">
+    <section className="relative min-h-screen overflow-hidden bg-background pt-10">
       <div className="absolute" />
       <div className="absolute" />
       <div
@@ -16,7 +16,7 @@ export default function HeroSection() {
           clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
         }}
       />
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:flex-row lg:items-center lg:px-8">
         <motion.div
           className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0 lg:order-last"
           initial={{ opacity: 0, scale: 0.8 }}
