@@ -96,8 +96,8 @@ export default function PortfolioOverview() {
   const clientCount = 4;
 
   return (
-    <main className="text-white flex items-start sm:items-center justify-center pt-3 pb-2">
-      <div className="w-full py-8 grid grid-cols-1 gap-6 md:gap-12 md:max-w-[2560px]">
+    <main className="text-white flex items-start sm:items-center justify-center pt-0 md:pt-3 pb-2">
+      <div className="w-full py-0 md:py-8 grid grid-cols-1 gap-6 md:gap-12 md:max-w-[2560px]">
         <div className="grid gap-6">
           
           {/* Hero Section */}
