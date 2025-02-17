@@ -8,7 +8,7 @@ import CtaSection from "./components/CtaSection"
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-6">
+    <div className="container mx-auto px-6 bg-gradient-to-br from-gray-900 to-black">
       <HeroSection />
       <TechStackSection />
       <ExperienceSection />
