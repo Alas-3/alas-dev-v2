@@ -118,7 +118,7 @@ export default function CertificateShowcase() {
                 <div className="relative p-6 flex flex-col h-full">
                   {/* Certificate Badge */}
                   <div className="relative w-40 h-40 mx-auto mb-6">
-                    <div className="absolute inset-0  rounded-[20%] blur-md group-hover:blur-lg transition-all duration-300" />
+                    <div className="absolute inset-0 rounded-[20%] blur-md group-hover:blur-lg transition-all duration-300" />
                     <div className="absolute inset-1bg-gradient-to-br from-gray-900 to-black rounded-[20%]" />
                     <Image
                       src={cert.image || "/placeholder.svg"}

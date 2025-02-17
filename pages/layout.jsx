@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   }, [router.pathname]); // Run this effect when the pathname changes
 
   return (
-    <div className={`${inter.className} min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-gray-100 overflow-x-hidden`}>
+    <div className={`${inter.className} min-h-screen bg-gradient-to-br from-gray-900 to-black text-gray-100 overflow-x-hidden`}>
       <div className="fixed inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
 
       {/* Conditionally render the NavBar if not on the 404 page */}
