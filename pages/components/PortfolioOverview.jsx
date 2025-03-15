@@ -25,8 +25,8 @@ const CertificationsGrid = memo(({ certifications, certIcons }) => (
             <IconComponent className="w-6 h-6 text-white/80" />
           </div>
           <div className="min-w-0">
-            <div className="text-3xl font-bold text-white truncate">x{cert.count}</div>
-            <div className="text-sm text-white/60 truncate">{cert.provider} Certified</div>
+            <div className="text-3xl font-bold text-white truncate">{cert.count}</div>
+            <div className="text-sm text-white/60 truncate">{cert.provider} Certificates</div>
           </div>
         </Card>
       );
