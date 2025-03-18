@@ -5,25 +5,36 @@ import { useRef } from "react"
 
 const experiences = [
   {
-  company: "Syrincal Trading, OPC",
-  position: "Software Engineer",
-  period: "Nov 2024 - Present",
-  location: "Meycauayan City, Bulacan, PH",
-  logo: "/images/syrincalvector.svg", // Updated logo path
-  description: "Developing B2B e-commerce platform and inventory management system",
-  current: true,
-  skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
-  website: "https://example.com",
-},
+    company: "Bone Fix Metal Craft",
+    position: "Web Developer",
+    period: "Jan 2025 - Present",
+    location: "Metro Manila, PH",
+    logo: "/images/bfmcLogo.jpeg", // Updated logo path
+    description: "Led the development and maintenance of company's website",
+    current: true,
+    skills: ["PHP", "HTML", "CSS", "JavaScript", "SEO", "Wordpress"],
+    website: "https://example.com",
+  },
+  {
+    company: "Syrincal Trading, OPC",
+    position: "Software Engineer",
+    period: "Nov 2024 - Present",
+    location: "Bulacan, PH",
+    logo: "/images/syrincalvector.svg", // Updated logo path
+    description: "Led the development of the B2B e-commerce platform and inventory management system",
+    current: true,
+    skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
+    website: "https://example.com",
+  },
   {
     company: "D.R.A Jewelry",
     position: "Web Developer",
     period: "Sep 2024 - Dec 2024",
-    location: "Meycauayan City, Bulacan, PH",
+    location: "Bulacan, PH",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
     description: "Led the development of business website",
     current: false,
-    skills: ["React",  "SEO", "Tailwind CSS", "Web3Forms"],
+    skills: ["React", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
   },
   {
@@ -34,7 +45,7 @@ const experiences = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
     description: "Managed social media campaigns, content strategy & client aquisition",
     current: false,
-    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach" ,"Analytics"],
+    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Analytics"],
     website: "https://wewhiten.com/",
   },
 ]
@@ -135,14 +146,14 @@ const ExperienceCard = ({ exp, index, inView }) => {
           />
         </motion.div>
 
-        <div className="space-y-4 mt-6 md:mt-0">
+        <div className="space-y-3 mt-6 md:mt-0">
           {/* Header Section */}
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4">
             <div>
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                 {exp.position}
               </h3>
-              <div className="flex items-center gap-2 mt-1">
+              <div className="flex items-center gap-2 mt-0.5">
                 <a
                   href={exp.website}
                   target="_blank"
@@ -156,14 +167,30 @@ const ExperienceCard = ({ exp, index, inView }) => {
               </div>
             </div>
             {exp.current && (
-              <span className="px-3 py-1 text-xs font-semibold self-start rounded-full bg-gradient-to-r from-green-400 to-blue-500 text-black">
-                Current
-              </span>
+              <>
+                {/* Desktop Active Indicator - Pulsing Green Dot */}
+                <div className="hidden md:flex items-center gap-1.5 self-start pt-1.5">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                  <span className="text-xs text-green-400">Active</span>
+                </div>
+
+                {/* Mobile Active Indicator - Pulsing Green Dot positioned at top right */}
+                <div className="md:hidden absolute top-3 right-3 flex items-center gap-1.5 z-10 pt-1.5">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                  <span className="text-xs text-green-400">Active</span>
+                </div>
+              </>
             )}
           </div>
 
           {/* Meta Information */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-sm text-gray-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 text-sm text-gray-400">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">{exp.location}</span>
@@ -175,10 +202,10 @@ const ExperienceCard = ({ exp, index, inView }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-gray-300 text-left leading-relaxed">{exp.description}</p>
+          <p className="text-sm sm:text-base text-gray-300 text-left leading-relaxed mt-2">{exp.description}</p>
 
           {/* Skills */}
-          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-3 sm:mt-4">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
             {exp.skills.map((skill, index) => (
               <motion.div
                 key={skill}
@@ -258,3 +285,4 @@ export default function ExperienceSection() {
     </section>
   )
 }
+
