@@ -6,13 +6,13 @@ import { useRef } from "react"
 const experiences = [
   {
     company: "Bone Fix Metal Craft",
-    position: "Web Developer",
+    position: "Full Stack Developer",
     period: "Jan 2025 - Present",
     location: "Metro Manila, PH",
     logo: "/images/bfmcLogo.jpeg", // Updated logo path
     description: "Led the development and maintenance of company's website",
     current: true,
-    skills: ["PHP", "HTML", "CSS", "JavaScript", "SEO", "Wordpress"],
+    skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "Wordpress"],
     website: "https://example.com",
   },
   {
