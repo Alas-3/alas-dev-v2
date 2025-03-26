@@ -10,9 +10,9 @@ const experiences = [
     period: "Jan 2025 - Present",
     location: "Metro Manila, PH",
     logo: "/images/bfmcLogo.jpeg", // Updated logo path
-    description: "Led the development and maintenance of company's website",
+    description: "Led the development of additional web pages and maintenance of company's website",
     current: true,
-    skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "Wordpress"],
+    skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "WordPress"],
     website: "https://example.com",
   },
   {
@@ -21,7 +21,7 @@ const experiences = [
     period: "Nov 2024 - Present",
     location: "Bulacan, PH",
     logo: "/images/syrincalvector.svg", // Updated logo path
-    description: "Led the development of the B2B e-commerce platform and inventory management system",
+    description: "Led the development and integration of a B2B e-commerce platform, inventory management system & delivery tracker",
     current: true,
     skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
     website: "https://example.com",
