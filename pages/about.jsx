@@ -113,6 +113,18 @@ const certificates = [
       "https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg", // Add the logo URL here
   },
   {
+    title: "Google AI Essentials",
+    issuer: "Coursera",
+    date: "2025",
+    verificationLink:
+      "https://coursera.org/share/d85d6d3743a115ef0ddb465ba86920cd",
+    description:
+      "Awarded for completing the Google AI Essentials Course",
+    icon: SiGoogle,
+    image:
+      "https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Google-512.png", // Add the logo URL here
+  },
+  {
     title: "Front-End Development with React V2",
     issuer: "Coursera",
     date: "2024",

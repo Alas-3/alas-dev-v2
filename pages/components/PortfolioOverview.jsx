@@ -82,7 +82,7 @@ const ClientsAndProjects = memo(({ clientCount }) => (
 
 export default function PortfolioOverview() {
   const certifications = [
-    { provider: "Google", count: 5 },
+    { provider: "Google", count: 6 },
     { provider: "Meta", count: 7 },
     { provider: "IBM", count: 8 },
   ];
