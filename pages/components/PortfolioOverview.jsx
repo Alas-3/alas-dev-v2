@@ -84,7 +84,7 @@ export default function PortfolioOverview() {
   const certifications = [
     { provider: "Google", count: 6 },
     { provider: "Meta", count: 7 },
-    { provider: "IBM", count: 8 },
+    { provider: "IBM", count: 10 },
   ];
 
   const certIcons = {

@@ -90,6 +90,30 @@ const certificates = [
       "https://images.credly.com/size/680x680/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png", // Add the logo URL here
   },
   {
+    title: "Developing Back-End Apps with Node.js and Express",
+    issuer: "IBM",
+    date: "2025",
+    verificationLink:
+      "https://coursera.org/share/3b61e2d90d2fc9f1d233518a29d4497a",
+    description:
+      "Awarded for completing the Generative AI: Introduction and Applications",
+    icon: SiIbm,
+    image:
+      "https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg", // Add the logo URL here
+  },
+  {
+    title: "JavaScript Programming Essentials",
+    issuer: "IBM",
+    date: "2025",
+    verificationLink:
+      "https://coursera.org/share/3ca9d32509f7d116db06ff2ab4abd8b5",
+    description:
+      "Awarded for completing the Generative AI: Introduction and Applications",
+    icon: SiIbm,
+    image:
+      "https://www.ibm.com/brand/experience-guides/developer/b1db1ae501d522a1a4b49613fe07c9f1/01_8-bar-positive.svg", // Add the logo URL here
+  },
+  {
     title: "Foundations of Prompt Engineering",
     issuer: "AWS",
     date: "2024",
