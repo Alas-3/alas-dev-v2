@@ -17,6 +17,16 @@ const certificates = [
   },
   {
     id: 2,
+    title: "IBM Full-Stack JavaScript Developer",
+    issuer: "IBM",
+    date: "2025",
+    image:
+      "https://images.credly.com/size/680x680/images/ff8f2956-43b1-47d1-abba-1db32724b24b/image.png",
+    verificationLink:
+      "https://www.coursera.org/account/accomplishments/specialization/9MX50VHJBGHZ",
+  },
+  {
+    id: 3,
     title: "Meta Front-End Developer",
     issuer: "Meta",
     date: "2024",
@@ -26,7 +36,7 @@ const certificates = [
       "https://coursera.org/share/dfd7fc30f72444b5795e968b6de56810",
   },
   {
-    id: 3,
+    id: 4,
     title: "IBM Front-End Developer",
     issuer: "IBM",
     date: "2024",
@@ -36,7 +46,7 @@ const certificates = [
       "https://coursera.org/share/7a5e5733ca88bd52efc7d81f52dece53",
   },
   {
-    id: 4,
+    id: 5,
     title: "Google IT Support",
     issuer: "Google",
     date: "2024",
@@ -46,7 +56,7 @@ const certificates = [
       "https://coursera.org/share/a6291acbd12cc6599b3f3e6bf43d28f4",
   },
   {
-    id: 5,
+    id: 6,
     title: "Google Project Management",
     issuer: "Google",
     date: "2024",
@@ -54,16 +64,6 @@ const certificates = [
       "https://images.credly.com/size/680x680/images/51dff787-71ae-4d9d-9ca7-ef9342914d75/GCC_badge_PGM_1000x1000.png",
     verificationLink:
       "https://www.coursera.org/account/accomplishments/specialization/EZ8JDDLZNOZT",
-  },
-  {
-    id: 6,
-    title: "Github Foundations",
-    issuer: "Github",
-    date: "2025",
-    image:
-      "https://images.credly.com/size/680x680/images/024d0122-724d-4c5a-bd83-cfe3c4b7a073/image.png",
-    verificationLink:
-      "https://www.credly.com/badges/fde0d473-a43b-48f2-983f-ee4edf516740/public_url",
   },
   // Add more certificates as needed
 ];

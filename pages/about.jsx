@@ -30,6 +30,18 @@ const certificates = [
     image: "/images/STIC_logo.jpg", // Add the logo URL here
   },
   {
+    title: "IBM Full-Stack JavaScript Developer Professional Certificate",
+    issuer: "Coursera",
+    date: "2025",
+    verificationLink:
+      "https://www.coursera.org/account/accomplishments/specialization/9MX50VHJBGHZ",
+    description:
+      "Awarded for completing all 12 courses of the IBM Full-Stack JavaScript Developer Specialization",
+    icon: SiIbm,
+    image:
+      "https://images.credly.com/size/680x680/images/ff8f2956-43b1-47d1-abba-1db32724b24b/image.png", // Add the logo URL here
+  },
+  {
     title: "IBM Front-End Developer Professional Certificate",
     issuer: "Coursera",
     date: "2024",
