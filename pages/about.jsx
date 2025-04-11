@@ -15,7 +15,7 @@ import {
   FaFreeCodeCamp,
   FaGithub,
 } from "react-icons/fa";
-import { SiIbm, SiMeta, SiGoogle, SiCisco } from "react-icons/si";
+import { SiIbm, SiMeta, SiGoogle, SiCisco, SiPearson } from "react-icons/si";
 import CertificateModal from "./components/CertificateModal";
 import PortfolioOverview from "./components/PortfolioOverview";
 
@@ -395,6 +395,17 @@ const certificates = [
     icon: SiCisco,
     image:
       "https://m.media-amazon.com/images/S/amzn-author-media-prod/149sgmk8pe5742vn5kmf6k86cg._SY450_CR0%2C0%2C450%2C450_.jpg", // Add the logo URL here
+  },
+  {
+    title: "IT Specialist - Python",
+    issuer: "Certiport",
+    date: "2023",
+    verificationLink: "https://www.credly.com/badges/f0e37d58-6a1a-454d-99f9-24a37c46e020/public_url",
+    description:
+      "Awarded for completing the Information Technology Specialist - Python Exam, provided by Certiport.",
+    icon: SiPearson,
+    image:
+      "https://images.credly.com/size/680x680/images/3c4602d8-832e-4a24-b42d-00359ce746f7/ITS-Badges_Python_1200px.png", // Add the logo URL here
   },
 ];
 
