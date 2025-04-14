@@ -20,7 +20,7 @@ const experiences = [
     position: "Software Engineer",
     period: "Nov 2024 - Present",
     location: "Bulacan, PH",
-    logo: "/images/syrincalLogo.jpg", // Updated logo path
+    logo: "/images/syrincalvector.svg", // Updated logo path
     description: "Led the development and integration of a B2B e-commerce platform, inventory management system & delivery tracker",
     current: true,
     skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
@@ -34,7 +34,7 @@ const experiences = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
     description: "Led the development of business website",
     current: false,
-    skills: ["React", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
+    skills: ["React", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
   },
   {

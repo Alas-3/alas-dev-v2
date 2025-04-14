@@ -74,8 +74,8 @@ const projects = [
       "An Anime Streaming Web App built using NextJS, Tailwind & a Custom APIs for 3rd Party Content Provider",
     favicon: "/images/personal_logo.png",
     techStack: ["Next.js", "Tailwind"],
-    livePreview: "https://kakureta.vercel.app/",
-    githubRepo: "https://github.com/Alas-3/kakureta",
+    livePreview: "https://projecthimitsu.vercel.app",
+    githubRepo: "https://github.com/Alas-3/asdfghjkl",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {

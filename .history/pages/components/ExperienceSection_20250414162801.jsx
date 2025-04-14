@@ -34,7 +34,7 @@ const experiences = [
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
     description: "Led the development of business website",
     current: false,
-    skills: ["React", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
+    skills: ["React", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
   },
   {

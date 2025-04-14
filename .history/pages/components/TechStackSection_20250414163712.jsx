@@ -25,7 +25,6 @@ export default function TechStackSection() {
     { name: 'Auth0', icon: SiAuth0 },
     { name: 'Git', icon: FaGit },
     { name: 'GitHub', icon: FaGithub },
-    { name: 'Copilot', icon: SiGithubcopilot },
     { name: 'Firebase', icon: SiFirebase },
     { name: 'Supabase', icon: SiSupabase },
     { name: 'Appwrite', icon: SiAppwrite },

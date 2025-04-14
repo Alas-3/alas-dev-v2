@@ -51,12 +51,12 @@ export default function ProjectsSection() {
       bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
     {
-      title: "Kakureta",
+      title: "Himitsu",
       description:
         "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
       techStack: ["Next.js", "Tailwind CSS", "Supabase", "Axios"],
-      liveUrl: "https://kakureta.vercel.app/",
-      repoUrl: "https://github.com/Alas-3/kakureta",
+      liveUrl: "https://projecthimitsu.vercel.app",
+      repoUrl: "https://github.com/Alas-3/asdfghjkl",
       bgColor: "bg-gradient-to-br from-white/5 to-transparent",
     },
     {

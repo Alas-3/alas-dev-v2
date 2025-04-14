@@ -411,17 +411,24 @@ const certificates = [
 
 const experiences = [
   {
+    company: "Bone Fix Metal Craft",
+    position: "Full-Stack Developer",
+    period: "Jan 2025 - Present",
+    location: " Metro Manila, PH", // Add location here
+    logo: "/images/bfmcLogo.jpeg",
+  },
+  {
     company: "Syrincal Trading, OPC",
     position: "Software Engineer",
     period: "Nov 2024 - Present",
-    location: "Meycauayan City, Bulacan, PH", // Add location here
-    logo: "/images/syrincalvector.svg",
+    location: "Bulacan, PH", // Add location here
+    logo: "/images/syrincalLogo.jpg",
   },
   {
     company: "D.R.A Jewelry",
     position: "Web Developer",
-    period: "Sep 2024 - Present",
-    location: "Meycauayan City, Bulacan, PH", // Add location here
+    period: "Sep 2024 - Dec 2024",
+    location: "Bulacan, PH", // Add location here
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
   },
   {
@@ -525,7 +532,7 @@ function EducationSection() {
                   <p className="text-sm font-semibold text-gray-300 mt-2">
                     Affiliations:
                   </p>
-                  <ul className="list-disc list-inside text-sm text-gray-400">
+                  <ul className="list-disc list-inside text-xs md:text-sm text-gray-400">
                     {edu.affiliations.map((affiliation, index) => (
                       <li key={index}>{affiliation}</li>
                     ))}
