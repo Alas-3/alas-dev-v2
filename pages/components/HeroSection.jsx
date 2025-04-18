@@ -7,7 +7,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0 pt-5">
+    <section className="relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0">
       <div className="absolute" />
       <div className="absolute" />
       <div

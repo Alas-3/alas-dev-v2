@@ -628,21 +628,21 @@ function CertificateShowcase() {
               <div className="flex items-center mb-4">
                 <div className="relative w-16 h-16 mr-4 flex-shrink-0">
                   {cert.icon ? (
-                    // Render the React icon if it exists
-                    <div className="w-full h-full flex items-center justify-center bg-white rounded-lg">
+                    // Render the React icon with gradient background
+                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-lg p-2 border border-white/10">
                       {React.createElement(cert.icon, {
                         size: 45,
-                        className: "text-gray-800",
+                        className: "text-white", // Changed from text-gray-800 to match your site's light text
                       })}
                     </div>
                   ) : (
-                    // Fallback to render the image if no icon is provided
+                    // Fallback to render the image
                     <div className="w-full h-full relative">
                       <Image
                         src={cert.image}
                         alt={cert.title}
                         fill
-                        className="object-contain bg-white rounded-lg"
+                        className="object-contain rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-600/20"
                         sizes="(max-width: 768px) 64px, 96px"
                       />
                     </div>
