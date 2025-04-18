@@ -48,7 +48,7 @@ export default function ProjectsSection() {
       techStack: ["React", "Electron", "Firebase"],
       liveUrl: "",
       repoUrl: "",
-      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
+      gradient: "from-blue-500/20 to-purple-600/20",
     },
     {
       title: "Kakureta",
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
       techStack: ["Next.js", "Tailwind CSS", "Supabase", "Axios"],
       liveUrl: "https://kakureta.vercel.app/",
       repoUrl: "https://github.com/Alas-3/kakureta",
-      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
+      gradient: "from-green-500/20 to-blue-600/20",
     },
     {
       title: "Syrincal System",
@@ -66,7 +66,7 @@ export default function ProjectsSection() {
       techStack: ["Next.js", "Tailwind CSS", "Supabase"],
       liveUrl: "",
       repoUrl: "https://github.com/Alas-3/syrincal-system",
-      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
+      gradient: "from-purple-500/20 to-pink-600/20",
     },
     {
       title: "DRA Jewelry",
@@ -75,103 +75,132 @@ export default function ProjectsSection() {
       techStack: ["Next.js", "Tailwind CSS", "Vercel"],
       liveUrl: "",
       repoUrl: "https://github.com/Alas-3/syrincal-system",
-      bgColor: "bg-gradient-to-br from-white/5 to-transparent",
+      gradient: "from-orange-500/20 to-red-600/20",
     },
   ];
 
   return (
-    <motion.section
-      id="projects"
-      className="py-10 md:py-24  px-4 sm:px-6 lg:px-8"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      viewport={{ once: true }}
-    >
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold mb-16 text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-500">
-          Featured Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {projects.map((project, index) => (
-            <motion.div
-              key={project.title}
-              className="rounded-2xl overflow-hidden shadow-2xl transform transition duration-500 hover:scale-105"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+    <section className="py-10 md:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto"
+        >
+          <div className="text-center mb-16">
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-indigo-700 bg-clip-text text-transparent"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
             >
-              <div className={`p-8 ${project.bgColor} h-full flex flex-col`}>
-                <h3 className="text-lg md:text-2xl font-bold text-white mb-4">
-                  {project.title}
-                </h3>
-                <p className="text-gray-100 mb-6 flex-grow text-sm md:text-lg leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex mb-6 space-x-3">
-                  {project.techStack.map((tech) => {
-                    const TechIcon = techStack[tech];
-                    return TechIcon ? (
-                      <motion.div
-                        key={tech}
-                        whileHover={{ scale: 1.2 }}
-                        className="bg-white bg-opacity-20 rounded-full p-2"
-                      >
-                        <TechIcon className="text-2xl text-white" />
-                      </motion.div>
-                    ) : null;
-                  })}
-                </div>
-                <div className="flex flex-col sm:flex-row justify-between gap-3 sm:gap-4">
-                  <motion.a
-                    href={project.liveUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-white transition-colors duration-300 flex items-center justify-center bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base w-full sm:w-auto ${
-                      !project.liveUrl && "opacity-50 cursor-not-allowed"
-                    }`}
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgba(255, 255, 255, 0.3)",
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    disabled={!project.liveUrl}
-                  >
-                    <FaExternalLinkAlt className="mr-2 text-xs sm:text-sm" />
-                    <span>Live Preview</span>
-                  </motion.a>
-                  <motion.a
-                    href={project.repoUrl || "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`text-white transition-colors duration-300 flex items-center justify-center bg-white bg-opacity-20 px-3 sm:px-4 py-2 rounded-full text-sm sm:text-base w-full sm:w-auto ${
-                      !project.repoUrl && "opacity-50 cursor-not-allowed"
-                    }`}
-                    whileHover={{
-                      scale: 1.05,
-                      backgroundColor: "rgba(255, 255, 255, 0.3)",
-                    }}
-                    whileTap={{ scale: 0.95 }}
-                    disabled={!project.repoUrl}
-                  >
-                    <FaGithub className="mr-2 text-xs sm:text-sm" />
-                    <span>View Repo</span>
-                  </motion.a>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+              Featured Projects
+            </motion.h2>
+            <motion.p
+              className="text-gray-400 text-lg max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              Showcasing my recent development work and creative solutions
+            </motion.p>
+          </div>
 
-        <div className="mt-16 text-center">
-          <Link
-            href="/projects#projectsection"
-            className="inline-block px-4 py-2 bg-gray-600 text-white text-sm rounded-md hover:bg-gray-700 transition-colors duration-300 opacity-70 hover:opacity-100"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative"
+              >
+                {/* Card Background with gradient border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-[1px] bg-gradient-to-br from-gray-900 to-black rounded-2xl" />
+
+                {/* Card Content */}
+                <div className="relative p-6 md:p-8 flex flex-col h-full">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-300 transition-colors duration-300 mb-4">
+                    {project.title}
+                  </h3>
+                  
+                  <p className="text-gray-400 mb-6">
+                    {project.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    {project.techStack.map((tech) => {
+                      const TechIcon = techStack[tech];
+                      return TechIcon ? (
+                        <div
+                          key={tech}
+                          className="bg-indigo-600/30 rounded-lg px-3 py-1.5 flex items-center gap-1.5"
+                        >
+                          <TechIcon className="text-white/80 text-sm" />
+                          <span className="text-white/90 text-xs font-medium">{tech}</span>
+                        </div>
+                      ) : null;
+                    })}
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-4 mt-auto md:flex md:justify-between md:w-full">
+                    <a
+                      href={project.liveUrl || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center px-4 py-2 rounded-md text-sm transition-all duration-300 ${
+                        project.liveUrl 
+                          ? "bg-gradient-to-r from-blue-500/20 to-blue-700/20 text-white hover:from-blue-500/30 hover:to-blue-700/30" 
+                          : "bg-gradient-to-r from-blue-500/5 to-blue-700/5 text-gray-500 cursor-default pointer-events-none"
+                      }`}
+                    >
+                      <FaExternalLinkAlt className="w-3.5 h-3.5 mr-2" />
+                      Live Preview
+                    </a>
+                    
+                    <a
+                      href={project.repoUrl || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center px-4 py-2 rounded-md text-sm transition-all duration-300 ${
+                        project.repoUrl
+                          ? "bg-gradient-to-r from-purple-500/20 to-pink-600/20 text-white hover:from-purple-500/30 hover:to-pink-600/30"
+                          : "bg-gradient-to-r from-purple-500/5 to-pink-600/5 text-gray-500 cursor-default pointer-events-none"
+                      }`}
+                    >
+                      <FaGithub className="w-3.5 h-3.5 mr-2" />
+                      View Repo
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-16 text-center"
           >
-            Show All Projects
-          </Link>
-        </div>
+            <Link
+              href="/projects#projectsection"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-white rounded-xl hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 group"
+            >
+              <span className="text-gray-300 group-hover:text-white">
+                View All Projects
+              </span>
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 }
