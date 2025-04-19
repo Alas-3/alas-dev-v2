@@ -6,22 +6,16 @@ import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
-  const [deviceType, setDeviceType] = useState('unknown');
+    const [deviceType, setDeviceType] = useState('unknown');
   
   useEffect(() => {
     // Only run on client-side
     if (typeof window !== 'undefined') {
-      // Store the full user agent for more reliable detection
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera || '';
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       
-      // More comprehensive iOS detection
-      const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
-                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ||
-                   /iPhone|iPad|iPod/.test(navigator.platform);
-      
-      if (isIOS) {
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         setDeviceType('ios');
-        
       } 
       // Android detection
       else if (/android/i.test(userAgent)) {
@@ -34,7 +28,7 @@ export default function HeroSection() {
     }
   }, []);
   return (
-    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0 ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-2' : ''}`}>
+    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3 -translate-y-2' : ''}`}>
       <div className="absolute" />
       <div className="absolute" />
       <div
