@@ -6,16 +6,22 @@ import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
-    const [deviceType, setDeviceType] = useState('unknown');
+  const [deviceType, setDeviceType] = useState('unknown');
   
   useEffect(() => {
     // Only run on client-side
     if (typeof window !== 'undefined') {
-      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      // Store the full user agent for more reliable detection
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera || '';
       
-      // iOS detection
-      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      // More comprehensive iOS detection
+      const isIOS = /iPad|iPhone|iPod/.test(userAgent) || 
+                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1) ||
+                   /iPhone|iPad|iPod/.test(navigator.platform);
+      
+      if (isIOS) {
         setDeviceType('ios');
+        
       } 
       // Android detection
       else if (/android/i.test(userAgent)) {
