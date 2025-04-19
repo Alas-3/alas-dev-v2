@@ -28,7 +28,7 @@ export default function HeroSection() {
     }
   }, []);
   return (
-    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3 -translate-y-2' : ''}`}>
+    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3' : ''}`}>
       <div className="absolute" />
       <div className="absolute" />
       <div
