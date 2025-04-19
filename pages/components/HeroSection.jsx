@@ -1,13 +1,34 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
+    const [deviceType, setDeviceType] = useState('unknown');
+  
+  useEffect(() => {
+    // Only run on client-side
+    if (typeof window !== 'undefined') {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+      // iOS detection
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        setDeviceType('ios');
+      } 
+      // Android detection
+      else if (/android/i.test(userAgent)) {
+        setDeviceType('android');
+      }
+      // Other devices
+      else {
+        setDeviceType('other');
+      }
+    }
+  }, []);
   return (
-    <section className="relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0">
+    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0 ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-2' : ''}`}>
       <div className="absolute" />
       <div className="absolute" />
       <div
