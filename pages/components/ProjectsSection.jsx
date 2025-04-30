@@ -21,6 +21,7 @@ import {
   SiFirebase,
 } from "react-icons/si";
 import { SiElectron } from "react-icons/si";
+import { TbBrandOauth } from "react-icons/tb";
 import Link from "next/link";
 
 const techStack = {
@@ -37,6 +38,7 @@ const techStack = {
   Firebase: SiFirebase,
   Supabase: SiSupabase,
   Axios: SiAxios,
+  OAuth: TbBrandOauth,
 };
 
 export default function ProjectsSection() {
@@ -63,9 +65,9 @@ export default function ProjectsSection() {
       title: "Syrincal System",
       description:
         "A Full-Stack Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
-      techStack: ["Next.js", "Tailwind CSS", "Supabase"],
+      techStack: ["Next.js", "Tailwind CSS", "Supabase", "OAuth"],
       liveUrl: "",
-      repoUrl: "https://github.com/Alas-3/syrincal-system",
+      repoUrl: "",
       gradient: "from-purple-500/20 to-pink-600/20",
     },
     {
@@ -73,8 +75,8 @@ export default function ProjectsSection() {
       description:
         "A Website built for an established Jewelry Business that allows clients to request personalized consultations with the owner",
       techStack: ["Next.js", "Tailwind CSS", "Vercel"],
-      liveUrl: "",
-      repoUrl: "https://github.com/Alas-3/syrincal-system",
+      liveUrl: "https://dra-jewelry.vercel.app/",
+      repoUrl: "",
       gradient: "from-orange-500/20 to-red-600/20",
     },
   ];

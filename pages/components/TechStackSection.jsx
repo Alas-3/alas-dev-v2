@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub, FaSwift, FaWordpress } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot, SiMysql } from 'react-icons/si';
 
 export default function TechStackSection() {
   const techStack = [
@@ -16,6 +16,7 @@ export default function TechStackSection() {
     { name: 'Tailwind CSS', icon: SiTailwindcss },
     { name: 'Node.js', icon: FaNodeJs }, // Using FaJs as a placeholder for Node.js
     { name: 'PHP', icon: SiPhp },
+    { name: 'MySQL', icon: SiMysql },
     { name: 'WordPress', icon: FaWordpress },
     { name: 'Framer Motion', icon: SiFramer },
     { name: 'Swift', icon: FaSwift }, // Added Swift

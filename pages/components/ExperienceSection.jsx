@@ -6,24 +6,13 @@ import { useRef } from "react"
 const experiences = [
   {
     company: "Bone Fix Metal Craft",
-    position: "Full Stack Developer",
-    period: "Jan 2025 - Present",
+    position: "Full Stack Developer Intern",
+    period: "Jan 2025 - April 2025",
     location: "Metro Manila, PH",
     logo: "/images/bfmcLogo.jpeg", // Updated logo path
-    description: "Led the development of additional web pages and maintenance of company's website",
-    current: true,
+    description: "Engineered and maintained a secure PHP-based web application module in collaboration with cross-functional teams and the project manager, delivering a web portal for doctors to access surgical metal product specifications and clinical application data.",
+    current: false,
     skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "WordPress"],
-    website: "https://example.com",
-  },
-  {
-    company: "Syrincal Trading, OPC",
-    position: "Software Engineer",
-    period: "Nov 2024 - Present",
-    location: "Bulacan, PH",
-    logo: "/images/syrincalLogo.jpg", // Updated logo path
-    description: "Led the development and integration of a B2B e-commerce platform, inventory management system & delivery tracker",
-    current: true,
-    skills: ["React", "Next.js", "Node.js", "Supabase", "Tailwind CSS"],
     website: "https://example.com",
   },
   {
@@ -32,20 +21,31 @@ const experiences = [
     period: "Sep 2024 - Dec 2024",
     location: "Bulacan, PH",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
-    description: "Led the development of business website",
+    description: "Designed and developed a mobile-first, fully responsive website using Next.js and Tailwind CSS, implemented SEO optimization best practices to improve organic search visibility, and integrated a private consultation scheduler—doubling online bookings.",
     current: false,
-    skills: ["React", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
+    skills: ["React", "Next.js", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
   },
   {
+    company: "Syrincal Trading, OPC",
+    position: "Software Engineer",
+    period: "Nov 2023 - Present",
+    location: "Bulacan, PH",
+    logo: "/images/syrincalLogo.jpg", // Updated logo path
+    description: "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
+    current: true,
+    skills: ["React", "Next.js", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
+    website: "https://example.com",
+  },
+  {
     company: "WeWhiten",
-    position: "Social Media Marketer",
+    position: "Social Media Manager",
     period: "Jun 2023 - Jun 2024",
     location: "Salt Lake City, UT, USA",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
-    description: "Managed social media campaigns, content strategy & client aquisition",
+    description: "Implemented focused outreach, campaigns and content strategies across social media platforms, increasing customer attraction by 30%, customer retention by 15% and doubling customer acquisition.",
     current: false,
-    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Analytics"],
+    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Management","Analytics"],
     website: "https://wewhiten.com/",
   },
 ]
@@ -202,7 +202,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-gray-300 text-left leading-relaxed mt-2">{exp.description}</p>
+          <p className="text-sm text-balance text-gray-300 text-left leading-relaxed mt-2">{exp.description}</p>
 
           {/* Skills */}
           <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">
