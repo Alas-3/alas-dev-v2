@@ -411,18 +411,18 @@ const certificates = [
 
 const experiences = [
   {
-    company: "Bone Fix Metal Craft",
-    position: "Full-Stack Developer",
-    period: "Jan 2025 - Present",
-    location: " Metro Manila, PH", // Add location here
-    logo: "/images/bfmcLogo.jpeg",
-  },
-  {
     company: "Syrincal Trading, OPC",
     position: "Software Engineer",
-    period: "Nov 2024 - Present",
+    period: "Nov 2023 - Present",
     location: "Bulacan, PH", // Add location here
     logo: "/images/syrincalLogo.jpg",
+  },
+  {
+    company: "Bone Fix Metal Craft",
+    position: "Full-Stack Developer",
+    period: "Jan 2025 - Apr 2025",
+    location: " Metro Manila, PH", // Add location here
+    logo: "/images/bfmcLogo.jpeg",
   },
   {
     company: "D.R.A Jewelry",

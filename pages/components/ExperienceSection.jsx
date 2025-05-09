@@ -253,7 +253,7 @@ export default function ExperienceSection() {
             </h2>
 
             <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-              A timeline of my professional journey and the companies I've had the pleasure to work with
+              A timeline of how I started my professional journey and the companies I've had the pleasure to work with
             </p>
           </motion.div>
 
