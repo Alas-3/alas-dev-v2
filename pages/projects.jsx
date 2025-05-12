@@ -69,13 +69,23 @@ const projects = [
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
+    title: "OJTfolio",
+    description:
+      "A SaaS web application with file-upload support, daily-note time-entry logging, and automated weekly report generation that helps students monitor and document their OJT hours.",
+    favicon: "/images/personal_logo.png",
+    techStack: ["Next.js", "Supabase", "Tailwind"],
+    livePreview: "https://kakureta.vercel.app/",
+    githubRepo: "https://github.com/Alas-3/kakureta",
+    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
+  },
+  {
     title: "Kakureta",
     description:
       "An Anime Streaming Web App built using NextJS, Tailwind & a Custom APIs for 3rd Party Content Provider",
     favicon: "/images/personal_logo.png",
     techStack: ["Next.js", "Tailwind"],
-    livePreview: "https://kakureta.vercel.app/",
-    githubRepo: "https://github.com/Alas-3/kakureta",
+    livePreview: "",
+    githubRepo: "",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
