@@ -41,7 +41,7 @@ const GitHubStats = memo(() => (
         <GithubIcon className="w-6 h-6 text-white/80" />
       </div>
       <div className="min-w-0">
-        <div className="text-3xl font-bold text-white truncate">500+</div>
+        <div className="text-3xl font-bold text-white truncate">600+</div>
         <div className="text-sm text-white/60 truncate">Commits</div>
       </div>
     </Card>
