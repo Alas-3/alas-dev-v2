@@ -19,6 +19,8 @@ import {
   SiVite,
   SiVercel,
   SiFirebase,
+  SiTypescript,
+  SiExpress
 } from "react-icons/si";
 import { SiElectron } from "react-icons/si";
 import { TbBrandOauth } from "react-icons/tb";
@@ -39,6 +41,8 @@ const techStack = {
   Supabase: SiSupabase,
   Axios: SiAxios,
   OAuth: TbBrandOauth,
+  Typescript: SiTypescript,
+  Express: SiExpress,
 };
 
 export default function ProjectsSection() {
@@ -47,7 +51,7 @@ export default function ProjectsSection() {
       title: "E-Registrar",
       description:
         "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS and Firebase",
-      techStack: ["React", "Electron", "Firebase"],
+      techStack: ["React", "Node.js", "Electron", "Firebase"],
       liveUrl: "",
       repoUrl: "",
       gradient: "from-blue-500/20 to-purple-600/20",
@@ -55,8 +59,8 @@ export default function ProjectsSection() {
     {
       title: "Kakureta",
       description:
-        "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
-      techStack: ["Next.js", "Tailwind CSS", "Supabase", "Axios"],
+        "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & Custom API using TypeScript",
+      techStack: ["Next.js", "Node.js", "Axios", "Typescript", "Supabase"],
       liveUrl: "https://kakureta.vercel.app/",
       repoUrl: "https://github.com/Alas-3/kakureta",
       gradient: "from-green-500/20 to-blue-600/20",
@@ -65,7 +69,7 @@ export default function ProjectsSection() {
       title: "Syrincal System",
       description:
         "A Full-Stack Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
-      techStack: ["Next.js", "Tailwind CSS", "Supabase", "OAuth"],
+      techStack: ["Next.js", "Tailwind CSS", "Node.js", "Supabase", "OAuth"],
       liveUrl: "",
       repoUrl: "",
       gradient: "from-purple-500/20 to-pink-600/20",
@@ -74,7 +78,7 @@ export default function ProjectsSection() {
       title: "DRA Jewelry",
       description:
         "A Website built for an established Jewelry Business that allows clients to request personalized consultations with the owner",
-      techStack: ["Next.js", "Tailwind CSS", "Vercel"],
+      techStack: ["Next.js", "Node.js", "Tailwind CSS", "Vercel"],
       liveUrl: "https://dra-jewelry.vercel.app/",
       repoUrl: "",
       gradient: "from-orange-500/20 to-red-600/20",

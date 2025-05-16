@@ -15,12 +15,16 @@ import {
   SiExpress,
   SiAxios,
   SiGithub,
-  SiNpm,
   SiVercel,
   SiGit,
   SiLighthouse,
   SiElectron,
+  SiTypescript,
+  SiPhp,
+  SiMysql,
+  SiWordpress,
 } from "react-icons/si";
+import { TbBrandOauth } from "react-icons/tb";
 import { FaSwift } from "react-icons/fa"; // For Swift icon
 import { SiCheerio } from "react-icons/si"; // For Cheerio icon
 
@@ -28,12 +32,16 @@ const techStack = [
   { name: "HTML", icon: SiHtml5, color: "#E34F26" }, // HTML5 color
   { name: "CSS", icon: SiCss3, color: "#1572B6" }, // CSS3 color
   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" }, // JavaScript color
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "React", icon: FaReact, color: "#61DAFB" },
   { name: "Vite", icon: SiVite, color: "#646CFF" },
   { name: "Next.js", icon: SiNextdotjs, color: "#F2F3F4" },
   { name: "Tailwind", icon: SiTailwindcss, color: "#38B2AC" },
   { name: "Electron", icon: SiElectron, color: "#F2F3F4" },
   { name: "Swift", icon: FaSwift, color: "#F05138" }, // Swift color
+  { name: "PHP", icon: SiPhp, color: "#777BB4" }, // PHP color
+  { name: "WordPress", icon: SiWordpress, color: "#21759b" }, // WordPress color
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" }, // MySQL color
   { name: "Node.js", icon: FaNodeJs, color: "#339933" },
   { name: "Axios", icon: SiAxios, color: "#5A29E3" }, // Axios color
   { name: "Cheerio", icon: SiCheerio, color: "#E88C1F" }, // Cheerio color
@@ -41,9 +49,9 @@ const techStack = [
   { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
   { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
   { name: "Appwrite", icon: SiAppwrite, color: "#F02E65" },
+  { name: "OAuth", icon: TbBrandOauth, color: "#4285F4" },
   { name: "GitHub", icon: SiGithub, color: "#F2F3F4" }, // GitHub color
   { name: "Git", icon: SiGit, color: "#F05032" }, // Git color
-  { name: "npm", icon: SiNpm, color: "#CB3837" }, // npm color
   { name: "Lighthouse", icon: SiLighthouse, color: "#F9BC24" }, // Lighthouse color
 ];
 
@@ -53,7 +61,7 @@ const projects = [
     description:
       "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS & Firebase",
     favicon: "/images/registrarlogo.png",
-    techStack: ["React", "Electron", "Firebase"],
+    techStack: ["React", "Electron", "Node.js", "Firebase"],
     livePreview: "",
     githubRepo: "",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -73,19 +81,19 @@ const projects = [
     description:
       "A SaaS web application with file-upload support, daily-note time-entry logging, and automated weekly report generation that helps students monitor and document their OJT hours.",
     favicon: "/images/personal_logo.png",
-    techStack: ["Next.js", "Supabase", "Tailwind"],
-    livePreview: "https://kakureta.vercel.app/",
-    githubRepo: "https://github.com/Alas-3/kakureta",
+    techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
+    livePreview: "",
+    githubRepo: "",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "Kakureta",
     description:
-      "An Anime Streaming Web App built using NextJS, Tailwind & a Custom APIs for 3rd Party Content Provider",
+      "An Anime Streaming Web App built using NextJS, Tailwind, a Custom API built using TypeScript, Node.js & Express & a few other third-party APIs",
     favicon: "/images/personal_logo.png",
-    techStack: ["Next.js", "Tailwind"],
-    livePreview: "",
-    githubRepo: "",
+    techStack: ["Next.js", "TypeScript", "Node.js", "Express", "Axios", "Tailwind"],
+    livePreview: "https://kakureta.vercel.app/",
+    githubRepo: "https://github.com/Alas-3/kakureta",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
@@ -93,7 +101,7 @@ const projects = [
     description:
     "A Full-Stack B2B Ordering platform, Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
     favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
-    techStack: ["Next.js", "Supabase", "Tailwind"],
+    techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
     livePreview: "",
     githubRepo: "",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -103,7 +111,7 @@ const projects = [
     description:
     "A Website built for an established Jewelry Business that allows clients to request personalized consulations with the owner",
     favicon: "/images/dralogo.png",
-    techStack: ["Next.js", "Tailwind"],
+    techStack: ["Next.js", "Node.js", "Tailwind"],
     livePreview: "https://dra-jewelry.vercel.app",
     githubRepo: "",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -113,7 +121,7 @@ const projects = [
     description:
       "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & deployed using Vercel",
     favicon: "/images/personal_logo.png",
-    techStack: ["Next.js", "Supabase", "Axios", "Tailwind"],
+    techStack: ["Next.js", "Supabase", "Axios", "Node.js", "Tailwind"],
     livePreview: "https://projecthimitsu.vercel.app",
     githubRepo: "https://github.com/Alas-3/asdfghjkl",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -123,7 +131,7 @@ const projects = [
     description:
       "A Location-based Weather Web App with real-time typhoon alerts and warnings from PAGASA",
     favicon: "/images/stormlogo.png",
-    techStack: ["Next.js", "Axios", "Tailwind"],
+    techStack: ["Next.js", "Axios", "Node.js", "Tailwind"],
     livePreview: "https://typhoon-tracker-ph.vercel.app",
     githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -133,7 +141,7 @@ const projects = [
     description:
       "A QR Code Generator Web App built using NextJS & Tailwind CSS",
     favicon: "/images/qrlogo.png",
-    techStack: ["Next.js", "Tailwind"],
+    techStack: ["Next.js", "Node.js", "Tailwind"],
     livePreview: "https://qr-generator-app-umber.vercel.app/",
     githubRepo: "https://github.com/Alas-3/qr-generator-app",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -163,7 +171,7 @@ const projects = [
     description:
       "A Full Stack Flood Awarenees Website built using HTML, CSS, JavaScript & PHP",
     favicon: "/images/bahalogo.png",
-    techStack: ["HTML", "CSS", "JavaScript"],
+    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
     livePreview: "https://baha-finals.vercel.app/",
     githubRepo: "https://github.com/Alas-3/BAHA-FINALS",
     bgColor: "bg-gradient-to-br from-white/5 to-transparent",
@@ -234,21 +242,21 @@ export default function ProjectsPage() {
             <h2 className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
               Tech Stack & Tools
             </h2>
-            <div className="flex flex-wrap justify-center gap-12">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 md:gap-6 lg:gap-8 px-2 mx-auto max-w-7xl">
               {techStack.map((tech, index) => (
                 <motion.div
                   key={tech.name}
                   className="flex flex-col items-center"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
                   whileHover={{ scale: 1.1 }}
                 >
                   <tech.icon
-                    className="text-6xl mb-3"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-2 md:mb-3"
                     style={{ color: tech.color }}
                   />
-                  <span className="text-sm font-semibold">{tech.name}</span>
+                  <span className="text-xs sm:text-sm font-semibold text-center">{tech.name}</span>
                 </motion.div>
               ))}
             </div>
