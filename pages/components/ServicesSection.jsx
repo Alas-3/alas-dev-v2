@@ -71,7 +71,7 @@ export default function ServicesSection() {
                 className="group relative"
               >
                 {/* Card Background */}
-                <div className="absolute inset-[1px] bg-gradient-to-br from-white/5 to-transparent rounded-2xl" />
+                <div className="absolute inset-[1px] bg-gray-900 rounded-2xl" />
 
                 {/* Card Content */}
                 <div className="relative p-6 md:p-8">

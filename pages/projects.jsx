@@ -64,7 +64,6 @@ const projects = [
     techStack: ["React", "Electron", "Node.js", "Firebase"],
     livePreview: "",
     githubRepo: "",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "alasportfolio",
@@ -74,7 +73,6 @@ const projects = [
     techStack: ["React", "Vite"],
     livePreview: "https://alas-dev.vercel.app",
     githubRepo: "https://github.com/Alas-3/alas.dev",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "OJTfolio",
@@ -84,7 +82,6 @@ const projects = [
     techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
     livePreview: "",
     githubRepo: "",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "Kakureta",
@@ -94,7 +91,6 @@ const projects = [
     techStack: ["Next.js", "TypeScript", "Node.js", "Express", "Axios", "Tailwind"],
     livePreview: "https://kakureta.vercel.app/",
     githubRepo: "https://github.com/Alas-3/kakureta",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "Syrincal System",
@@ -104,7 +100,6 @@ const projects = [
     techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
     livePreview: "",
     githubRepo: "",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "D.R.A Jewelry",
@@ -114,7 +109,6 @@ const projects = [
     techStack: ["Next.js", "Node.js", "Tailwind"],
     livePreview: "https://dra-jewelry.vercel.app",
     githubRepo: "",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "Himitsu",
@@ -124,7 +118,6 @@ const projects = [
     techStack: ["Next.js", "Supabase", "Axios", "Node.js", "Tailwind"],
     livePreview: "https://projecthimitsu.vercel.app",
     githubRepo: "https://github.com/Alas-3/asdfghjkl",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "StormSignal",
@@ -134,7 +127,6 @@ const projects = [
     techStack: ["Next.js", "Axios", "Node.js", "Tailwind"],
     livePreview: "https://typhoon-tracker-ph.vercel.app",
     githubRepo: "https://github.com/Alas-3/typhoon-tracker-ph",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "QuiRky",
@@ -144,7 +136,6 @@ const projects = [
     techStack: ["Next.js", "Node.js", "Tailwind"],
     livePreview: "https://qr-generator-app-umber.vercel.app/",
     githubRepo: "https://github.com/Alas-3/qr-generator-app",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "AniGuess",
@@ -154,7 +145,6 @@ const projects = [
     techStack: ["Next.js", "Tailwind"],
     livePreview: "https://anime-guess-9k9b-sepia.vercel.app/",
     githubRepo: "https://github.com/Alas-3/anime-guess",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "UniFind",
@@ -164,7 +154,6 @@ const projects = [
     techStack: ["Next.js", "Tailwind"],
     livePreview: "https://uni-finder-beige.vercel.app/",
     githubRepo: "https://github.com/Alas-3/uni-finder",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
   {
     title: "BAHA",
@@ -174,7 +163,6 @@ const projects = [
     techStack: ["HTML", "CSS", "JavaScript", "PHP"],
     livePreview: "https://baha-finals.vercel.app/",
     githubRepo: "https://github.com/Alas-3/BAHA-FINALS",
-    bgColor: "bg-gradient-to-br from-white/5 to-transparent",
   },
 ];
 
@@ -282,7 +270,7 @@ export default function ProjectsPage() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <div
-                    className={`p-6 bg-gradient-to-br ${project.bgColor} h-[300px] flex flex-col`}
+                    className={`p-6 bg-gray-900 h-[300px] flex flex-col`}
                   >
                     <div className="flex items-center mb-4">
                       <img

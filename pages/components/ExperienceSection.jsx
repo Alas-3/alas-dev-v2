@@ -1,7 +1,7 @@
 "use client"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { Building2, MapPin, Calendar, ExternalLink } from "lucide-react"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 
 const experiences = [
   {
@@ -10,7 +10,8 @@ const experiences = [
     period: "Jan 2025 - April 2025",
     location: "Metro Manila, PH",
     logo: "/images/bfmcLogo.jpeg", // Updated logo path
-    description: "Engineered and maintained a secure PHP-based web application module in collaboration with cross-functional teams and the project manager, delivering a web portal for doctors to access surgical metal product specifications and clinical application data.",
+    description:
+      "Engineered and maintained a secure PHP-based web application module in collaboration with cross-functional teams and the project manager, delivering a web portal for doctors to access surgical metal product specifications and clinical application data.",
     current: false,
     skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "WordPress"],
     website: "https://example.com",
@@ -21,7 +22,8 @@ const experiences = [
     period: "Sep 2024 - Dec 2024",
     location: "Bulacan, PH",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
-    description: "Designed and developed a mobile-first, fully responsive website using Next.js and Tailwind CSS, implemented SEO optimization best practices to improve organic search visibility, and integrated a private consultation scheduler—doubling online bookings.",
+    description:
+      "Designed and developed a mobile-first, fully responsive website using Next.js and Tailwind CSS, implemented SEO optimization best practices to improve organic search visibility, and integrated a private consultation scheduler—doubling online bookings.",
     current: false,
     skills: ["React", "Next.js", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
@@ -32,7 +34,8 @@ const experiences = [
     period: "Nov 2023 - Present",
     location: "Bulacan, PH",
     logo: "/images/syrincalLogo.jpg", // Updated logo path
-    description: "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
+    description:
+      "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
     current: true,
     skills: ["React", "Next.js", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
     website: "https://example.com",
@@ -43,9 +46,10 @@ const experiences = [
     period: "Jun 2023 - Jun 2024",
     location: "Salt Lake City, UT, USA",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3BHhskCCwnOZI_ZfbX6suvMUonVnUKwSm2w&s",
-    description: "Implemented focused outreach, campaigns and content strategies across social media platforms, increasing customer attraction by 30%, customer retention by 15% and doubling customer acquisition.",
+    description:
+      "Implemented focused outreach, campaigns and content strategies across social media platforms, increasing customer attraction by 30%, customer retention by 15% and doubling customer acquisition.",
     current: false,
-    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Management","Analytics"],
+    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Management", "Analytics"],
     website: "https://wewhiten.com/",
   },
 ]
@@ -61,6 +65,8 @@ const SkillBadge = ({ skill }) => (
 )
 
 const ExperienceCard = ({ exp, index, inView }) => {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -74,6 +80,13 @@ const ExperienceCard = ({ exp, index, inView }) => {
       },
     },
   }
+
+  const toggleDescription = () => {
+    setIsExpanded(!isExpanded)
+  }
+
+  const truncatedDescription =
+    exp.description.length > 120 ? exp.description.substring(0, 120) + "..." : exp.description
 
   return (
     <motion.div
@@ -110,14 +123,16 @@ const ExperienceCard = ({ exp, index, inView }) => {
 
       {/* Content Card */}
       <motion.div
-        className={`w-full ml-12 md:ml-0 p-6 rounded-xl border bg-gradient-to-br from-white/5 to-transparent backdrop-blur-sm relative
-          ${index % 2 === 0 ? "md:mr-[calc(50%+3rem)]" : "md:ml-[calc(50%+3rem)]"}`}
+        className={`w-full ml-12 md:ml-0 p-6 rounded-2xl border-2 border-transparent bg-gray-900/80 backdrop-blur-sm relative
+    ${index % 2 === 0 ? "md:mr-[calc(50%+3rem)]" : "md:ml-[calc(50%+3rem)]"}`}
         style={{
-          borderImage: "linear-gradient(45deg, #68D391, #4299E1) 1",
+          background: "linear-gradient(rgba(17, 24, 39, 0.8), rgba(17, 24, 39, 0.8)), linear-gradient(45deg, #68D391, #4299E1)",
+          backgroundOrigin: "border-box",
+          backgroundClip: "padding-box, border-box",
         }}
         whileHover={{
           scale: 1.02,
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundColor: "rgba(17, 24, 39, 0.9)",
         }}
         transition={{
           type: "spring",
@@ -158,7 +173,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
                   href={exp.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors flex items-center gap-1"
+                  className="text-gray-200 hover:text-white transition-colors flex items-center gap-1"
                 >
                   <Building2 className="w-4 h-4 mr-1" />
                   <span className="text-sm md:text-base">{exp.company}</span>
@@ -190,7 +205,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
           </div>
 
           {/* Meta Information */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 text-sm text-gray-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 text-sm text-gray-200">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 flex-shrink-0" />
               <span className="truncate">{exp.location}</span>
@@ -202,7 +217,23 @@ const ExperienceCard = ({ exp, index, inView }) => {
           </div>
 
           {/* Description */}
-          <p className="text-sm text-balance text-gray-300 text-left leading-relaxed mt-2">{exp.description}</p>
+          <div className="text-sm text-balance text-gray-100 text-left leading-relaxed mt-2">
+            {/* Mobile: Collapsible description */}
+            <div className="md:hidden">
+              <p>{isExpanded ? exp.description : truncatedDescription}</p>
+              {exp.description.length > 120 && (
+                <button
+                  onClick={toggleDescription}
+                  className="text-blue-300 hover:text-blue-200 text-xs mt-1 transition-colors"
+                >
+                  {isExpanded ? "Show less" : "Show more"}
+                </button>
+              )}
+            </div>
+
+            {/* Desktop: Full description */}
+            <p className="hidden md:block">{exp.description}</p>
+          </div>
 
           {/* Skills */}
           <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2">

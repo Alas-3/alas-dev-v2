@@ -502,7 +502,7 @@ function EducationSection() {
         {educationData.map((edu, index) => (
           <motion.div
             key={edu.school}
-            className="bg-gradient-to-br from-white/5 to-transparent rounded-lg p-6 shadow-lg flex items-start space-x-4"
+            className="bg-gray-900 rounded-lg p-6 shadow-lg flex items-start space-x-4"
             initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: index * 0.1 }}
@@ -566,7 +566,7 @@ function ExperienceSection() {
         {experiences.map((exp, index) => (
           <motion.div
             key={exp.company}
-            className="bg-gradient-to-br from-white/5 to-transparent rounded-lg p-6 shadow-lg flex items-center space-x-4"
+            className="bg-gray-900 rounded-lg p-6 shadow-lg flex items-center space-x-4"
             initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: index * 0.1 }}

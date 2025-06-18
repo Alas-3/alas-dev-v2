@@ -128,7 +128,7 @@ export default function ProjectsSection() {
               >
                 {/* Card Background with gradient border */}
                 <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-[1px] bg-gradient-to-br from-gray-900 to-black rounded-2xl" />
+                <div className="absolute inset-[1px] bg-gray-900/90 rounded-2xl" />
 
                 {/* Card Content */}
                 <div className="relative p-6 md:p-8 flex flex-col h-full">
@@ -136,7 +136,7 @@ export default function ProjectsSection() {
                     {project.title}
                   </h3>
                   
-                  <p className="text-gray-400 mb-6">
+                  <p className="text-gray-200 mb-6">
                     {project.description}
                   </p>
                   
