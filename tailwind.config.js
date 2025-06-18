@@ -16,6 +16,16 @@ module.exports = {
           raw: "(min-width: 360px) and (max-width: 767px) and (not (width: 375px)) and (not (width: 390px)) and (not (width: 414px)) and (not (width: 428px))",
         },
       },
+      height: {
+        'screen-dynamic': '100dvh',
+        'screen-small': '100svh',
+        'screen-large': '100lvh',
+      },
+      minHeight: {
+        'screen-dynamic': '100dvh',
+        'screen-small': '100svh',
+        'screen-large': '100lvh',
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",

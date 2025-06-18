@@ -28,7 +28,7 @@ export default function HeroSection() {
     }
   }, []);
   return (
-    <section className={`relative min-h-screen overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3' : ''}`}>
+    <section className={`relative min-h-screen-dynamic overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3' : ''}`}>
       <div className="absolute" />
       <div className="absolute" />
       <div
@@ -37,7 +37,7 @@ export default function HeroSection() {
           clipPath: "polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%)",
         }}
       />
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen-dynamic px-4 sm:px-6 lg:flex-row lg:items-center lg:px-8">
         <motion.div
           className="w-full lg:w-1/2 flex justify-center lg:justify-end mb-8 lg:mb-0 lg:order-last"
           initial={{ opacity: 0, scale: 0.8 }}
