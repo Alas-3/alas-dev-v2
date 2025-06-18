@@ -41,7 +41,7 @@ export default function ServicesSection() {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#3a0035] to-[#ff1744] bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -50,7 +50,7 @@ export default function ServicesSection() {
               Services
             </motion.h2>
             <motion.p
-              className="text-gray-400 text-lg max-w-2xl mx-auto"
+              className="text-gray-200 text-lg max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -70,8 +70,9 @@ export default function ServicesSection() {
                 viewport={{ once: true }}
                 className="group relative"
               >
-                {/* Card Background */}
-                <div className="absolute inset-[1px] bg-gray-900 rounded-2xl" />
+                {/* Card Background with gradient border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-[1px] bg-gray-900/90 rounded-2xl" />
 
                 {/* Card Content */}
                 <div className="relative p-6 md:p-8">
@@ -79,15 +80,15 @@ export default function ServicesSection() {
                     <div className="relative">
                       {/* Icon container with gradient background */}
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-green-400/70 to-blue-500/70 flex items-center justify-center">
-                        <div className="w-6 h-6 text-white/80">{service.icon}</div>
+                        <div className="w-6 h-6 text-white/90">{service.icon}</div>
                       </div>
                     </div>
 
-                    <div className="flex-1 space-y-2">
-                      <h3 className="text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
+                    <div className="flex-1 space-y-3">
+                      <h3 className="text-xl font-semibold text-transparent bg-clip-text text-gray-200">
                         {service.title}
                       </h3>
-                      <p className="text-gray-400">{service.description}</p>
+                      <p className="text-gray-200 leading-relaxed">{service.description}</p>
                     </div>
                   </div>
                 </div>

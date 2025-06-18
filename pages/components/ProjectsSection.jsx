@@ -97,7 +97,7 @@ export default function ProjectsSection() {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-500 to-indigo-700 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -106,7 +106,7 @@ export default function ProjectsSection() {
               Featured Projects
             </motion.h2>
             <motion.p
-              className="text-gray-400 text-lg max-w-2xl mx-auto"
+              className="text-gray-200 text-lg max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -132,7 +132,7 @@ export default function ProjectsSection() {
 
                 {/* Card Content */}
                 <div className="relative p-6 md:p-8 flex flex-col h-full">
-                  <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-300 transition-colors duration-300 mb-4">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-blue-500 transition-colors duration-300 mb-4">
                     {project.title}
                   </h3>
                   
@@ -146,10 +146,10 @@ export default function ProjectsSection() {
                       return TechIcon ? (
                         <div
                           key={tech}
-                          className="bg-indigo-600/30 rounded-lg px-3 py-1.5 flex items-center gap-1.5"
+                          className="bg-gray-800/80 rounded-lg px-3 py-1.5 flex items-center gap-1.5 border border-gray-700/50"
                         >
-                          <TechIcon className="text-white/80 text-sm" />
-                          <span className="text-white/90 text-xs font-medium">{tech}</span>
+                          <TechIcon className="text-gray-300 text-sm" />
+                          <span className="text-gray-200 text-xs font-medium">{tech}</span>
                         </div>
                       ) : null;
                     })}
@@ -162,8 +162,8 @@ export default function ProjectsSection() {
                       rel="noopener noreferrer"
                       className={`inline-flex items-center px-4 py-2 rounded-md text-sm transition-all duration-300 ${
                         project.liveUrl 
-                          ? "bg-gradient-to-r from-blue-500/20 to-blue-700/20 text-white hover:from-blue-500/30 hover:to-blue-700/30" 
-                          : "bg-gradient-to-r from-blue-500/5 to-blue-700/5 text-gray-500 cursor-default pointer-events-none"
+                          ? "bg-gray-800/80 text-white hover:bg-gray-700/80 border border-gray-700/50 hover:border-green-400/50" 
+                          : "bg-gray-800/40 text-gray-500 cursor-default pointer-events-none border border-gray-700/30"
                       }`}
                     >
                       <FaExternalLinkAlt className="w-3.5 h-3.5 mr-2" />
@@ -176,8 +176,8 @@ export default function ProjectsSection() {
                       rel="noopener noreferrer"
                       className={`inline-flex items-center px-4 py-2 rounded-md text-sm transition-all duration-300 ${
                         project.repoUrl
-                          ? "bg-gradient-to-r from-purple-500/20 to-pink-600/20 text-white hover:from-purple-500/30 hover:to-pink-600/30"
-                          : "bg-gradient-to-r from-purple-500/5 to-pink-600/5 text-gray-500 cursor-default pointer-events-none"
+                          ? "bg-gray-800/80 text-white hover:bg-gray-700/80 border border-gray-700/50 hover:border-blue-500/50"
+                          : "bg-gray-800/40 text-gray-500 cursor-default pointer-events-none border border-gray-700/30"
                       }`}
                     >
                       <FaGithub className="w-3.5 h-3.5 mr-2" />
@@ -198,9 +198,9 @@ export default function ProjectsSection() {
           >
             <Link
               href="/projects#projectsection"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-white rounded-xl hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 group"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400/10 to-blue-500/10 text-white rounded-xl hover:from-green-400/20 hover:to-blue-500/20 transition-all duration-300 group border border-green-400/20"
             >
-              <span className="text-gray-300 group-hover:text-white">
+              <span className="text-gray-200 group-hover:text-white">
                 View All Projects
               </span>
             </Link>

@@ -81,9 +81,9 @@ function ScrollingRow({ techStack }) {
             const Icon = tech.icon;
 
             return (
-              <div key={index} className="flex flex-col items-center min-w-max">
-                <Icon className="text-5xl mb-2 text-gray-400" />
-                <span className="text-gray-400 whitespace-nowrap text-sm">{tech.name}</span>
+              <div key={index} className="flex flex-col items-center min-w-max group">
+                <Icon className="text-5xl mb-2 text-gray-300 group-hover:text-green-400 transition-colors duration-300" />
+                <span className="text-gray-200 group-hover:text-blue-400 whitespace-nowrap text-sm transition-colors duration-300">{tech.name}</span>
               </div>
             );
           })}

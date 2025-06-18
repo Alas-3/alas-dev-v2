@@ -279,11 +279,11 @@ export default function ExperienceSection() {
             animate={isInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#9e0032] to-[#4579c0] bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
               Work Experience
             </h2>
 
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            <p className="text-gray-200 max-w-2xl mx-auto text-lg">
               A timeline of how I started my professional journey and the companies I've had the pleasure to work with
             </p>
           </motion.div>

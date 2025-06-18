@@ -81,7 +81,7 @@ export default function CertificateShowcase() {
         >
           <div className="text-center mb-16">
             <motion.h2
-              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-pink-300 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -90,7 +90,7 @@ export default function CertificateShowcase() {
               My Certificates
             </motion.h2>
             <motion.p
-              className="text-gray-400 text-lg max-w-2xl mx-auto"
+              className="text-gray-200 text-lg max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
@@ -111,15 +111,15 @@ export default function CertificateShowcase() {
                 className="group relative"
               >
                 {/* Card Background with gradient border */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="absolute inset-[1px] bg-gray-900 rounded-2xl" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-[1px] bg-gray-900/90 rounded-2xl" />
 
                 {/* Card Content */}
                 <div className="relative p-6 flex flex-col h-full">
                   {/* Certificate Badge */}
                   <div className="relative w-40 h-40 mx-auto mb-6">
                     <div className="absolute inset-0 rounded-[20%] blur-md group-hover:blur-lg transition-all duration-300" />
-                    <div className="absolute inset-1 bg-gray-900 rounded-[20%]" />
+                    <div className="absolute inset-1 bg-gray-900/90 rounded-[20%]" />
                     <Image
                       src={cert.image || "/placeholder.svg"}
                       alt={cert.title}
@@ -128,16 +128,16 @@ export default function CertificateShowcase() {
                     />
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-pink-300 transition-colors duration-300 text-center mb-4">
+                  <h3 className="text-xl font-semibold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-green-400 group-hover:to-blue-500 transition-colors duration-300 text-center mb-4">
                     {cert.title}
                   </h3>
 
                   <div className="mt-auto flex justify-between items-center">
                     <div className="flex items-center gap-2">
-                      <span className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-xs leading-none">
+                      <span className="px-3 py-1 bg-gray-800/80 text-gray-200 rounded-full text-xs leading-none">
                         {cert.issuer}
                       </span>
-                      <span className="text-xs text-gray-400 leading-none">
+                      <span className="text-xs text-gray-300 leading-none">
                         {cert.date}
                       </span>
                     </div>
@@ -146,7 +146,7 @@ export default function CertificateShowcase() {
                       href={cert.verificationLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-md hover:from-purple-600 hover:to-pink-700 transition-all duration-300 text-sm"
+                      className="inline-flex items-center justify-center px-4 py-2 bg-gray-800/80 text-white rounded-md hover:bg-gray-700/80 border border-gray-700/50 hover:border-green-400/50 transition-all duration-300 text-sm"
                     >
                       Verify
                       <ExternalLink className="w-4 h-4 ml-2" />
@@ -166,10 +166,10 @@ export default function CertificateShowcase() {
           >
             <Link
               href="/about#certificates"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 text-white rounded-xl hover:from-purple-500/20 hover:to-pink-500/20 transition-all duration-300 group"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-400/10 to-blue-500/10 text-white rounded-xl hover:from-green-400/20 hover:to-blue-500/20 transition-all duration-300 group border border-green-400/20"
             >
               <Award className="w-5 h-5 mr-2 opacity-70 group-hover:opacity-100" />
-              <span className="text-gray-300 group-hover:text-white">
+              <span className="text-gray-200 group-hover:text-white">
                 View All Certificates
               </span>
             </Link>
