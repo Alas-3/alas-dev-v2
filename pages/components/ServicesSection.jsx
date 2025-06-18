@@ -85,7 +85,7 @@ export default function ServicesSection() {
                     </div>
 
                     <div className="flex-1 space-y-3">
-                      <h3 className="text-xl font-semibold text-transparent bg-clip-text text-gray-200">
+                      <h3 className="text-xl font-semibold text-gray-200">
                         {service.title}
                       </h3>
                       <p className="text-gray-200 leading-relaxed">{service.description}</p>
