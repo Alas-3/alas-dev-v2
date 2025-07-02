@@ -1,24 +1,26 @@
 "use client"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
-import { Building2, MapPin, Calendar, ExternalLink } from "lucide-react"
+import { Building2, MapPin, Calendar, ExternalLink, FileText, ExternalLinkIcon } from "lucide-react"
 import { useRef, useState } from "react"
 
 const experiences = [
   {
     company: "Bone Fix Metal Craft",
-    position: "Full Stack Developer Intern",
+    position: "Full-Stack Developer Intern",
     period: "Jan 2025 - Apr 2025",
     location: "Metro Manila, PH",
-    logo: "/images/bfmcLogo.jpeg", // Updated logo path
+    logo: "/images/bfmcLogo.jpeg",
     description:
       "Engineered and maintained a secure PHP-based web application module in collaboration with cross-functional teams and the project manager, delivering a web portal for doctors to access surgical metal product specifications and clinical application data.",
     current: false,
     skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "WordPress"],
     website: "",
+    coe: "/coe/COC-Bonefix.pdf", // Certificate of Completion
+    certificateType: "completion", // Add this field
   },
   {
     company: "D.R.A Jewelry",
-    position: "Web Developer",
+    position: "Freelance Web Developer",
     period: "Sep 2024 - Dec 2024",
     location: "Bulacan, PH",
     logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPlxGEa_lx4b8-5QFW2a8vwTxXwLFkCjN2xQ&s",
@@ -27,18 +29,22 @@ const experiences = [
     current: false,
     skills: ["React", "Next.js", "Node.js", "SEO", "Tailwind CSS", "Web3Forms"],
     website: "https://dra-jewelry.vercel.app/",
+    coe: "", // No certificate
+    certificateType: "", // No type
   },
   {
     company: "Syrincal Trading, OPC",
     position: "Software Engineer",
     period: "Nov 2023 - Jun 2025",
     location: "Bulacan, PH",
-    logo: "/images/syrincalLogo.jpg", // Updated logo path
+    logo: "/images/syrincalLogo.jpg",
     description:
       "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
     current: false,
     skills: ["React", "Next.js", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
     website: "",
+    coe: "/coe/COE_Syrincal Trading.pdf", // Certificate of Employment
+    certificateType: "employment", // Add this field
   },
   {
     company: "WeWhiten",
@@ -51,8 +57,49 @@ const experiences = [
     current: false,
     skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Management", "Analytics"],
     website: "https://wewhiten.com/",
+    coe: "/coe/COE-Wewhiten_Christopher Ace Labador.pdf", // Certificate of Employment
+    certificateType: "employment", // Add this field
   },
 ]
+
+// Updated COE Button Component
+const COEButton = ({ coeUrl, certificateType, company }) => {
+  const handleCOEClick = () => {
+    if (coeUrl) {
+      window.open(coeUrl, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  if (!coeUrl) return null;
+
+  // Determine button text based on certificate type
+  const getButtonText = () => {
+    switch (certificateType) {
+      case "completion":
+        return "COC"; // Certificate of Completion
+      case "employment":
+        return "COE"; // Certificate of Employment
+      default:
+        return "CERT"; // Generic certificate
+    }
+  };
+
+  return (
+    <motion.button
+      onClick={handleCOEClick}
+      className="inline-flex items-center gap-1 text-sm md:text-base font-medium text-gray-400 hover:text-green-400 transition-all duration-200"
+      whileHover={{ 
+        scale: 1.05,
+      }}
+      whileTap={{ scale: 0.95 }}
+      transition={{ type: "spring", stiffness: 300, damping: 10 }}
+    >
+      <FileText className="w-4 h-4" />
+      <span>{getButtonText()}</span>
+      <ExternalLinkIcon className="w-3 h-3" />
+    </motion.button>
+  );
+};
 
 const SkillBadge = ({ skill }) => (
   <motion.span
@@ -162,13 +209,13 @@ const ExperienceCard = ({ exp, index, inView }) => {
         </motion.div>
 
         <div className="space-y-3 mt-6 md:mt-0">
-          {/* Header Section */}
+          {/* Header Section - Updated with inline COE button */}
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1 sm:gap-4">
-            <div>
+            <div className="flex-1">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
                 {exp.position}
               </h3>
-              <div className="flex items-center gap-2 mt-0.5">
+              <div className="flex items-center gap-2 mt-0.5 flex-wrap">
                 <a
                   href={exp.website}
                   target="_blank"
@@ -177,8 +224,14 @@ const ExperienceCard = ({ exp, index, inView }) => {
                 >
                   <Building2 className="w-4 h-4 mr-1" />
                   <span className="text-sm md:text-base">{exp.company}</span>
-                  <ExternalLink className="w-3 h-3" />
+                  {exp.website && <ExternalLink className="w-3 h-3" />}
                 </a>
+                {/* COE Button - Now inline with company name */}
+                <COEButton 
+                  coeUrl={exp.coe} 
+                  certificateType={exp.certificateType}
+                  company={exp.company} 
+                />
               </div>
             </div>
             {exp.current && (
@@ -204,7 +257,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
             )}
           </div>
 
-          {/* Meta Information */}
+          {/* Meta Information - Remove the old COE button section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-3 text-sm text-gray-200">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 flex-shrink-0" />
@@ -216,7 +269,7 @@ const ExperienceCard = ({ exp, index, inView }) => {
             </div>
           </div>
 
-          {/* Description */}
+          {/* Description - Remove the old COE button section that was here */}
           <div className="text-sm text-balance text-gray-100 text-left leading-relaxed mt-2">
             {/* Mobile: Collapsible description */}
             <div className="md:hidden">
