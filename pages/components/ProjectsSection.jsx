@@ -68,7 +68,7 @@ export default function ProjectsSection() {
     {
       title: "Syrincal System",
       description:
-        "A Full-Stack Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
+        "A Full-Stack B2B Ordering platform with integrated Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
       techStack: ["Next.js", "Tailwind CSS", "Node.js", "Supabase", "OAuth"],
       liveUrl: "",
       repoUrl: "",

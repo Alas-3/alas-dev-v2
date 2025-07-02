@@ -83,7 +83,7 @@ export default function HeroSection() {
             </motion.a>
 
             <motion.a
-              href="/Labador-Work-Resume.pdf" // Link to the resume in the public folder
+              href="/Work Resume-Labador, Christopher Ace.pdf" // Link to the resume in the public folder
               target="_blank" // Opens the PDF in a new tab
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-md border-2 border-transparent bg-black px-5 py-3 text-base font-medium text-white transition hover:bg-gray-800 sm:text-lg"

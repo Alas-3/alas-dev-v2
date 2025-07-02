@@ -7,14 +7,14 @@ const experiences = [
   {
     company: "Bone Fix Metal Craft",
     position: "Full Stack Developer Intern",
-    period: "Jan 2025 - April 2025",
+    period: "Jan 2025 - Apr 2025",
     location: "Metro Manila, PH",
     logo: "/images/bfmcLogo.jpeg", // Updated logo path
     description:
       "Engineered and maintained a secure PHP-based web application module in collaboration with cross-functional teams and the project manager, delivering a web portal for doctors to access surgical metal product specifications and clinical application data.",
     current: false,
     skills: ["PHP", "HTML", "CSS", "JavaScript", "MySQL", "SEO", "WordPress"],
-    website: "https://example.com",
+    website: "",
   },
   {
     company: "D.R.A Jewelry",
@@ -31,14 +31,14 @@ const experiences = [
   {
     company: "Syrincal Trading, OPC",
     position: "Software Engineer",
-    period: "Nov 2023 - Present",
+    period: "Nov 2023 - Jun 2025",
     location: "Bulacan, PH",
     logo: "/images/syrincalLogo.jpg", // Updated logo path
     description:
       "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
-    current: true,
+    current: false,
     skills: ["React", "Next.js", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
-    website: "https://example.com",
+    website: "",
   },
   {
     company: "WeWhiten",
