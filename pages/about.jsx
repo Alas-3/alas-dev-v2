@@ -413,7 +413,7 @@ const experiences = [
   {
     company: "Syrincal Trading, OPC",
     position: "Software Engineer",
-    period: "Nov 2023 - Present",
+    period: "Nov 2023 - Jun 2025",
     location: "Bulacan, PH", // Add location here
     logo: "/images/syrincalLogo.jpg",
   },
@@ -444,7 +444,7 @@ const educationData = [
   {
     school: "Our Lady of Fatima University",
     degree: "Bachelor of Science in Information Technology",
-    year: "2021 - 2025 (Expected)",
+    year: "2021 - 2025",
     location: "Valenzuela, Philippines",
     affiliations: ["Junior Philippine Computer Society (JPCS)"],
   },
