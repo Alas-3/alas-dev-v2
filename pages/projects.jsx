@@ -80,7 +80,7 @@ const projects = [
       "A SaaS web application with file-upload support, daily-note time-entry logging, and automated weekly report generation that helps students monitor and document their OJT hours.",
     favicon: "/images/personal_logo.png",
     techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
-    livePreview: "",
+    livePreview: "https://ojtfolio.systems/",
     githubRepo: "",
   },
   {
@@ -206,7 +206,7 @@ export default function ProjectsPage() {
           >
             <h1
               id="projects-title1"
-              className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 pt-15"
+              className="text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 pt-15 pb-1"
             >
               Things I've made trying to put my dent in the universe.
             </h1>
@@ -222,7 +222,7 @@ export default function ProjectsPage() {
           </motion.div>
 
           <motion.section
-            className="mb-24"
+            className="mb-24 hidden"
             initial="initial"
             animate="animate"
             variants={fadeInUp}
