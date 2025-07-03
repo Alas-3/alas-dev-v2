@@ -56,32 +56,27 @@ export default function TechStackSection() {
 }
 
 function ScrollingRow({ techStack }) {
-  const [isInView, setIsInView] = useState(true);
-
-  useEffect(() => {
-    setIsInView(true);
-  }, []);
-
   return (
     <div className="col-span-2 md:col-span-3 lg:col-span-4">
-      <div className="flex ">
+      <div className="flex">
         <motion.div
           className="flex space-x-16"
-          initial={{ x: 0 }}
           animate={{
-            x: isInView ? ['0%', '-100%'] : '0%', // Changed from -50% to -100%
+            x: ['0%', '-50%'], // Move halfway through the duplicated array
           }}
           transition={{
-            duration: 60,
+            duration: 60, // Animation speed
             ease: 'linear',
             repeat: Infinity,
+            repeatType: 'loop',
           }}
         >
-          {[...techStack, ...techStack].map((tech, index) => {
+          {/* Quintuple the array for ultra-smooth infinite scrolling */}
+          {[...techStack, ...techStack, ...techStack, ...techStack, ...techStack].map((tech, index) => {
             const Icon = tech.icon;
 
             return (
-              <div key={index} className="flex flex-col items-center min-w-max group">
+              <div key={`${tech.name}-${index}`} className="flex flex-col items-center min-w-max group">
                 <Icon className="text-5xl mb-2 text-gray-300 group-hover:text-green-400 transition-colors duration-300" />
                 <span className="text-gray-200 group-hover:text-blue-400 whitespace-nowrap text-sm transition-colors duration-300">{tech.name}</span>
               </div>
