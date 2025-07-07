@@ -41,7 +41,7 @@ const experiences = [
     description:
       "Architected and led the development of a Next.js-based B2B ordering platform that unified supply chain, inventory management, and delivery tracking, doubling operational efficiency, reducing order processing time, and support 500+ daily operations —while conducting unit testing to ensure system reliability.",
     current: false,
-    skills: ["React", "Next.js", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
+    skills: ["React", "Next.js", "Redux", "Node.js", "Supabase", "OAuth", "Tailwind CSS"],
     website: "",
     coe: "/coe/COE_Syrincal Trading.pdf", // Certificate of Employment
     certificateType: "employment", // Add this field

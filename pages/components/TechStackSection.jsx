@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub, FaSwift, FaWordpress } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiFramer, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot, SiMysql } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiFramer, SiRedux, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot, SiMysql } from 'react-icons/si';
 
 export default function TechStackSection() {
   const techStack = [
@@ -11,6 +11,7 @@ export default function TechStackSection() {
     { name: 'TypeScript', icon: SiTypescript },
     { name: 'React', icon: FaReact },
     { name: 'Next.js', icon: SiNextdotjs },
+    { name: 'Redux', icon: SiRedux },
     { name: 'Vite', icon: SiVite },
     { name: 'Electron', icon: SiElectron },
     { name: 'Tailwind CSS', icon: SiTailwindcss },
