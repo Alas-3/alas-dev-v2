@@ -45,13 +45,15 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-            <Image
-              src="/images/herologo.png" // Update to your image path
-              alt="Ace Labador"
-              fill
-              className="rounded-full object-cover shadow-2xl"
-              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-            />
+          <Image
+  src="/images/herologo.png"
+  alt="Ace Labador"
+  fill
+  priority // Add this
+  quality={80} // Optimize quality
+  className="rounded-full object-cover shadow-2xl"
+  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
+/>
           </div>
         </motion.div>
         <motion.div
