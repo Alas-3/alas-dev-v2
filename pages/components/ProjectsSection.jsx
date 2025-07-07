@@ -20,8 +20,11 @@ import {
   SiVercel,
   SiFirebase,
   SiTypescript,
-  SiExpress
+  SiExpress,
+  SiRedux,
+  SiRadixui,
 } from "react-icons/si";
+import ShadcnIcon from "../components/icons/ShadcnIcon";
 import { SiElectron } from "react-icons/si";
 import { TbBrandOauth } from "react-icons/tb";
 import Link from "next/link";
@@ -43,18 +46,30 @@ const techStack = {
   OAuth: TbBrandOauth,
   Typescript: SiTypescript,
   Express: SiExpress,
+  Redux: SiRedux,
+  "Radix UI": SiRadixui,
+  "shadcn/ui": ShadcnIcon,
 };
 
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "E-Registrar",
+      title: "OJTfolio",
       description:
-        "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS and Firebase",
-      techStack: ["React", "Node.js", "Electron", "Firebase"],
-      liveUrl: "",
+        "A SaaS web application with file-upload support, daily-note time-entry logging, and automated weekly report generation that helps students monitor and document their OJT hours.",
+      techStack: ["React", "Next.js", "Node.js", "shadcn/ui", "Tailwind CSS", "OAuth", "Supabase"],
+      liveUrl: "https://ojtfolio.systems/",
       repoUrl: "",
       gradient: "from-blue-500/20 to-purple-600/20",
+    },
+    {
+      title: "Loooply",
+      description:
+        "A SaaS app for managers to track employee performance, time, and tasks in real-time — boosting team productivity and accountability without micromanagement.",
+      techStack: ["Next.js", "Typescript", "Tailwind CSS", "shadcn/ui", "Redux", "Node.js", "Supabase", "OAuth"],
+      liveUrl: "https://loooply.vercel.app/",
+      repoUrl: "",
+      gradient: "from-purple-500/20 to-pink-600/20",
     },
     {
       title: "Kakureta",
@@ -64,15 +79,6 @@ export default function ProjectsSection() {
       liveUrl: "https://kakureta.vercel.app/",
       repoUrl: "https://github.com/Alas-3/kakureta",
       gradient: "from-green-500/20 to-blue-600/20",
-    },
-    {
-      title: "Syrincal System",
-      description:
-        "A Full-Stack B2B Ordering platform with integrated Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
-      techStack: ["Next.js", "Tailwind CSS", "Node.js", "Supabase", "OAuth"],
-      liveUrl: "",
-      repoUrl: "",
-      gradient: "from-purple-500/20 to-pink-600/20",
     },
     {
       title: "DRA Jewelry",
