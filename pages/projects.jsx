@@ -23,10 +23,13 @@ import {
   SiPhp,
   SiMysql,
   SiWordpress,
+  SiRadixui,
+  SiRedux,
 } from "react-icons/si";
 import { TbBrandOauth } from "react-icons/tb";
 import { FaSwift } from "react-icons/fa"; // For Swift icon
 import { SiCheerio } from "react-icons/si"; // For Cheerio icon
+import ShadcnIcon from "./components/icons/ShadcnIcon";
 
 const techStack = [
   { name: "HTML", icon: SiHtml5, color: "#E34F26" }, // HTML5 color
@@ -53,6 +56,9 @@ const techStack = [
   { name: "GitHub", icon: SiGithub, color: "#F2F3F4" }, // GitHub color
   { name: "Git", icon: SiGit, color: "#F05032" }, // Git color
   { name: "Lighthouse", icon: SiLighthouse, color: "#F9BC24" }, // Lighthouse color
+  { name: "shadcn/ui", icon: ShadcnIcon, color: "#F2F3F4" }, // shadcn/ui color
+  { name: "Radix UI", icon: SiRadixui, color: "#F2F3F4" }, // Radix UI color
+  { name: "Redux", icon: SiRedux, color: "#764ABC" }, // Redux color
 ];
 
 const projects = [
@@ -61,7 +67,7 @@ const projects = [
     description:
       "A Full Stack Queue Management Kiosk System for School Registrars built using ReactJS, ElectronJS & Firebase",
     favicon: "/images/registrarlogo.png",
-    techStack: ["React", "Electron", "Node.js", "Firebase"],
+    techStack: ["React", "Redux","Electron", "Node.js", "Firebase"],
     livePreview: "",
     githubRepo: "",
   },
@@ -75,11 +81,20 @@ const projects = [
     githubRepo: "https://github.com/Alas-3/alas.dev",
   },
   {
+    title: "Loooply",
+    description:
+      "A SaaS app for managers to track employee performance, time, and tasks in real-time — boosting team productivity and accountability without micromanagement.",
+    favicon: "/images/personal_logo.png",
+    techStack: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Redux", "Node.js"],
+    livePreview: "https://loooply.vercel.app/",
+    githubRepo: "",
+  },
+  {
     title: "OJTfolio",
     description:
       "A SaaS web application with file-upload support, daily-note time-entry logging, and automated weekly report generation that helps students monitor and document their OJT hours.",
     favicon: "/images/personal_logo.png",
-    techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
+    techStack: ["Next.js", "shadcn/ui", "Supabase", "OAuth", "Node.js", "Tailwind"],
     livePreview: "https://ojtfolio.systems/",
     githubRepo: "",
   },
@@ -97,7 +112,7 @@ const projects = [
     description:
     "A Full-Stack B2B Ordering platform, Inventory System & Delivery Tracker for a trading company built using NextJS & Supabase",
     favicon: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1rR8i3q9fB_rQPc08LC8C0emi85r_ohFkQ&s",
-    techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind"],
+    techStack: ["Next.js", "Supabase", "OAuth", "Node.js", "Tailwind", "shadcn/ui", "Redux"],
     livePreview: "",
     githubRepo: "",
   },
@@ -160,7 +175,7 @@ const projects = [
     description:
       "A Full Stack Flood Awarenees Website built using HTML, CSS, JavaScript & PHP",
     favicon: "/images/bahalogo.png",
-    techStack: ["HTML", "CSS", "JavaScript", "PHP"],
+    techStack: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     livePreview: "https://baha-finals.vercel.app/",
     githubRepo: "https://github.com/Alas-3/BAHA-FINALS",
   },
