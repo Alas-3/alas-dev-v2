@@ -55,9 +55,9 @@ const experiences = [
     description:
       "Implemented focused outreach, campaigns and content strategies across social media platforms, increasing customer attraction by 30%, customer retention by 15% and doubling customer acquisition.",
     current: false,
-    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Management", "Analytics"],
+    skills: ["Social Media", "Content Strategy", "Client Aquisition & Outreach", "Collaborations", "Campaigns", "Management", "Analytics"],
     website: "https://wewhiten.com/",
-    coe: "/coe/COE-Wewhiten_Christopher Ace Labador.pdf", // Certificate of Employment
+    coe: "/coe/WeWhiten-Certificate of Employment-Christopher Ace Labador.pdf", // Certificate of Employment
     certificateType: "employment", // Add this field
   },
 ]
