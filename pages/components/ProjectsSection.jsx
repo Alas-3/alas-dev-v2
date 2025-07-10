@@ -23,6 +23,7 @@ import {
   SiExpress,
   SiRedux,
   SiRadixui,
+  SiCheerio,
 } from "react-icons/si";
 import ShadcnIcon from "../components/icons/ShadcnIcon";
 import { SiElectron } from "react-icons/si";
@@ -49,6 +50,7 @@ const techStack = {
   Redux: SiRedux,
   "Radix UI": SiRadixui,
   "shadcn/ui": ShadcnIcon,
+  Cheerio: SiCheerio,
 };
 
 export default function ProjectsSection() {
@@ -66,7 +68,7 @@ export default function ProjectsSection() {
       title: "Loooply",
       description:
         "A SaaS app for managers to track employee performance, time, and tasks in real-time — boosting team productivity and accountability without micromanagement.",
-      techStack: ["Next.js", "Typescript", "Tailwind CSS", "shadcn/ui", "Redux", "Node.js", "Supabase", "OAuth"],
+      techStack: ["Next.js", "Typescript", "Redux", "Tailwind CSS", "shadcn/ui", "Node.js", "Supabase", "OAuth"],
       liveUrl: "https://loooply.vercel.app/",
       repoUrl: "",
       gradient: "from-purple-500/20 to-pink-600/20",
@@ -75,7 +77,7 @@ export default function ProjectsSection() {
       title: "Kakureta",
       description:
         "A Full Stack Private Anime Streaming Web App built using NextJS, Supabase, Axios & Custom API using TypeScript",
-      techStack: ["Next.js", "Node.js", "Axios", "Typescript", "Supabase"],
+      techStack: ["Next.js", "Node.js", "Axios", "Express", "Cheerio", "Typescript", "Supabase"],
       liveUrl: "https://kakureta.vercel.app/",
       repoUrl: "https://github.com/Alas-3/kakureta",
       gradient: "from-green-500/20 to-blue-600/20",
