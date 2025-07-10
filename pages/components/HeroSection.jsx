@@ -6,29 +6,33 @@ import Image from "next/image";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function HeroSection() {
-    const [deviceType, setDeviceType] = useState('unknown');
-  
+  const [deviceType, setDeviceType] = useState("unknown");
+
   useEffect(() => {
     // Only run on client-side
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-      
+
       // iOS detection
       if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-        setDeviceType('ios');
-      } 
+        setDeviceType("ios");
+      }
       // Android detection
       else if (/android/i.test(userAgent)) {
-        setDeviceType('android');
+        setDeviceType("android");
       }
       // Other devices
       else {
-        setDeviceType('other');
+        setDeviceType("other");
       }
     }
   }, []);
   return (
-    <section className={`relative min-h-screen-dynamic overflow-hidden bg-background mt-12 md:mt-0  ${deviceType === 'android' ? 'pt-6' : deviceType === 'ios' ? '-mt-3' : ''}`}>
+    <section
+      className={`relative min-h-screen-dynamic overflow-hidden bg-background mt-12 md:mt-0  ${
+        deviceType === "android" ? "pt-6" : deviceType === "ios" ? "-mt-3" : ""
+      }`}
+    >
       <div className="absolute" />
       <div className="absolute" />
       <div
@@ -45,15 +49,15 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]">
-          <Image
-  src="/images/herologo.png"
-  alt="Ace Labador"
-  fill
-  priority // Add this
-  quality={80} // Optimize quality
-  className="rounded-full object-cover shadow-2xl"
-  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
-/>
+            <Image
+              src="/images/herologo.png"
+              alt="Ace Labador"
+              fill
+              priority // Add this
+              quality={80} // Optimize quality
+              className="rounded-full object-cover shadow-2xl"
+              sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 20vw"
+            />
           </div>
         </motion.div>
         <motion.div
