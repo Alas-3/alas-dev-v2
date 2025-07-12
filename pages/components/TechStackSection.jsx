@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaJs, FaHtml5, FaCss3, FaGit, FaGithub, FaSwift, FaWordpress } from 'react-icons/fa';
-import { SiTailwindcss, SiNextdotjs, SiRadixui, SiFramer, SiRedux, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot, SiMysql } from 'react-icons/si';
+import { SiTailwindcss, SiNextdotjs, SiRadixui, SiFramer, SiRedux, SiTypescript, SiFirebase, SiSupabase, SiAppwrite, SiVercel, SiAuth0, SiAxios, SiElectron, SiVite, SiNpm, SiLighthouse, SiExpress, SiCheerio, SiPhp, SiGithubcopilot, SiMysql, SiGithubactions } from 'react-icons/si';
 import ShadcnIcon from './icons/ShadcnIcon';
 
 export default function TechStackSection() {
@@ -30,6 +30,7 @@ export default function TechStackSection() {
     { name: 'Auth0', icon: SiAuth0 },
     { name: 'Git', icon: FaGit },
     { name: 'GitHub', icon: FaGithub },
+    { name: 'GitHub Actions', icon: SiGithubactions },
     { name: 'Copilot', icon: SiGithubcopilot },
     { name: 'Firebase', icon: SiFirebase },
     { name: 'Supabase', icon: SiSupabase },
