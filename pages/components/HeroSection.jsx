@@ -71,7 +71,7 @@ export default function HeroSection() {
               Ace Labador{" "}
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 pb-2 text-3xl md:text-6xl 1024:text-4xl 1440:text-6xl 2560:text-7xl lg:text-4xl">
-              Software Engineer
+            &lt;Software Engineer /&gt;
             </span>
           </h1>
           <p className="mt-6 text-xl text-muted-foreground text-pretty text-justify lg:text-left sm:text-2xl lg:text-3xl">

@@ -1,0 +1,45 @@
+---
+description: Generate a single-line, scoped commit message using the diff between the current branch and the main branch. Formats each change using uppercase types (ADDED, UPDATED, REMOVED, RENAMED, MOVED, REFACTORED, FORMATTED, REVERTED), and joins entries with ` | `.
+type: Manual
+globs:
+  - "**/*"
+alwaysApply: false
+---
+When invoked as `@commit-message`, automatically treat it as:
+
+@Branch (Diff with Main Branch)
+
+Then, based on that diff, follow these rules to generate the commit message:
+
+1. If the diff is empty or contains no changes, respond exactly:
+
+No branch diff changes to commit.
+
+2. Otherwise, produce a **single-line** commit message summarizing all file-level changes.
+
+**Change types:**
+- New files or sections → `ADDED`
+- Modified files or sections → `UPDATED`
+- Deleted files → `REMOVED`
+- Renamed files → `RENAMED`
+- Moved files/directories → `MOVED`
+- Code refactors → `REFACTORED`
+- Formatting-only changes (e.g. Prettier) → `FORMATTED`
+- Reverts → `REVERTED`
+- Other or unclear → let AI choose the most appropriate label
+
+3. Use an optional scope in parentheses (e.g. `ADDED(icons): …`) if it clarifies intent.
+
+4. Paths must be relative to the repo root (e.g. `src/components/Button.tsx`).
+
+5. Write descriptions in **imperative mood**, not past tense.  
+   - Good: `UPDATED: Tailwind config with dynamic viewport height utilities`  
+   - Bad: `Update Tailwind config`
+
+6. Combine multiple entries in order of changes, separated by ` | `.  
+   Example:  
+
+ADDED: Hero section in src/pages/Home.tsx | MOVED: utils/helpers.ts → lib/helpers.ts
+
+
+7. Keep the entire message ≤ 80 characters where possible.
